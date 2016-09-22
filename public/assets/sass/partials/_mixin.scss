@@ -1,0 +1,84 @@
+$mainColor: #994399;
+$textColor: #353535;
+$textColorBold: #3b3b3b; 
+$mainTextSize: 13px;
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style:normal;
+	font-weight: 400;
+	src: url(../../fonts/OpenSans-Regular.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style:normal;
+	font-weight: 600;
+	src: url(../../fonts/OpenSans-Semibold.ttf) format("truetype");
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style:normal;
+	font-weight: 700;
+	src: url(../../fonts/OpenSans-Bold.ttf) format("truetype");
+}
+body{
+	font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+	font-weight: 400;  
+}
+h1, h2, h3, h4, h5, h6, li, ul, p{
+	margin: 0;
+}
+ul, li{
+	list-style: none;
+	padding: 0;
+}
+.clearFix{
+	clear: both;
+}
+@mixin transition($x) {
+    -webkit-transition: $x;
+    -moz-transition: $x;
+    -o-transition: $x;
+    transition: $x;
+}
+@mixin transform($x) {
+  -webkit-transform: $x;
+  -moz-transform: $x;
+  -ms-transform: $x;
+  -o-transform: $x;
+  transform: $x; 
+}
+@mixin shadow($x) {
+  -moz-box-shadow: $x;
+  -webkit-box-shadow: $x;
+  box-shadow: $x;
+}
+@mixin border-radius($x) {
+  -webkit-border-radius: $x; 
+  -moz-border-radius: $x; 
+  border-radius: $x; 
+}
+@mixin animation($x) {
+  -webkit-animation: $x;
+  -moz-animation: $x;
+  -o-animation: $x;
+  animation: $x;
+}
+//keyframes istifade eden zaman her browzer ucun uygunlasmasi
+//ucunasagi komente alinan hissede ki sekilde istifade edin
+// @-webkit-keyframes KEYFRAME-ADI {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// @-moz-keyframes KEYFRAME-ADI {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// @-o-keyframes KEYFRAME-ADI {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }
+// @keyframes KEYFRAME-ADI {
+//   0%   { opacity: 0; }
+//   100% { opacity: 1; }
+// }

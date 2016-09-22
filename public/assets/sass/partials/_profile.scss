@@ -1,0 +1,205 @@
+#account_settings-wrap{
+	font-weight: 400;
+	font-size: 14px;
+	padding-top: 50px;
+	width: 100%;
+	height: auto;
+	background-color: #F4F4F4;
+
+		.mainDiv{
+			border: 1px solid #CCCCCC;
+			.col-md-2{
+				background-color: white;
+				
+			}
+			////////////////////////////////
+				.viewProfile{
+					
+					height: 100%;
+						.Picture{
+							margin-top: 5px;
+						}
+						h5{
+							color: $textColorBold;
+							font-size: $mainTextSize;
+							margin-top: 10px;
+							margin-bottom: 10px;
+						}
+						li{
+							padding: 2px 2px 0px 2px;
+							margin-bottom: 7px;
+							color: #7A89C5;
+							&:hover{
+								color: white;
+								background-color:#7A89C5;  
+							}
+						}
+
+				}
+			// Profile PANELINE XOS GELMISINIZ
+			.profile{
+				padding-top: 25px;
+				padding-bottom:20px;
+				min-height: 100px;
+				border:1px solid #CCCCCC;
+				font-weight: 400;
+				color: $textColorBold;
+				margin-bottom: 20px;
+
+	
+			}
+			.basics{
+				width: 80%;
+				margin:20px auto;
+				background-color: #F1F3F6;
+
+				.basicsInput{
+					margin-bottom: 20px;
+					width: 100%;
+					height: 26px;
+				}
+				
+			}
+			.biographyArea{
+				margin:0 auto;
+				width: 68%;
+				textarea{
+					width:100%;
+					height:90px;
+					margin-top:0px; 
+					margin-bottom:20px;
+				}
+				input{
+					width:100%;
+					height:41px;
+				}
+			}	
+		//////////////links/////////////////////////
+			
+
+				.website{
+				margin-bottom: 20px;
+				width:612px;
+				height:45px;
+							}
+ 	.InputDiv{
+ 		margin: 20px auto;
+ 		width: 68%;
+ 		.input-group{
+					padding-top: 10px;
+					width:100%;
+					height:45px;
+					margin-bottom: 20px;
+							}
+		.lastDiv{
+			border-bottom: 1px solid #CCCCCC;
+
+			.saveButon{
+				margin-top: 30px;
+				color: white;
+				background-color: #994399;
+				width: 80px;
+				height: 48px;
+				border:none;
+				}
+		}
+ 	}
+				
+				
+
+	}
+}
+
+
+#edit_profile-wrap{
+	padding-top: 50px;
+	width: 100%;
+	height: 650px;
+	background-color: #F4F4F4;
+
+		.mainDiv{
+			border: 1px solid #CCCCCC;
+			background-color: white;
+			////////////////////////////////
+				.viewProfile{
+					width: 190px;
+					height: 570px;
+						.Picture{
+							margin-top: 5px;
+						}
+						h5{
+							color: $textColorBold;
+							font-size: $mainTextSize;
+							margin-top: 10px;
+							margin-bottom: 10px;
+						}
+						li{
+							padding: 2px 2px 0px 2px;
+							margin-bottom: 7px;
+							color: #7A89C5;
+							&:hover{
+								color: white;
+								background-color:#7A89C5;  
+							}
+						}
+
+				}
+			// ACCOUNT PANELINE XOS GELMISINIZ
+			.account{
+				padding-top: 25px;
+				padding-bottom:30px;
+				height: 78px;
+				border:1px solid #CCCCCC;
+				font-weight: 400;
+
+	
+			}
+			.emailDiv{
+				height: 140px;
+				padding-top: 30px;
+				padding-bottom: 20px;
+				background-color: #F1F3F6;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.emailInput{
+				width: 590px;
+				height: 38px;
+				position:absolute;
+
+			}
+			.labels{
+				color: $textColorBold;
+			}
+			i{
+				position: relative;
+				padding-left:550px; 
+				padding-top: 5px;
+			}
+			.registred{
+			padding-top: 30px;
+			background-color: #F1F3F6;
+			height: 180px;
+			border-bottom: 1px solid #CCCCCC; 
+				.passwordInput{
+					margin-bottom: 15px;
+					width: 590px;
+					height: 26px;
+	
+				}
+			}
+			.buton{
+				margin-top: 20px;
+				width: 143px;
+				height: 43px;
+				background-color: $mainColor;
+				border: none;
+				color: white;
+				
+					&:hover{
+						background-color: #9A5F9A;
+					}
+			}
+			
+
+}
+}

@@ -1,0 +1,9 @@
+@import 'partials/_mixin';
+@import 'partials/_header';
+@import 'partials/_profile';
+@import 'partials/_categories';
+@import 'partials/_course';
+@import 'partials/_myCourses';
+@import 'partials/_shopping';
+@import 'partials/_content';
+@import 'partials/_footer';

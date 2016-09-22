@@ -1,0 +1,757 @@
+#main-Page{
+	background-color: #E1E3E4;
+	//up line
+	.upLine{
+		border: 2px solid $mainColor;
+		@include shadow(0 4px 40px 11px black);
+	}
+	.menu{
+		//logo
+		.logo{
+			width: 120px;
+			height: 40px;
+			float:left;
+			h1{
+				font-size: 19px; 
+				padding: 4px 12px; 
+				line-height: 25px; 
+				margin-left: 5px;
+				color: white; 
+				font-weight: bold; 
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		//menu
+		.menuList{
+			float: right;
+			ul{
+				display: inline-block;
+				li{
+					display: inline-block;
+					a{
+						font-size: $mainTextSize;
+						display: block;
+						padding: 9px 15px;
+						text-decoration: none;
+						color: white;
+						font-weight: 600;
+					}
+					button{
+						font-size: $mainTextSize;
+						padding: 9px 15px;
+						color: white;
+						font-weight: 600;
+						border: none;
+						background-color: transparent;
+					}
+				}
+				&:first-child{
+					li{
+						a{
+							padding: 9px 5px;
+							i{
+								font-size: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	//login
+	.login-First{
+		display: none;
+	}
+	.login{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 11;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(0,0,0,.6);
+		.log{
+			width: 420px;
+			min-height: 300px;
+			background-color: #EDEFF1;
+			@include border-radius(6px);
+			.exit{
+				text-align: right;
+				padding: 7px 10px;
+				i{
+					font-size: 24px;
+					cursor: pointer;
+				}
+			}
+			.writeInfo{
+				padding: 0 20px 20px 20px;
+				p{
+					font-size: 14px;
+				}
+				h4{
+					font-size: 24px;
+					font-weight: 300;
+					text-align: center;
+					padding-bottom: 10px;
+					margin-bottom: 14px;
+					border-bottom: 1px solid lightgray;
+					color: #355368;
+				}
+				form{
+					padding: 0 15px;
+					input[type="email"],input[type="password"]{
+						width: 100%;
+						border: 1px solid darken(lightgray, 15%);
+						@include border-radius(4px);
+						margin: 5px 0;
+						background-color: white;
+						padding: 11px 0;
+						text-indent: 15px;
+						font-size: 18px;
+						font-weight: 300;
+						color: #7893AB;
+					}
+					input:focus{
+						border: 1px solid #7893AB;
+					}
+					input[type="submit"]{
+						width: 100%;
+						padding: 13px 0;
+						font-size: 16px;
+						font-weight: 600;
+						border: none;
+						color: white;
+						background-color: $mainColor;
+						@include border-radius(2px);
+						margin: 30px 0 8px 0;
+					}
+					h6{
+						font-size: 16px;
+						margin-bottom: 30px;
+						text-align: center;
+						a{
+							color: #2979B0;
+							text-decoration: none;
+							&:hover{
+								color: darken(#7893AB, 15%);
+							}
+						}
+					}
+				}
+				h5{
+					font-size: 16px;
+					padding: 17px 0;
+					text-align: center;
+					border-top: 1px solid lightgray;
+					color: #355368;
+					button{
+						border: none;
+						background-color: transparent;
+						color: #2979B0;
+						font-weight: 600;
+						&:hover{
+							color: darken(#7893AB, 15%);
+						}
+					}
+				}
+			}
+		}
+	}
+	//signUP
+	.signUP-First{
+		display: none;
+	}
+	.signUP{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 11;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(0,0,0,.6);
+		.sign{
+			width: 420px;
+			min-height: 563px;
+			background-color: #EDEFF1;
+			@include border-radius(6px);
+			.exit{
+				text-align: right;
+				padding: 7px 10px;
+				i{
+					font-size: 24px;
+					cursor: pointer;
+				}
+			}
+			.writeInfo{
+				padding: 0 20px 20px 20px;
+				h4{
+					font-size: 24px;
+					font-weight: 300;
+					text-align: center;
+					padding-bottom: 10px;
+					margin-bottom: 14px;
+					border-bottom: 1px solid lightgray;
+					color: #355368;
+				}
+				form{
+					padding: 0 15px;
+					input[type="text"],input[type="email"],input[type="password"]{
+						width: 100%;
+						border: 1px solid darken(lightgray, 15%);
+						@include border-radius(4px);
+						margin: 5px 0;
+						padding: 11px 0;
+						text-indent: 15px;
+						background-color: white;
+						font-size: 18px;
+						font-weight: 300;
+						color: #7893AB;
+					}
+					input:focus{
+						border: 1px solid #7893AB;
+					}
+					input[type="checkbox"]{
+						margin-top: 28px;
+						border: 1px solid #7893AB;
+						margin-right: 8px;
+						float: left;
+					}
+					p{
+						margin-top: 25px;
+						margin-bottom: 40px;
+						font-size: 14px;
+					}
+					input[type="submit"]{
+						width: 100%;
+						padding: 13px 0;
+						font-size: 16px;
+						font-weight: 600;
+						border: none;
+						color: white;
+						background-color: $mainColor;
+						@include border-radius(2px);
+						margin: 8px 0;
+					}
+					h6{
+						font-size: 10px;
+						margin-bottom: 40px;
+						a{
+							color: #2979B0;
+							text-decoration: none;
+							&:hover{
+								color: darken(#7893AB, 15%);
+							}
+						}
+					}
+				}
+				h5{
+					font-size: 16px;
+					padding: 22px 0;
+					text-align: center;
+					border-top: 1px solid lightgray;
+					color: #355368;
+					button{
+						border: none;
+						background-color: transparent;
+						color: #2979B0;
+						font-weight: 600;
+						&:hover{
+							color: darken(#7893AB, 15%);
+						}
+					}
+				}
+			}
+		}
+	}
+	//main slider
+	.slider{
+		width: 100%;
+		padding: 30px 3%;
+		//course image
+		.sliderImage{
+			width: 50%;
+			padding: 0 15px;
+			float: left;
+			img{
+				width: 100%;
+				@include transition(all 0.3s ease);
+				&:hover{
+					filter: brightness(80%);
+				}
+			}
+		}
+		//course about content
+		.content{
+			float: right;
+			width: 50%;
+			padding: 0 15px;
+			color: $textColor;
+			h6{
+				line-height: 23px;
+			}
+			.time{
+				h6{
+					font-size: 14px;
+				}
+			}
+			.header{
+				padding: 19px 0;
+				h6{
+					font-size: 29px;
+					font-weight: 300;
+					line-height: 30px;
+					a{
+						text-decoration: none;
+						color: $textColor;
+					}
+				}
+			}
+			.ratings{
+				.star 
+					i{
+					letter-spacing: 2px;
+					color:$mainColor;
+					font-size:14px;
+				}
+				.review_degree{
+					font-weight:600;
+				}
+				.review_count{
+					font-weight:600;
+					color:lighten($textColor, 35%);
+				}
+			}
+			.about{
+				padding: 15px 0;
+				h5{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				h6{
+					font-size: 13px;
+				}
+			}
+			.duration{
+				h5{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				h6{
+					font-size: 13px;
+				}
+			}
+			.takeCours{
+				padding: 15px 0;
+				position: relative;
+				.count{
+					position: relative;
+					h5{
+						font-size: 14px;
+						font-weight: 600;
+					}
+					h6{
+						font-size: 13px;
+					}
+					.take{
+						margin-right: 7%;
+						position: absolute;
+						bottom:0;
+						right: 0;
+						a{
+							display: block;
+							padding: 7px 25px;
+							font-size: 13px;
+							border: 1px solid none;
+							background-color: $mainColor;
+							text-decoration: none;
+							color: white;
+							@include border-radius(2px);
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 960px){
+		.slider{
+			display: flex;
+			align-items: center;
+		}
+	}
+	@media screen and (min-width: 960px) and (max-width: 1200px){
+		.slider{
+			padding: 30px 3% 15px 3%;
+			.sliderImage{
+
+			}
+			.content{
+				.time{
+					h6{
+						font-size: 13px;
+						margin: 0 0 -9px 0;
+					}
+				}
+				.header{
+					padding: 10px 0;
+					h6{
+						font-size: 24px;
+					}
+				}
+				.about{
+					padding: 8px 0;
+				}
+				.takeCours{
+					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 960px){
+		.slider{
+			.sliderImage{
+				width: 100%;
+			}
+			.content{
+				width: 100%;
+				.time{
+					margin: 13px 0 -10px 0;
+				}
+				.header{
+					padding: 13px 0;
+					h6{
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 720px){
+		.logo2{
+			display: none;
+		}
+		.navigator{
+			display: none;
+		}
+		.sidebar{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 719px){
+		//logos
+		.logo{
+			display: none;
+		}
+		.logo2{
+			width: 120px;
+			height: 40px;
+			margin: 0 auto;
+			position: relative;
+			h1{
+				font-size: 19px; 
+				padding: 4px 12px; 
+				line-height: 25px; 
+				margin-left: 5px;
+				color: white; 
+				font-weight: bold; 
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		//navigator
+		.navigator{
+			position: absolute;
+			top: 5px;
+			left: 10px;
+			color: white;
+			font-size: 23px;
+			width: 37px;
+			height: 37px;
+			// position: relative;
+			i{	
+				cursor: pointer;
+				font-size: 25px;
+			}
+
+			
+			.sidebar{
+				position: fixed;
+				top: 0;
+				left: 7px;
+				z-index: 112;
+				background-color: #F4F4F4;
+				overflow-y: scroll;
+				@include shadow(4px 4px 8px lightgray);
+				// .imgProfile{
+				// 	border: 1px solid transparent;
+				// 	background-color: $mainColor;
+				// 	div{
+				// 		width: 120px;
+				// 		margin: 40px auto;
+				// 		img{
+				// 			width: 100%;
+				// 			margin: 20px 0;
+				// 		}
+				// 		span{
+				// 			font-size: 16px;
+				// 			color: white;
+				// 			font-weight: 600;
+				// 		}
+				// 	}
+				// }
+				a{
+					display: block;
+					padding: 11px 13px;
+					font-size: 18px;
+					color: $textColor;
+					text-decoration: none;
+					&:hover{
+						background-color: white;
+					}
+				}
+				button{
+					width: 100%;
+					text-align: left;
+					border: none;
+					background-color: transparent;
+					padding: 11px 13px;
+					font-size: 18px;
+					color: $textColor;
+					&:hover{
+						background-color: white;
+					}
+				}
+				.buttonBrowse{
+					margin-top: 10px;
+					cursor: pointer;
+				}
+			}
+			.browseMenu{
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 112;
+				background-color: #F4F4F4;
+				overflow-y: scroll;
+				@include shadow(4px 4px 8px lightgray);
+				div{
+					background-color: $mainColor;
+					padding: 13px 13px;
+					margin-bottom: 10px;
+					span{
+						font-size: 19px;
+						border: none;
+						background-color: transparent;
+						color:white;
+						cursor: pointer;
+						i{
+							line-height: 35px;
+						}
+					}
+				}
+				h6{
+					display: inline-block;
+					color: white;
+					font-size: 18px;
+					font-weight: 600;
+					margin-left: 20%;
+				}
+				a{
+					display: block;
+					padding: 11px 13px;
+					font-size: 18px;
+					color: $textColor;
+					text-decoration: none;
+					&:hover{
+						background-color: white;
+					}
+				}
+			}
+		}
+		.menuList{
+			position: absolute;
+			top: 3px;
+			right: 20px;
+		}
+	}
+	@media screen and (min-width:480px) and (max-width: 719px){
+		//menu
+		.menuList{
+			ul{
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 480px){
+		//menu
+		.menuList{
+			display: none;
+		}
+	}
+}
+
+
+
+
+#courses-catalog{
+	padding: 50px 0;
+	background-color: #F4F4F4;
+	.container-manual{
+		margin: 0 auto;
+		.column{ 
+			margin: 10px;
+			display: block;
+			height: 340px;
+			background-color: white;
+			cursor: pointer;
+			float: left;
+			text-decoration: none;
+			color: $textColor;
+			position: relative;
+			overflow: hidden;
+			&:hover{
+				@include shadow( 0 0 5px lightgray);
+				.img{
+					img{
+						filter: brightness(80%);
+					}
+				}
+			}
+			.img{
+				img{
+					width: 100%;
+					height: 150px;
+				}
+			}
+			.contents{
+				padding: 8px;
+				h6{
+					font-size: 17px;
+				}
+				p{
+					padding: 8px 0;
+					color: lighten($textColor, 30%);
+				}
+			}
+			.column-footer{
+				padding: 8px;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				position: absolute;
+				bottom: 0;
+				.icon{
+					width: 50%;
+					float: left;
+					color: lighten($textColor, 30%);
+					i{
+						font-size: 19px;
+						margin-right: 3px;
+						color: #98A4B1;
+					}
+					span{
+						font-size: 13px;
+					}
+				}
+				.price{
+					width: 50%;
+					text-align: right;
+					float: right;
+					span{
+						&:first-child{
+							font-size: 19px;
+							font-weight: 600;
+							color: $mainColor;
+						}
+						&:last-child{
+							font-size: 17px;
+							color: lighten($textColor, 30%);
+						}
+					}
+				}
+			}
+		}
+	}
+	@media screen and (min-width: 1200px){
+		.container-manual{
+			width: 1164px;
+			.column{
+				width: calc(100% / 4 - 20px);
+			}
+		}
+	}
+	@media screen and (min-width: 960px) and (max-width: 1200px){
+		.container-manual{
+			width: 872px;
+			.column{
+				width: calc(100% / 3 - 20px);
+			}
+		}
+	}
+	@media screen and (min-width: 620px) and (max-width: 960px){
+		.container-manual{
+			width: 580px;
+			.column{
+				width: calc(100% / 2 - 20px);
+			}
+		}
+	}
+	@media screen and (max-width: 620px){
+		.container-manual{
+			width: 287px;
+			.column{
+				width: calc(100% - 20px);
+			}
+		}
+	}
+}
+
+#search-course{
+	background-color: #E1E3E4;
+	padding: 30px 0 15px 0;
+	.container{
+		a{
+			display: block;
+			width: 100%;
+			padding: 15px 0;
+			text-decoration: none;
+			color: white;
+			background-color: #3F73A0;
+			font-size: 25px;
+		}
+		h6{
+			padding: 15px 0;
+			margin-top: 40px;
+			font-size: 35px;
+			font-weight: 300;
+		}
+		form{
+			input[type="text"],[placeholder]{
+				color: $mainColor;
+				width: 100%;
+				padding: 15px 0;
+				border: 1px solid #3F73A0;
+				font-size: 25px;
+				font-weight: 300;
+				text-align: center;
+			}
+			input[type="submit"]{
+				padding: 15px 43px;
+				color: white;
+				border: 1px solid transparent;
+				@include border-radius(2px);
+				background-color: $mainColor;
+				font-size: 25px;
+				margin: 15px 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,74 @@
+#shopping-wrap{
+	.container-fluid{
+	padding:0px;
+	.container{
+		padding:0px;
+	}
+
+	// SHOPPING CART
+	.shopping-cart{
+		height:120px;
+		background:$mainColor;
+		h1{
+			color:white;
+		}
+		a{
+		padding-top:30px;
+		color:white;
+		text-decoration: none;
+		display: inline-block;
+		&:hover{
+			color: lightgrey;
+			@include transition(0.5s);
+			}
+		}
+		span{
+			color: white;
+		}
+	}
+
+	// COURSE NUMBER
+		.course-number{
+			h4{
+				padding-top:25px;
+				padding-bottom:14px;
+			}
+		}
+
+	// KEEP SHOPPING
+	.keep-shopping{
+		.container{
+			height: 300px;
+			border: 1px solid #EEEEEE;
+			border-radius:2px;
+			padding-top:42px;
+			box-shadow: 0px 0px 1px #888888;
+		}
+		i{
+			font-size: 8em;
+			color:#C0C0C0;
+		}
+		a{
+			text-decoration: none;
+			padding:12px 17px;
+			background:#17AA1C;
+			color: white;
+			&:hover{
+				background:#159D1A;
+			}
+		}
+		p{
+			padding-top:28px;
+			padding-bottom:17px;
+		}
+	}
+	.saved-later{
+		h4{
+			padding-top:37px;
+		}
+		p{
+			padding-top:10px;
+		}
+	}
+}
+}

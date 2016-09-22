@@ -1,0 +1,102 @@
+#myCourses-wrap{
+	
+.container-fluid{
+	padding:0px;
+
+	// MY COURSES
+	.mycourses{
+		height:138px;
+		background:$mainColor;
+		h1{
+			padding-top:55px;
+			color:white;
+		}
+		a{
+			color: white;
+			border-bottom:2px solid #8BD58D;
+			padding-bottom:3px;
+			text-decoration: none;
+		}
+	}
+
+	// FILTER
+	.filter{
+		p{
+			color: grey;
+			display: inline-block;
+			padding-top:33px;
+			
+		}
+		.first{
+				padding-right:160px;
+			}
+	}
+
+	// ENROLL
+	.enroll{
+		.dropdown{
+			display: inline-block;
+			button{
+				padding:12px 15px;
+				border-radius:2px;
+			}
+			&:first-child,{
+				padding-right:41px;
+			}
+			&:nth-child(2), &:nth-child(3){
+				padding-right:15px;
+			}
+		}
+		button{
+			&:last-child{
+					background-color:#B1B1B1;
+					border-radius:1px;
+					color:#DEDEDE;
+				}
+		}
+		.reset{
+			background-color:#F4F4F4;
+		}
+		input{
+			padding:10px 10px;
+		}
+		.fa-search{
+			padding: 8px 0px;
+
+		}
+		.btn{
+			margin-top: -2px;
+		}
+		.search-course{
+			float: right;
+		}
+	}
+
+	// COURSES LIST
+	.courses-list{
+		padding-top:40px;
+		.thumbnail{
+			text-decoration: none;
+			&:hover{
+				box-shadow: 0px 0px 3px #888888;
+				opacity: 0.8;
+				text-decoration: none;
+			}
+			h5, p, strong{
+				text-decoration: none;
+				font-size: 15px;
+			}
+			h4{
+				text-decoration: none;
+				color: #34AC71;
+				font-size: 17px;
+			}
+
+		}
+		.yazi{
+				height: 105px;
+				border-bottom:2px solid lightgrey;
+			}
+	}
+}
+}
