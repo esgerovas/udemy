@@ -20,71 +20,128 @@
         src: url("/assets/fonts/Roboto-Regular.ttf")
             }
 Try it Yourself »
-        body {
+        body, html{
             font-family: 'Roboto';
+            background-color: #287EA2;
         }
         .fa-btn {
             margin-right: 6px;
         }
+        .margin{
+            margin-left:15px;
+        }
+        .container-fluid{
+           /* background-image: url("/assets/images/backg.jpg");
+            background-attachment: fixed;
+            background-position: center;*/
+            background-color: #287EA2;
+
+        }
+        .panel-default {
+            border-radius: none;
+            margin: 40px 0;
+        }
+        .panel-default .head .image{
+            /*34495e*/
+            width: 100px;
+            margin: 0 auto;
+        }
+        .panel-default .head .image img{
+            margin-top: 15px;
+            width: 100%;
+            border: 3px solid #34495E;
+            -webkit-border-radius: 50%; 
+            -moz-border-radius: 50%;
+            border-radius: 50%; 
+        }
+        .panel-default .head-content{
+            margin: 10px 0;
+            color: #34495E;
+        }
+        .panel-body{
+            padding: 0 25px;
+        }
+        @media screen and (max-width: 480px){
+            .form-group button{
+                width: 100%;
+                display: block;
+                font-size: 13px;
+            }
+            .form-group a{
+                width: 100%;
+                display: block;
+                text-align: center;
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="row main">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading"><span>Xoş Gəlmisiniz</span></div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
+<div class="container-fluid">
+    <div class="container">
+        <div class="row main">
+            <div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                <div class="panel panel-default" >
+                    <div class="head text-center">
+                    <div class="image">
+                        <img src="/assets/images/login.png">
+                    </div>
+                    <div class="head-content">
+                        <span>Girişinizi təsdiqləyin</span>
+                    </div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+                            {{ csrf_field() }}
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Email Adress</label>
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="margin control-label">Email Adress</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
+                                <div class="col-md-12">
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
 
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Şifrə</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Məni Xatırla
-                                    </label>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
-                        </div>
+                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                                <label for="password" class="margin control-label">Şifrə</label>
 
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i> Daxil Ol
-                                </button>
+                                <div class="col-md-12">
+                                    <input id="password" type="password" class="form-control" name="password">
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Şifrəni unutmusunuz ? </a>
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="remember"> Məni Xatırla
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="fa fa-btn fa-sign-in"></i> Daxil Ol
+                                    </button>
+
+                                    <a class="btn btn-link pull-right" href="{{ url('/password/reset') }}">Şifrəni unutmusunuz ? </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
