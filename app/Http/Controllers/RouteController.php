@@ -5,27 +5,27 @@ use App\Http\Requests;
 class RouteController extends Controller
 {
 	function home(){
-		return view('udemy.home');
+		return view('website.home');
 	}
   	function courses() {
-	   	return view('udemy.courses');
+	   	return view('website.courses');
 	}
 	function categories() {
-	    return view('udemy.course.categories');
+	    return view('website.course.categories');
 	}
 	function course() {
-	    return view('udemy.course.course');
+	    return view('website.course.course');
 	}
 	function shopping() {
-	    return view('udemy.course.shopping');
+	    return view('website.course.shopping');
 	}
 	function my_courses() {
-	    return view('udemy.course.my_courses');
+	    return view('website.course.my_courses');
 	}
 	function edit_profile() {
-	    return view('udemy.course.edit_profile');
+	    return view('website.course.edit_profile');
 	}
 	function account_settings() {
-	    return view('udemy.course.account_settings');
+	    return view('website.course.account_settings');
 	}
 }

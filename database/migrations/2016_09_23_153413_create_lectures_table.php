@@ -17,7 +17,8 @@ class CreateLecturesTable extends Migration
             $table->string('name', 150);
             $table->string('slug', 150)->unique();
             $table->text('text');
-            $table->integer('order',10);
+            $table->integer('order', false, true)->length(10);
+            $table->integer('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

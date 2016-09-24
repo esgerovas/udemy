@@ -13,10 +13,9 @@ class CreateTeachersTable extends Migration
     public function up()
     {
         Schema::create('teachers', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id',11);
             $table->string('name',30);
             $table->string('surname',30);
-            $table->integer('age',3);
             $table->string('job',50);
             $table->text('biography');
             $table->string('email',50)->unique();
@@ -28,6 +27,7 @@ class CreateTeachersTable extends Migration
             $table->string('image',50);
             $table->string('password',50);
             $table->string('number',20)->unique();
+            $table->integer('age', false, true)->length(3);
             $table->timestamps();
         });
     }
