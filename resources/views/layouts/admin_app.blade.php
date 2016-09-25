@@ -102,8 +102,8 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
                 <div class="pull-right">
-                <a href="{{ url('/logout') }}" class="btn btn-primary btn-flat" style="margin-top:7px;"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
-                </div>
+                <a href="{{ url('/admin/logout') }}" class="btn btn-primary btn-flat" style="margin-top:7px;"><i class="fa fa-btn fa-sign-out"></i>Logout</a>
+              
             
           </li>
           <!-- Control Sidebar Toggle Button -->
