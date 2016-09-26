@@ -7,54 +7,6 @@
 		font-weight: 600;
 	}
 	.container-fluid{
-		.row{
-			margin: 20px -15px;
-		}
-		tr{
-			margin: 2px 0;
-			.head{
-				font-size: 19px;
-				padding: 10px 17px;
-				font-weight: 600;
-				color: white;
-				background-color: #00C0EF;
-				@include border-radius(2px);
-			}
-			.courseName{
-				width: 100%;
-				font-size: 17px;
-				padding: 10px;
-				border: 2px solid #ECF0F5;
-				color: white;
-				@include border-radius(2px);
-				background-color: $mainColor;
-			}
-			.update{
-				a{
-					display: block;
-					padding: 11px 15px;
-					margin-left: 10px;
-					margin: 0 2px;
-					text-align: center;
-					background-color: #00A65A;
-					@include border-radius(2px);
-					color: white;
-					font-weight: 400;
-				}
-			}
-			.delete{
-				a{
-					display: block;
-					padding: 11px 15px;
-					margin: 2px 0;
-					text-align: center;
-					background-color: #DD4B39;
-					@include border-radius(2px);
-					color: white;
-					font-weight: 400;
-				}
-			}
-		}
 	}
 }
 

@@ -1,7 +1,7 @@
 @extends("layouts.admin_app")
 @section('content')
 <section id="courseCreate">
-	<h1>Dərslər əlavə et</h1>
+	<h1>Menu əlavə et</h1>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">

@@ -31,9 +31,9 @@
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
   
   <!-- iconsWebSite -->
-  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/iconsWebSite.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{url('/dist/css/iconsWebSite.css') }}">
   <!-- Custom stylesheet -->
-  <link rel="stylesheet" type="text/css" href="{{url('/assets/css/custom/style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{url('/dist/css/styleAdmin.css')}}">
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -146,8 +146,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="/admin/courses"><i class="fa fa-circle-o"></i>Bütün dərslər</a></li>
-            <li><a href="/admin/add-course"><i class="fa fa-circle-o"></i>Dərs əlavə et</a></li>
+            <li class="active"><a href="#"><i class="fa fa-circle-o"></i>Bütün dərslər</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i>Dərs əlavə et</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -189,8 +189,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i>Menular</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Alt Menular</a></li>
+            <li><a href="/admin/courses"><i class="fa fa-circle-o"></i>Menular</a></li>
+            <li><a href="/admin/add-course"><i class="fa fa-circle-o"></i>Alt Menular</a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i>Dərs səviyyələri</a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i>Dərs dilləri</a></li>
           </ul>

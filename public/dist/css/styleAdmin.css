@@ -1,0 +1,96 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../fonts/OpenSans-Regular.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url(../../fonts/OpenSans-Semibold.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../../fonts/OpenSans-Bold.ttf) format("truetype"); }
+body {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6, li, ul, p {
+  margin: 0; }
+
+ul, li {
+  list-style: none;
+  padding: 0; }
+
+.clearFix {
+  clear: both; }
+
+#allCourse {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #allCourse h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+
+#courseCreate {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #courseCreate h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+  #courseCreate .container-fluid .row .colorBlue {
+    background-color: #00C0EF;
+    padding: 15px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+  #courseCreate .container-fluid .row h2 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+    padding: 8px 0;
+    color: white; }
+  #courseCreate .container-fluid .row ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    color: white; }
+  #courseCreate .container-fluid .row form {
+    padding: 5px 0; }
+    #courseCreate .container-fluid .row form select {
+      width: 50px;
+      padding: 1px 0; }
+    #courseCreate .container-fluid .row form input[type="text"] {
+      width: calc(100% - 55px);
+      border: 1px solid lightgray;
+      padding: 3px 0;
+      text-indent: 10px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px; }
+    #courseCreate .container-fluid .row form input[type="submit"] {
+      border: 1px solid transparent;
+      background-color: #3880ab;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      padding: 5px 10px;
+      float: right;
+      color: white;
+      margin: 10px 2px; }
+
+#allAuthor_wrap {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #allAuthor_wrap h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+  #allAuthor_wrap table {
+    padding: 20px !important; }
+
+/*# sourceMappingURL=styleAdmin.css.map */
