@@ -17,4 +17,14 @@ class AdminController extends Controller
     	// return Auth::guard('admin')->user();
     	return view('admin.dashboard');
     }
+
+    public function courses(){
+    	return view('admin.viewAllCourse');
+    }
+    public function addCourse(){
+    	return view('admin.courseCreate');
+    }
+    public function unsignedAuthors(){
+    	return view('admin.unsignedAuthors');
+    }
 }

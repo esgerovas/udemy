@@ -1,0 +1,117 @@
+#allCourse{
+	font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	h1{
+		padding: 20px;
+		font-size: 25px;
+		font-weight: 600;
+	}
+	.container-fluid{
+		.row{
+			margin: 20px -15px;
+		}
+		tr{
+			margin: 2px 0;
+			.head{
+				font-size: 19px;
+				padding: 10px 17px;
+				font-weight: 600;
+				color: white;
+				background-color: #00C0EF;
+				@include border-radius(2px);
+			}
+			.courseName{
+				width: 100%;
+				font-size: 17px;
+				padding: 10px;
+				border: 2px solid #ECF0F5;
+				color: white;
+				@include border-radius(2px);
+				background-color: $mainColor;
+			}
+			.update{
+				a{
+					display: block;
+					padding: 11px 15px;
+					margin-left: 10px;
+					margin: 0 2px;
+					text-align: center;
+					background-color: #00A65A;
+					@include border-radius(2px);
+					color: white;
+					font-weight: 400;
+				}
+			}
+			.delete{
+				a{
+					display: block;
+					padding: 11px 15px;
+					margin: 2px 0;
+					text-align: center;
+					background-color: #DD4B39;
+					@include border-radius(2px);
+					color: white;
+					font-weight: 400;
+				}
+			}
+		}
+	}
+}
+
+#courseCreate{
+	font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+	font-weight: 400;
+	h1{
+		padding: 20px;
+		font-size: 25px;
+		font-weight: 600;
+	}
+	.container-fluid{
+		.row{
+			.colorBlue{
+				background-color: #00C0EF;
+				padding: 15px;
+				margin-bottom: 30px;
+				@include border-radius(2px);
+			}
+			h2{
+				text-align: center;
+				font-size: 21px;
+				font-weight: 400;
+				padding: 8px 0;
+				color: white;
+			}
+			ul{
+				li{
+					padding: 5px 0;
+					cursor: pointer;
+					color: white;
+				}
+			}
+			form{
+				padding: 5px 0;
+				select{
+					width: 50px;
+					padding: 1px 0;
+				}
+				input[type="text"]{
+					width: calc(100% - 55px);
+					border: 1px solid lightgray;
+					padding: 3px 0;
+					text-indent: 10px;
+					@include border-radius(2px);
+
+				}
+				input[type="submit"]{
+					border: 1px solid transparent;
+					background-color: darken(#63A5CC, 15%);
+					@include border-radius(2px);
+					padding: 5px 10px;
+					float: right;
+					color: white;
+					margin: 10px 2px;
+				}
+			}
+		}
+	}
+}

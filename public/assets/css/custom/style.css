@@ -2810,4 +2810,116 @@ h2 {
     font-size: 25px;
     margin: 15px 0; }
 
+#allCourse {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #allCourse h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+  #allCourse .container-fluid .row {
+    margin: 20px -15px; }
+  #allCourse .container-fluid tr {
+    margin: 2px 0; }
+    #allCourse .container-fluid tr .head {
+      font-size: 19px;
+      padding: 10px 17px;
+      font-weight: 600;
+      color: white;
+      background-color: #00C0EF;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px; }
+    #allCourse .container-fluid tr .courseName {
+      width: 100%;
+      font-size: 17px;
+      padding: 10px;
+      border: 2px solid #ECF0F5;
+      color: white;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background-color: #994399; }
+    #allCourse .container-fluid tr .update a {
+      display: block;
+      padding: 11px 15px;
+      margin-left: 10px;
+      margin: 0 2px;
+      text-align: center;
+      background-color: #00A65A;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      color: white;
+      font-weight: 400; }
+    #allCourse .container-fluid tr .delete a {
+      display: block;
+      padding: 11px 15px;
+      margin: 2px 0;
+      text-align: center;
+      background-color: #DD4B39;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      color: white;
+      font-weight: 400; }
+
+#courseCreate {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #courseCreate h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+  #courseCreate .container-fluid .row .colorBlue {
+    background-color: #00C0EF;
+    padding: 15px;
+    margin-bottom: 30px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+  #courseCreate .container-fluid .row h2 {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 400;
+    padding: 8px 0;
+    color: white; }
+  #courseCreate .container-fluid .row ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    color: white; }
+  #courseCreate .container-fluid .row form {
+    padding: 5px 0; }
+    #courseCreate .container-fluid .row form select {
+      width: 50px;
+      padding: 1px 0; }
+    #courseCreate .container-fluid .row form input[type="text"] {
+      width: calc(100% - 55px);
+      border: 1px solid lightgray;
+      padding: 3px 0;
+      text-indent: 10px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px; }
+    #courseCreate .container-fluid .row form input[type="submit"] {
+      border: 1px solid transparent;
+      background-color: #3880ab;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      padding: 5px 10px;
+      float: right;
+      color: white;
+      margin: 10px 2px; }
+
+#allAuthor_wrap {
+  font-family: "Open Sans",Tahoma,Helvetica,Arial,sans-serif;
+  font-weight: 400; }
+  #allAuthor_wrap h1 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600; }
+  #allAuthor_wrap table {
+    padding: 20px !important; }
+
 /*# sourceMappingURL=style.css.map */
