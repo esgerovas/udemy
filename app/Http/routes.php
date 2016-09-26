@@ -38,4 +38,7 @@ Route::get('/account-settings', 'RouteController@account_settings');
    //Route::get('admin/password/reset/{token?}','AdminAuth\PasswordController@showResetForm');
 
     Route::get('/admin', 'AdminController@index');
+    Route::get('/admin/courses','AdminController@courses');
+    Route::get('/admin/add-course', 'AdminController@addCourse');
+    Route::get('/admin/unsigned-authors', 'AdminController@unsignedAuthors');
 // });  

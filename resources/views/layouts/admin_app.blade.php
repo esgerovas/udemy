@@ -29,6 +29,12 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  
+  <!-- iconsWebSite -->
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/iconsWebSite.css') }}">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{{url('/assets/css/custom/style.css')}}">
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -140,8 +146,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>Bütün dərslər</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i>Dərs əlavə et</a></li>
+            <li class="active"><a href="/admin/courses"><i class="fa fa-circle-o"></i>Bütün dərslər</a></li>
+            <li><a href="/admin/add-course"><i class="fa fa-circle-o"></i>Dərs əlavə et</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -154,7 +160,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Təsdiqlənmiş Müəlliflər</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>Təsdiqlənməmiş Müəlliflər</a></li>
+            <li><a href="/admin/unsigned-authors"><i class="fa fa-circle-o"></i>Təsdiqlənməmiş Müəlliflər</a></li>
             <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i>Müəllif əlavə et</a></li>
           </ul>
         </li>
@@ -246,5 +252,6 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 </body>
 </html>
