@@ -36,4 +36,16 @@ Route::get('/account-settings', 'RouteController@account_settings');
     Route::get('/admin/language/{id}', 'AdminPages\LanguageController@delete');
     Route::put('/admin/language/{id}', 'AdminPages\LanguageController@update');
 
+// ==================Menu Routes================
+    Route::get('/admin/menu', 'AdminPages\MenuController@index');
+    Route::post('/admin/menu', 'AdminPages\MenuController@store');
+    Route::put('/admin/menu/{id}', 'AdminPages\MenuController@update');
+    Route::get('/admin/menu/{id}', 'AdminPages\MenuController@delete');
+
+    Route::post('/admin/menu/{id}/submenu', 'AdminPages\SubmenuController@store');
+    Route::put('/admin/submenu/{id}', 'AdminPages\SubmenuController@update');
+    Route::get('/admin/submenu/{id}', 'AdminPages\SubmenuController@delete');
+
+
+
     

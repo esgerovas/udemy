@@ -16,8 +16,7 @@
                   <th style="width: 30px">Sil</th>
                 </tr>
                  @foreach($data as $level)
-                    <tr>{{-- 
-                        <td>{{$level->id}}</td> --}}
+                    <tr>
                         <form action="{{url('/admin/level/'.$level->id)}}" method="post">
                         {{csrf_field()}}
                         {{ method_field('PUT') }}
