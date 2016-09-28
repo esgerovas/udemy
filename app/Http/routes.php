@@ -1,4 +1,5 @@
 <?php
+Route::auth();
 
 Route::get('/', 'RouteController@home');
 Route::get('/courses', 'RouteController@courses');
@@ -8,23 +9,19 @@ Route::get('/shopping-card', 'RouteController@shopping');
 Route::get('/my-courses', 'RouteController@my_courses');
 Route::get('/edit-profile', 'RouteController@edit_profile');
 Route::get('/account-settings', 'RouteController@account_settings');
-// Route::group(['middleware' => ['web']], function(){
-	Route::auth();
-	//Route::get('/home', 'HomeController@index');
-// });
-// Route::group(['middleware' => ['web']], function () {
-    //Login Routes...
+
+//Login Routes...
     Route::get('/admin/login','AdminAuth\AuthController@showLoginForm');
     Route::post('/admin/login','AdminAuth\AuthController@login');
     Route::get('/admin/logout','AdminAuth\AuthController@logout');
-    // Registration Routes...
-    Route::get('admin/register', 'AdminAuth\AuthController@showRegistrationForm');
-    Route::post('admin/register', 'AdminAuth\AuthController@register');
+// Registration Routes...
+    Route::get('/admin/register', 'AdminAuth\AuthController@showRegistrationForm');
+    Route::post('/admin/register', 'AdminAuth\AuthController@register');
     Route::get('/admin', 'AdminPages\AdminController@index');
     //Route::post('admin/password/email','AdminAuth\PasswordController@sendResetLinkEmail');
     //Route::post('admin/password/reset','AdminAuth\PasswordController@reset');
    //Route::get('admin/password/reset/{token?}','AdminAuth\PasswordController@showResetForm');
-// });  
+ 
 // ==================level Routes================
     Route::get('/admin/level', 'AdminPages\LevelController@index');
     Route::post('/admin/level', 'AdminPages\LevelController@store');
@@ -46,6 +43,9 @@ Route::get('/account-settings', 'RouteController@account_settings');
     Route::put('/admin/submenu/{id}', 'AdminPages\SubmenuController@update');
     Route::get('/admin/submenu/{id}', 'AdminPages\SubmenuController@delete');
 
-
+// ==================User Register================
+    Route::post('/register','Auth\AuthController@register');
+    // Route::post('/login','Auth\AuthController@login');
+    // Route::get('/logout','Auth\AuthController@logout');
 
     

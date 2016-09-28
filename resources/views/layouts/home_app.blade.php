@@ -28,17 +28,28 @@
                         <i class="fa fa-times" aria-hidden="true"></i>
                     </div>
                     <div class="writeInfo">
-                        <h4>Login to your Grapes account!</h4>
-                        <form>
-                            <p>Login with your email</p>
-                            <input type="email" name="" placeholder="E-mail">
-                            <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
-                            <input type="password" name="" placeholder="Password">
-                            <!-- <i class="fa fa-lock" aria-hidden="true"></i> -->
-                            <input type="submit" name="" value="Login">
-                            <h6>or <a href="#">Forgot Password</a></h6>
+                        <h4>Hesaba giriş</h4>
+                        <form  role="form" method="POST" action="{{ url('/login') }}">
+                        {{ csrf_field() }}
+                            <p>Email adresinizlə girin...</p>
+                            <input type="email" name="email" placeholder="E-mail" value="{{ old('email') }}" class="{{ $errors->has('email') ? ' has-error' : '' }}">
+                             @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password" placeholder="Şifrə" class="{{ $errors->has('password') ? ' has-error' : '' }}">
+                            @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="submit" name="" value="Giriş">
+                            <h6><a href="#">Şifrənizi unutmusunuz?</a></h6>
                         </form>
-                        <h5>Don't have an account? <button>Sign up</button></h5>
+                        <h5>Hesabınız yoxdur? <button>Qeydiyyat</button></h5>
                     </div>
                 </div>
             </div>
@@ -50,23 +61,46 @@
                 <div class="sign">
                     <div class="exit">
                         <i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
+                    </div>                      
                     <div class="writeInfo">
-                        <h4>Sign up and start learning!</h4>
-                        <form>
-                            <input type="text" name="" placeholder="Full Name">
-                            <!-- <i class="fa fa-users" aria-hidden="true"></i> -->
-                            <input type="email" name="" placeholder="E-mail">
-                            <!-- <i class="fa fa-envelope" aria-hidden="true"></i> -->
-                            <input type="password" name="" placeholder="Password">
-                            <!-- <i class="fa fa-lock" aria-hidden="true"></i> -->
-                            <input type="checkbox" name="">
-                            <p>Be the first one to know about new courses and great offers!</p>
+                        <h4>Qeydiyyatdan keçin!</h4>
+
+                        <form  role="form" method="POST" action="{{ url('/register') }}">
+                            {{ csrf_field() }}
+
+                            <input type="text" name="name" placeholder="Ad və Soyad" class="{{ $errors->has('name') ? ' has-error' : '' }}">
+                            @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="email" name="email" placeholder="E-mail" class="{{ $errors->has('email') ? ' has-error' : '' }}">
+                             @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password" placeholder="Şifrə" class="{{ $errors->has('password') ? ' has-error' : '' }}">
+                            @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password_confirmation" placeholder="Şifrəni təsdiqlə" class="{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                             @if ($errors->has('password_confirmation'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                </span>
+                            @endif
+
                             <div class="clearFix"></div>
-                            <input type="submit" name="" value="Sign Up">
-                            <h6>By signing up, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy.</a></h6>
+                            <input type="submit" name="" value="Qeydiyyat">
+                            <h6>Qeydiyatdan keçərək bizim <a href="#">İstifadəçi şərtləri</a>ni qəbul etdiniz.</a></h6>
                         </form>
-                        <h5>Already have an account? <button>Login</button></h5>
+                        <h5>Sizin artıq hesabınız var? <button>Daxil ol</button></h5>
                     </div>
                 </div>
             </div>
@@ -87,19 +121,26 @@
             <div class="navigator">
                 <i class="navigat fa fa-bars" aria-hidden="true"></i>
                 <div class="sidebar">
-                    <!-- <div class="text-center imgProfile">
+                @if(Auth::user())
+                    <div class="text-center imgProfile">
                         <div>
-                            <img src="assets/images/smileWhite.png">
-                            <span>Alim</span>
+                            <img src="assets/images/{{ Auth::user()->image }}">
+                            <span>{{ Auth::user()->name }}</span>
                         </div>
-                    </div> -->
+                    </div>
+                @endif
                     <ul>
                         <li class="buttonBrowse"><a href="{{url('/courses')}}">Courses <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Partners</a></li>
-                        <li><button class="loggin">Login</button></li>
-                        <li><button class="sin">Sign Up</button></li>  
+                    @if(Auth::user())
+                     <li><a href="{{ url('/logout') }}" style="color:#993399;">Logout</a></li>
+                    @else
+                       <li><button class="loggin">Login</button></li>
+                       <li><button class="sin">Sign Up</button></li>  
+                    @endif
+                        
                     </ul>
                 </div>
 
@@ -131,8 +172,19 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Partners</a></li>
-                    <li><button class="loggin">Login</button></li>
-                    <li><button class="sin">Sign Up</button></li>
+
+                     @if(Auth::user())
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}<span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                                <li><a href="{{ url('/logout') }}" class="btn btn-default"><i class="fa fa-btn fa-sign-out"></i> Çıxış</a></li>
+                          </ul>
+                        </li>
+
+                    @else
+                       <li><button class="loggin">Login</button></li>
+                       <li><button class="sin">Sign Up</button></li>  
+                    @endif
                 </ul>
             </div>
             <div class="clearFix"></div>
@@ -225,3 +277,12 @@
     <script src="/assets/js/footer-wrap.js"></script>
   </body>
 </html>
+
+
+        <?php 
+            if($errors->has('email') || $errors->has('password')) {
+        ?>
+            <script type="text/javascript">
+            $("#main-Page .login-First").css({"display":"block"});
+           </script>
+        <?php  } ?>

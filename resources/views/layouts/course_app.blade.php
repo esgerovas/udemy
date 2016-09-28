@@ -21,7 +21,92 @@
     <!-- This page for Alim -->
     <section id="header-wrap">
         <!-- up line -->
-        <div class="line"></div>    
+        <div class="line"></div>   
+        <!-- Login -->
+        <div class="login-First">
+            <div class="login">
+                <div class="log">
+                    <div class="exit">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <div class="writeInfo">
+                        <h4>Hesaba giriş</h4>
+                        <form  role="form" method="POST" action="{{ url('/login') }}">
+                        {{ csrf_field() }}
+                            <p>Email adresinizlə girin...</p>
+                            <input type="email" name="email" placeholder="E-mail" class="{{ $errors->has('email') ? ' has-error' : '' }}">
+                             @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password" placeholder="Şifrə" class="{{ $errors->has('password') ? ' has-error' : '' }}">
+                            @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="submit" name="" value="Giriş">
+                            <h6><a href="#">Şifrənizi unutmusunuz?</a></h6>
+                        </form>
+                        <h5>Hesabınız yoxdur? <button>Qeydiyyat</button></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- signUP -->
+        <div class="signUP-First">
+            <div class="signUP">
+                <div class="sign">
+                    <div class="exit">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>                      
+                    <div class="writeInfo">
+                        <h4>Qeydiyyatdan keçin!</h4>
+
+                        <form  role="form" method="POST" action="{{ url('/register') }}">
+                            {{ csrf_field() }}
+
+                            <input type="text" name="name" placeholder="Ad və Soyad" class="{{ $errors->has('name') ? ' has-error' : '' }}">
+                            @if ($errors->has('name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="email" name="email" placeholder="E-mail" class="{{ $errors->has('email') ? ' has-error' : '' }}">
+                             @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password" placeholder="Şifrə" class="{{ $errors->has('password') ? ' has-error' : '' }}">
+                            @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                            @endif
+
+                            <input type="password" name="password_confirmation" placeholder="Şifrəni təsdiqlə" class="{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+                             @if ($errors->has('password_confirmation'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                </span>
+                            @endif
+
+                            <div class="clearFix"></div>
+                            <input type="submit" name="" value="Qeydiyyat">
+                            <h6>Qeydiyatdan keçərək bizim <a href="#">İstifadəçi şərtləri</a>ni qəbul etdiniz.</a></h6>
+                        </form>
+                        <h5>Sizin artıq hesabınız var? <button>Daxil ol</button></h5>
+                    </div>
+                </div>
+            </div>
+        </div> 
         <!-- logo -->
         <div class="logo">
             <h1>grapes</h1>
@@ -153,7 +238,8 @@
         </div>
         <!-- My Courses -->
         <div class="right-panel">
-            <div class="myCourses"><a href="{{url('/my-courses')}}">My Courses</a>
+         @if(Auth::user())
+            <div class="myCourses myCourses1"><a href="{{url('/my-courses')}}">Kurslarım</a>
                 <div class="quickStart">
                     <div><h4>Quick Start</h4></div>
                     <a href="#">
@@ -170,72 +256,13 @@
                     </a>
                     <div class="text-right"><a href="#">See All <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></div>
                 </div>
-
             </div>
-            <!-- Shopping Cart -->
-            <div class="shopping">
-                <a href="{{url('shopping-card')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                <div class="shoppingCart">
-                    <div>
-                        <div><h4>Shopping Cart</h4></div>
+            <div class="myCourses myCourses2" style="width:150px; border-left:0;"><a>{{ Auth::user()->name}}</a>
                 
-                        <div>
-                            <ul>
-                                <a href="#"><img src="assets/images/2016.png"></a>
-                                <a href="#">PHP, Javascript, MySql (Frontend and Backend)</a>
-                                <p>By Infinite Skills, Hight</p>
-                            </ul>
-                            <ul><b>$19</b><del>$40</del></ul>
-                            <li class="clearFix"></li>
-                        </div>
-
-                        <div>
-                            <ul>
-                                <a href="#"><img src="assets/images/2016.png"></a>
-                                <a href="#">Jquery</a>
-                                <p>By Infinite Skills, Hight</p>
-                            </ul>
-                            <ul><b>$11</b><del>$45</del></ul>
-                            <li class="clearFix"></li>
-                        </div>
-
-                        <div class="total text-right"><span>Your Total:</span>&nbsp;<span>$30</span></div>
-                        
-                        <div>
-                            <form>
-                                <input type="submit" name="" value="Go to Cart">
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- notification -->
-            <div class="bell">
-                <a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
-
-                <div class="notifications">
-                    <div>
-                        <div>
-                            <h4>Notification</h4>
-                            <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
-                            <li class="clearFix"></li>
-                        </div>
-                
-                        <div class="text-center">
-                            <ul>
-                                <li>No notifications.</li>
-                            </ul>
-                        </div>
-
-                        <div class="empty"></div>
-                    </div>
-                </div>
-
             </div>
             <!-- smile -->
             <div class="smile">
-                <a href="{{url('/account-settings')}}"><img src="assets/images/smile.png"></a>
-
+                <a href="{{url('/account-settings')}}"><img src="assets/images/{{ Auth::user()->image }}"></a>
                 <div class="profil_menu">
                     <ul>
                         <li><a href="#">My Profile</a></li>
@@ -247,11 +274,14 @@
                         </li>
                         <li><a href="{{url('/edit-profile')}}">Account Setting</a></li>
                         <li><a href="#">Grapes Credits</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{ url('/logout') }}">Logout</a></li>
                     </ul>
                 </div>
-
             </div>
+            @else
+                <div class="qeydiyyat"><button class="loggin">Login</button></div>
+                <div class="qeydiyyat" ><button class="sin">Sign Up</button></div>
+            @endif
         </div>
         <div class="clearFix"></div>
     </section>
@@ -298,3 +328,17 @@
     <script src="/assets/js/footer-wrap.js"></script>
   </body>
 </html>
+         @if(Auth::user())
+                <script type="text/javascript">
+                if($(window).width()<960 && $(window).width()>760){
+                    $(".search").css({
+                        "width": 'calc(100% - 401px)'
+                    });
+                }
+                else{
+                     $(".search").css({
+                        "width": 'calc(100% - 551px)'
+                    });
+                }
+            </script>
+        @endif

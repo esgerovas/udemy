@@ -27,6 +27,213 @@ body{
 			height: 100%;
 		}
 	}
+	//login
+	.login-First{
+		display: none;
+	}
+	.login{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 12323;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(0,0,0,.6);
+		.log{
+			width: 420px;
+			min-height: 300px;
+			background-color: #EDEFF1;
+			@include border-radius(6px);
+			.exit{
+				text-align: right;
+				padding: 7px 10px;
+				i{
+					font-size: 24px;
+					cursor: pointer;
+				}
+			}
+			.writeInfo{
+				padding: 0 20px 20px 20px;
+				p{
+					font-size: 14px;
+				}
+				h4{
+					font-size: 24px;
+					font-weight: 300;
+					text-align: center;
+					padding-bottom: 10px;
+					margin-bottom: 14px;
+					border-bottom: 1px solid lightgray;
+					color: #355368;
+				}
+				form{
+					padding: 0 15px;
+					input[type="email"],input[type="password"]{
+						width: 100%;
+						border: 1px solid darken(lightgray, 15%);
+						@include border-radius(4px);
+						margin: 5px 0;
+						background-color: white;
+						padding: 11px 0;
+						text-indent: 15px;
+						font-size: 18px;
+						font-weight: 300;
+						color: #7893AB;
+					}
+					input:focus{
+						border: 1px solid #7893AB;
+					}
+					input[type="submit"]{
+						width: 100%;
+						padding: 13px 0;
+						font-size: 16px;
+						font-weight: 600;
+						border: none;
+						color: white;
+						background-color: $mainColor;
+						@include border-radius(2px);
+						margin: 30px 0 8px 0;
+					}
+					h6{
+						font-size: 16px;
+						margin-bottom: 30px;
+						text-align: center;
+						a{
+							color: #2979B0;
+							text-decoration: none;
+							&:hover{
+								color: darken(#7893AB, 15%);
+							}
+						}
+					}
+				}
+				h5{
+					font-size: 16px;
+					padding: 17px 0;
+					text-align: center;
+					border-top: 1px solid lightgray;
+					color: #355368;
+					button{
+						border: none;
+						background-color: transparent;
+						color: #2979B0;
+						font-weight: 600;
+						&:hover{
+							color: darken(#7893AB, 15%);
+						}
+					}
+				}
+			}
+		}
+	}
+	//signUP
+	.signUP-First{
+		display: none;
+	}
+	.signUP{
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 13434;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: rgba(0,0,0,.6);
+		.sign{
+			width: 420px;
+			min-height: 563px;
+			background-color: #EDEFF1;
+			@include border-radius(6px);
+			.exit{
+				text-align: right;
+				padding: 7px 10px;
+				i{
+					font-size: 24px;
+					cursor: pointer;
+				}
+			}
+			.writeInfo{
+				padding: 0 20px 20px 20px;
+				h4{
+					font-size: 24px;
+					font-weight: 300;
+					text-align: center;
+					padding-bottom: 10px;
+					margin-bottom: 14px;
+					border-bottom: 1px solid lightgray;
+					color: #355368;
+				}
+				form{
+					padding: 0 15px;
+					input[type="text"],input[type="email"],input[type="password"]{
+						width: 100%;
+						border: 1px solid darken(lightgray, 15%);
+						@include border-radius(4px);
+						margin: 5px 0;
+						padding: 11px 0;
+						text-indent: 15px;
+						background-color: white;
+						font-size: 18px;
+						font-weight: 300;
+						color: #7893AB;
+					}
+					input:focus{
+						border: 1px solid #7893AB;
+					}
+					input[type="checkbox"]{
+						margin-top: 28px;
+						border: 1px solid #7893AB;
+						margin-right: 8px;
+						float: left;
+					}
+					p{
+						margin-top: 25px;
+						margin-bottom: 40px;
+						font-size: 14px;
+					}
+					input[type="submit"]{
+						width: 100%;
+						padding: 13px 0;
+						font-size: 16px;
+						font-weight: 600;
+						border: none;
+						color: white;
+						background-color: $mainColor;
+						@include border-radius(2px);
+						margin: 20px 0 8px 0;
+					}
+					h6{
+						font-size: 10px;
+						margin-bottom: 40px;
+						a{
+							color: #2979B0;
+							text-decoration: none;
+							&:hover{
+								color: darken(#7893AB, 15%);
+							}
+						}
+					}
+				}
+				h5{
+					font-size: 16px;
+					padding: 22px 0;
+					text-align: center;
+					border-top: 1px solid lightgray;
+					color: #355368;
+					button{
+						border: none;
+						background-color: transparent;
+						color: #2979B0;
+						font-weight: 600;
+						&:hover{
+							color: darken(#7893AB, 15%);
+						}
+					}
+				}
+			}
+		}
+	}
 	//browse
 	.browse{
 		width: 111px;
@@ -124,7 +331,7 @@ body{
 	.search{
 		position: relative;
 		float: left;
-		width: calc(100% - 521px);
+		width: calc(100% - 431px);
 		input[type="text"]{
 			width: 100%;
 			height: 48px;
@@ -183,6 +390,7 @@ body{
 		border-left: 1px solid darken(#F4F4F4, 15%);
 		border-right: 1px solid darken(#F4F4F4, 15%);
 		position: relative;
+		text-align:center;
 		a{	
 			display: block;
 			padding: 14px 16px;
@@ -259,169 +467,29 @@ body{
 		}
 
 	}
-	//sebet
-	.shopping{
-		width: 60px;
+	.qeydiyyat{
+		width: 100px;
 		height: 48px;
 		background-color: white;
 		float: left;
-		border-right: 1px solid darken(#F4F4F4, 15%);
+		border-left: 1px solid darken(#F4F4F4, 15%);
 		position: relative;
-		a{
-			text-decoration: none;
-			i{
-				display: block;
-				padding: 14px 16px;
-				font-size: $mainTextSize + 9px;
-				font-weight: bold;
-				color: lighten($textColor, 35%);
-			}
+		text-align:center;
+		button{	
+			font-size: $mainTextSize;
+			padding: 13px 11px;;
+			font-weight: 600;
+			border: none;
+			background-color: transparent;
+			color: lighten($textColor, 35%);
+
 		}
 		&:hover{
 			background-color: #F4F4F4;
-			.shoppingCart{
-				@media screen and (min-width: 400px){
-					display: block;
-				}
-			}
-		}
-		.shoppingCart{
-			display: none;
-			width: 375px;
-			min-height: 240px;
-			background-color: white;
-			@include shadow(0 5px 8px 0 lightgray);
-			position: absolute;
-			top: 49px;
-			left: -315px;
-			z-index: 11;
-			div{
-				div{
-					border-bottom: 1px solid darken(#F4F4F4, 10%);
-					padding: 10px;
-					h4{
-						font-size: 16px;
-					}
-					ul{
-						&:first-child{
-							float: left;
-							width: calc(100% / 1.3);
-							a{
-								font-size: $mainTextSize;
-								color: darken(#88BCDD, 15%);
-								&:hover{
-									color: darken(#88BCDD, 25%);
-								}
-							}
-							p{
-								font-size: 12px;
-							}
-						}
-						&:nth-child(2){
-							float: right;
-							text-align: right;
-							margin-top: 5px;
-							width: calc(100% / 6.5);
-							b{
-								display: block;
-								color: $mainColor;
-							}
-						}
-						img{
-							margin-right: 10px;
-							float: left;
-						}
-					}
-					span{
-						font-size: 16px;
-						&:last-child{
-							color: $mainColor;
-						}
-					}
-					input[type="submit"]{
-						width: 100%;
-						padding: 10px 0;
-						border: none;
-						font-size: 17px;
-						background-color: $mainColor;
-						color: white;
-						@include border-radius(2px);
-						&:hover{
-							background-color: darken($mainColor, 3%);
-						}
-					}
-				}
-			}
-		}
-	}
-	//notification
-	.bell{
-		width: 60px;
-		height: 48px;
-		background-color: white;
-		float: left;
-		border-right: 1px solid darken(#F4F4F4, 15%);
-		position: relative;
-		a{
-			text-decoration: none;
-			i{
-				display: block;
-				padding: 14px 16px;
-				font-size: $mainTextSize + 9px;
-				font-weight: bold;
-				color: lighten($textColor, 35%);
-			}
-		}
-		&:hover{
-			background-color: #F4F4F4;
-			.notifications{
+			.quickStart{
 				display: block;
 			}
 		}
-		.notifications{
-			display: none;
-			width: 375px;
-			min-height: 100px;
-			background-color: white;
-			@include shadow(0 5px 8px 0 lightgray);
-			position: absolute;
-			top: 49px;
-			left: -315px;
-			z-index: 11;
-			div{
-				div{
-					border-bottom: 1px solid darken(#F4F4F4, 10%);
-					padding: 10px;
-					h4{
-						font-size: 16px;
-						display: inline-block;
-					}
-					a{
-						i{
-							padding: 0;
-							float: right;
-							font-size: 21px;
-							cursor: pointer;
-							color: lighten($textColor, 35%);
-							@include transition(all 0.3s ease);
-							&:hover{
-								color: $textColor;
-							}
-						}
-					}
-					ul{
-						li{
-							margin: 15px 0;
-							font-size: 14px;
-						}
-					}
-				}
-				.empty{
-					padding: 20px;
-				}
-			}
-		}
-		
 	}
 	//profil menu olan hisse. Logout ve s.
 	.smile{
@@ -637,13 +705,10 @@ body{
 			display: none;
 		}
 	}
-
 	@media screen and (max-width: 960px){
-		.myCourses{
-			display: none;
-		}
-		.search{
-			width: calc(100% - 411px);
+		.myCourses2{
+			width:0;
+			display:none;
 		}
 		.fixedMenu{
 			ul{
@@ -659,6 +724,18 @@ body{
 			&:hover{
 				background-color: #F4F4F4;
 			}
+		}
+	}
+	@media screen and (max-width: 760px){
+		.qeydiyyat{
+			display: none;
+		}
+		.search{
+			width: calc(100% - 291px);
+		}
+		.myCourses1{
+			width:0;
+			display:none;
 		}
 	}
 }

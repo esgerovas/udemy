@@ -166,3 +166,50 @@ function navigator(){
 	heightSideBar();
 }
 navigator();
+
+function login(){
+	$("#header-wrap .loggin").click(function() {
+		$("#header-wrap .login-First").css({"display":"block"});
+		width = $(window).width();
+		$("#header-wrap .sidebar").css({
+			transform: "translateX(-"+width+"px)",
+			opacity: "0"
+		});
+		$("#search-course .login-First a,input").css({
+			pointerEvents: "",
+			cursor: ""
+		});
+	});
+	$("#header-wrap .login-First i").click(function() {
+		$("#header-wrap .login-First").css({"display":"none"});
+	});
+	$("#header-wrap .login-First .writeInfo button").click(function() {
+		$("#header-wrap .login-First").css({"display":"none"});
+		$("#header-wrap .signUP-First").css({"display":"block"});
+	});
+}
+login();
+
+//login Page open and close
+function signUP(){
+	$("#header-wrap .sin").click(function() {
+		$("#header-wrap .signUP-First").css({"display":"block"});
+		width = $(window).width();
+		$("#header-wrap .sidebar").css({
+			transform: "translateX(-"+width+"px)",
+			opacity: "0"
+		});
+		$("#search-course .signUP-First a,input").css({
+			pointerEvents: "",
+			cursor: ""
+		});
+	});
+	$("#header-wrap .signUP-First i").click(function() {
+		$("#header-wrap .signUP-First").css({"display":"none"});
+	});
+	$("#header-wrap .signUP-First .writeInfo button").click(function() {
+		$("#header-wrap .signUP-First").css({"display":"none"});
+		$("#header-wrap .login-First").css({"display":"block"});
+	});
+}
+signUP();
