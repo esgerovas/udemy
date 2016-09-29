@@ -1460,6 +1460,8 @@ body {
 
 #course-wrap {
   width: 100%; }
+  #course-wrap .container {
+    padding: 30px 0; }
   #course-wrap h1 {
     font-size: 35px;
     font-weight: normal;
@@ -1469,25 +1471,40 @@ body {
     font-size: 15px; }
   #course-wrap .ud_i_star {
     color: #994399; }
+  #course-wrap .author {
+    margin-bottom: 10px; }
+    #course-wrap .author h2, #course-wrap .author h3 {
+      display: inline-block; }
+    #course-wrap .author a {
+      text-decoration: none; }
   #course-wrap span {
-    font-weight: normal;
-    line-height: 40px; }
-  #course-wrap span h2 {
-    font-weight: 300;
-    font-size: 13px;
-    color: #353535; }
+    font-weight: normal; }
   #course-wrap h3 {
     font-size: 15px;
     font-weight: normal;
     color: #4985B8; }
     #course-wrap h3:hover {
       color: #353535; }
+  #course-wrap .reiting {
+    padding: 7px 0; }
+  #course-wrap .startPreview {
+    padding: 15px 0;
+    margin-bottom: 5px;
+    display: block;
+    border-bottom: 1px solid lightgray; }
+    #course-wrap .startPreview span {
+      padding: 0 15px;
+      display: block;
+      padding-bottom: 7px; }
+      #course-wrap .startPreview span a {
+        text-decoration: none; }
+  #course-wrap .navbar {
+    margin: 30px 0;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray; }
   #course-wrap .video {
     height: 420px;
-    background-color: pink; }
-  #course-wrap .dolar span {
-    font-size: 33px;
-    font-weight: 700; }
+    width: 100%; }
   #course-wrap .btn-1 {
     width: 195px;
     height: 40px;
@@ -1540,47 +1557,51 @@ body {
 
 #about_use {
   background-color: #F4F4F4; }
-  #about_use p {
-    font-size: 35px;
-    font-weight: 300; }
-  #about_use .Description h6 {
-    font-size: 15px;
+  #about_use .details {
+    font-size: 16px;
     font-weight: 700;
-    line-height: 35px; }
-  #about_use .Description p {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 30px; }
-  #about_use .Description span {
-    font-weight: 300; }
-  #about_use .Description ul li {
-    font-weight: 300;
-    list-style-type: disc;
-    list-style-position: inside;
-    line-height: 25px; }
-  #about_use .Description ol li i {
-    list-style-type: none;
-    font-weight: 300;
-    line-height: 40px; }
-  #about_use .Description h1 {
-    font-size: 15px;
-    line-height: 40px;
-    color: #353535;
-    font-style: normal; }
-  #about_use .Description b i {
-    font-size: 15px;
-    line-height: 45px;
-    font-weight: 300; }
-  #about_use .Description h2 {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 45px;
-    font-style: normal; }
-  #about_use .Description ul h3 {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 20px;
-    font-style: normal; }
+    cursor: pointer;
+    color: #5074A1; }
+  #about_use .Description {
+    padding: 10px 15px; }
+    #about_use .Description h6 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 35px; }
+    #about_use .Description p {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px; }
+    #about_use .Description span {
+      font-weight: 300; }
+    #about_use .Description ul li {
+      font-weight: 300;
+      list-style-type: disc;
+      list-style-position: inside;
+      line-height: 25px; }
+    #about_use .Description ol li i {
+      list-style-type: none;
+      font-weight: 300;
+      line-height: 40px; }
+    #about_use .Description h1 {
+      font-size: 15px;
+      line-height: 40px;
+      color: #353535;
+      font-style: normal; }
+    #about_use .Description b i {
+      font-size: 15px;
+      line-height: 45px;
+      font-weight: 300; }
+    #about_use .Description h2 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 45px;
+      font-style: normal; }
+    #about_use .Description ul h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 20px;
+      font-style: normal; }
   #about_use .Students p {
     font-size: 15px;
     font-weight: 700;
@@ -1689,57 +1710,67 @@ h4 {
   font-style: normal;
   color: #353535; }
 
-#Curriculum {
-  background-color: #F4F4F4; }
-  #Curriculum .col-md-9 h2 {
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 700; }
-  #Curriculum .col-md-9 .Lecture_1 h5 {
+.col-md-8 h2 {
+  margin-top: 15px;
+  font-style: normal;
+  padding-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 1px solid lightgray; }
+.col-md-8 #curriclum {
+  margin-top: 20px; }
+.col-md-8 #curriclum > div {
+  display: flex;
+  align-items: center; }
+  .col-md-8 #curriclum > div button {
+    font-style: normal; }
+.col-md-8 .Lecture_1 {
+  padding: 8px 0;
+  border-bottom: 1px solid lightgray; }
+  .col-md-8 .Lecture_1 h5 {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     color: #353535; }
-  #Curriculum .col-md-9 .Lecture_1 span {
+  .col-md-8 .Lecture_1 span {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     color: #4985B8; }
-  #Curriculum .col-md-9 .Lecture_1 .btn-primary {
+  .col-md-8 .Lecture_1 .btn-primary {
     background: #994399;
     border: none;
-    float: right;
     width: 77px;
     height: 34px; }
-  #Curriculum .col-md-9 .Lecture_1 h4 {
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    color: #353535;
-    float: right; }
-  #Curriculum .col-md-9 .Lecture_1 h2 {
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 700; }
-  #Curriculum .col-md-9 .Lecture_1 p {
+  .col-md-8 .Lecture_1 h4 {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
     color: #353535; }
-  #Curriculum .col-md-9 .Lecture_1 h3 {
+  .col-md-8 .Lecture_1 h2 {
+    font-style: normal;
+    font-size: 15px;
+    font-weight: 700; }
+  .col-md-8 .Lecture_1 p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    color: #353535; }
+  .col-md-8 .Lecture_1 h3 {
     font-style: normal;
     font-size: 15px;
     font-weight: 700;
     color: #3b3b3b; }
-  #Curriculum .col-md-9 h1 {
-    font-style: normal;
-    line-height: 70px; }
-  #Curriculum .col-md-9 h4 {
-    font-style: normal;
-    font-weight: 600;
-    color: #3b3b3b; }
-  #Curriculum .fa-play-circle {
-    color: #999FA3; }
+.col-md-8 h1 {
+  font-style: normal;
+  line-height: 70px; }
+.col-md-8 h4 {
+  font-style: normal;
+  font-weight: 600;
+  color: #3b3b3b; }
+
+.fa-play-circle {
+  color: #999FA3; }
 
 #Instructor {
   background-color: #F4F4F4; }
