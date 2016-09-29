@@ -14,7 +14,8 @@
     <link rel="stylesheet" type="text/css" href="{{url('/assets/css/font-awesome.min.css')}}">
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('/assets/css/custom/style.css')}}">
-
+    <script src="/assets/js/footer-wrap.js"></script><script src="/plugins/afterglow/afterglow.min.js"></script>
+    
     
   </head>
   <body>
@@ -325,7 +326,7 @@
     <script src="/assets/js/content-wrap.js"></script>
        <!-- categories -->
     <script src="/assets/js/categories.js"></script>
-    <script src="/assets/js/footer-wrap.js"></script>
+    <script src="/assets/js/footer-wrap.js"></script><script src="/assets/js/course-wrap.js"></script>
   </body>
 </html>
          @if(Auth::user())

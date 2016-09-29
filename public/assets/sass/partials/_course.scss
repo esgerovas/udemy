@@ -1,9 +1,12 @@
 #course-wrap{
+	.container{
+		padding: 30px 0;
+	}
 	width: 100%;
 	h1 {
 		font-size: 35px;
-		font-weight:normal;
-		line-height:50px;
+		font-weight: normal;
+		line-height: 50px;
 		  
 	}
 
@@ -16,16 +19,19 @@
 
 	 }
 
+	.author{
+		margin-bottom: 10px;
+		h2, h3{
+			display: inline-block;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+
 	span{
         font-weight:normal;
-        line-height:40px;
         }
-         span h2{
-        	font-weight: 300;
-        	font-size:13px;
-        	color:#353535;
-        }
-
 
 	h3{
 		font-size: 15px;
@@ -35,18 +41,32 @@
 			   color:#353535;
 		}
 	  }
-
-
+	.reiting{
+		padding: 7px 0;
+	}
+	.startPreview{
+		padding: 15px 0;
+		margin-bottom: 5px;
+		display: block;
+		border-bottom: 1px solid lightgray;
+		span{
+			padding: 0 15px;
+			display: block;
+			padding-bottom: 7px;
+			a{
+				text-decoration: none;
+			}
+		}
+	}
+	.navbar{
+		margin: 30px 0;
+		border-top: 1px solid lightgray;
+		border-bottom: 1px solid lightgray;
+	}
 	.video{
 		height: 420px;
-		background-color: pink;
+		width: 100%;
 
-	}
-	.dolar{
-		span{
-			font-size: 33px;
-			font-weight: 700;
-		    }
 	}
 	.btn-1{
 		width: 195px;
@@ -142,11 +162,14 @@
 
 #about_use{
 	background-color:#F4F4F4;
-      p{
-		font-size:35px;
-		font-weight: 300;
+	.details{
+		font-size: 16px;
+		font-weight: 700;
+		cursor: pointer;
+		color: #5074A1;
 	}
 	.Description{
+		padding: 10px 15px;
 		h6{
 			font-size: 15px;
 			font-weight: 700;
@@ -355,34 +378,39 @@
 					color: #994399;
 				}
 			}
-
-
-
 		}
-		
+	}
+
+      h4{
+		font-size:15px;
+		font-style:normal;
+		color: #353535;
 
 	}
 
-              h4{
-				font-size:15px;
-				font-style:normal;
-				color: #353535;
-
-			}
-
-	
-	
- #Curriculum{
- 	
- 	background-color:#F4F4F4;
- 	   .col-md-9{
+ 	   .col-md-8{
  	   	   h2{
+ 	   	   	margin-top: 15px;
  	   	   	font-style:normal;
+ 	   	   	padding-bottom: 8px;
  	   	   	font-size:15px;
  	   	   	font-weight: 700;
-
+ 	   	   	border-bottom: 1px solid lightgray;
+ 	   	   }
+ 	   	   #curriclum{
+ 	   	   		margin-top: 20px;
+ 	   	   		
+ 	   	   }
+ 	   	   #curriclum>div{
+ 	   	   		display: flex;
+ 	   	   		align-items: center;
+ 	   	   		button{
+ 	   	   			font-style: normal
+ 	   	   		}
  	   	   }
  	   	   .Lecture_1{
+ 	   	   	padding: 8px 0;
+ 	   	   	border-bottom: 1px solid lightgray;
  	   	   	h5{
  	   	   		font-size:15px;
  	   	   		font-style:normal;
@@ -400,7 +428,7 @@
  	   	    .btn-primary{
 	 	         background:#994399;
 	 	         border:none;
-	            float:right;
+	            
 		         width: 77px;
 	 	         height: 34px;
 	 	         
@@ -410,7 +438,7 @@
  	   	   		font-style:normal;
  	   	   		font-weight: 300;
  	   	   		color: #353535;
- 	   	   		float:right;
+ 	   	   		
 
 	        }
 	        h2{
@@ -449,7 +477,7 @@
         .fa-play-circle{
 	 	     color:#999FA3;
 		}
-}
+
 #Instructor{
 	background-color:#F4F4F4;
 	h1{
