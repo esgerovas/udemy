@@ -2,88 +2,93 @@
 
 @section('content')
         <!-- This page for Hemide -->
-        <section id="course-wrap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1>Begin Teaching Online Full Time: Starter Course Unofficial</h1>
-                        <h5>Learn How To Create Your Very Own Online Video Course From Scratch Today!</h5>
-                        <i class="ud_i_star" aria-hidden="true"></i>
-                        <i class="ud_i_star" aria-hidden="true"></i>
-                        <i class="ud_i_star" aria-hidden="true"></i>
-                        <i class="ud_i_star" aria-hidden="true"></i>
-                        <i class="ud_i_star" aria-hidden="true"></i>
-                        <span>4.3 (104 ratings)•3,076 students enrolled</span>
-                        <span><h2>Instructed by</h2><h3>Joe Parys, Joe Parys Academy   Teacher Training / Instructional Design</h3></span>
-                    </div>
+<section id="course-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Begin Teaching Online Full Time: Starter Course Unofficial</h1>
+                <h5>Learn How To Create Your Very Own Online Video Course From Scratch Today!</h5>
+                <div class="reiting">
+                    <i class="ud_i_star" aria-hidden="true"></i>
+                    <i class="ud_i_star" aria-hidden="true"></i>
+                    <i class="ud_i_star" aria-hidden="true"></i>
+                    <i class="ud_i_star" aria-hidden="true"></i>
+                    <i class="ud_i_star" aria-hidden="true"></i>
+                    <span>4.3 (104 ratings) • 3,076 students enrolled</span>
                 </div>
-                <div class="row">
-                <!-- video yerlesdirilecek -->
-                    <div class="col-md-8 ">
-                        <div class="video">
-                            
-                        </div>
-                    </div>
-                    
-                    <!-- <div class="col-md-4 dolar">
-                    <span>$195</span>
-                        <div class="take"> 
-                        
-                            <button type="button" class="btn btn-1">Take This Course</button>
-                        
-                            <button type="button" class="btn btn-2">Added to Cart</button>
-                            <h6>Redeem a Coupon</h6> -->
-                            <h6>Start Free Preview</h6>
-                            <!-- <div class="dropdown">
-                                <button class="dropdown-toggle" type="button" data-toggle="dropdown">
-                                <h6>More Options</h6>
-                                <span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Gift This Course</a></li>
-                                    <li><a href="#">Buy for My Team</a></li>
-                                    <hr>
-                                    <li><i class="fa fa-flag"><a href="#">Report Abuse</a></i></li>
-                                </ul> -->
-                            </div>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <div class="lectures">
-                                        <h5>Lectures</h5>
-                                        <h5>Video</h5>
-                                        <h5>Skill Level</h5>
-                                        <h5>Languages</h5>
-                                        <h5>Includes</h5>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xs-6 col-sm-6">
-                                    <div class="eight">
-                                        <h5><b>8</b></h5>
-                                        <h5><b>1 hour</b></h5>
-                                        <h5><b>All Level</b></h5>
-                                        <h5><b>English</b></h5>
-                                        <h5><b>Lifetime access<br><b>30 day money back guarantee!
-                                        Available on iOS and Android
-                                        Certificate of Completion </h5></b>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="author">
+                    <h2>Instructed by</h2>&nbsp;<h3><a href="#"> Joe Parys</a> ,<a href="#"> Joe Parys Academy </a></h3>
                 </div>
             </div>
         </div>
-        <hr>
-    </div>
-    
-    <div class="container">
+        <div class="row">
+            <!-- video yerlesdirilecek -->
+            <div class="col-md-8">
+                <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto">
+                    <source type="video/mp4" src="/assets/videos/yapon.mp4">
+                    <!-- <source type="video/mp4" src="ParovStelar_hd.mp4" data-quality="hd">
+                    <source type="video/webm" src="ParovStelar.webm">
+                    <source type="video/webm" src="ParovStelar_hd.webm" data-quality="hd">
+                    <source type="video/ogg" src="ParovStelar.ogg">
+                    <source type="video/ogg" src="ParovStelar_hd.ogg" data-quality="hd"> -->
+                </video>
+            </div>
+            
+            <div class="col-md-4">
+                <!-- <div class="take">
+                    
+                    <button type="button" class="btn btn-1">Take This Course</button>
+                    
+                    <button type="button" class="btn btn-2">Added to Cart</button>
+                    <h6>Redeem a Coupon</h6> -->
+                    <span class="startPreview">
+                        <span>Free</span>
+                        <span><a href="#"> Start Free Preview</a></span>
+                    </span>
+                    <!-- <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" data-toggle="dropdown">
+                        <h6>More Options</h6>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Gift This Course</a></li>
+                            <li><a href="#">Buy for My Team</a></li>
+                            <hr>
+                            <li><i class="fa fa-flag"><a href="#">Report Abuse</a></i></li>
+                        </ul> -->
+                        
+                        <div class="col-md-4 col-xs-4 col-sm-4">
+                            <div class="lectures">
+                                <h5>Lectures</h5>
+                                <h5>Video</h5>
+                                <h5>Skill Level</h5>
+                                <h5>Languages</h5>
+                                <h5>Includes</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-xs-8 col-sm-8">
+                            <div class="eight">
+                                <h5><b>8</b></h5>
+                                <h5><b>1 hour</b></h5>
+                                <h5><b>All Level</b></h5>
+                                <h5><b>English</b></h5>
+                                <h5><b>Lifetime access</b><br><b>30 day money back guarantee!
+                                Available on iOS and Android
+                                Certificate of Completion </b></h5>
+                            </div>
+                        </div>
+                   <!--  </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+        
+        
         <nav class="navbar navbar-light bg-faded">
             <ul class="nav navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About This Course <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#AboutThisCourse">About This Course <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="#curriclum">
                     Curriculum</a>
                 </li>
                 <li class="nav-item">
@@ -97,262 +102,210 @@
             </ul>
         </nav>
     </div>
-    <hr>
 </section>
 <section id="about_use">
     <div class="container">
     
-        <p>About This Course</p>
+        <p style="font-size: 40px; font-weight: 300;" id="AboutThisCourse">About This Course</p>
         
         <i class="ud_icon-schedule pr5">
         <span> Published 5/2016 </span>
         </i>
-        <i class="ud_i_website pr5">
+        <!-- <i class="ud_i_website pr5">
         <span> English</span>
-        </i>
+        </i> -->
         <div class="row">
-        
-    <div class="col-md-8 Description">
-        <h6>Course Description</h6>
-        <p>⇉ Want To Learn How Begin Teaching Online Full Time From Scratch?</p>
-        <p>⇉ Then Enroll Today In This FREE Course!</p>
-        <p>⇉ Watch the promo video <span>To See How You Can Begin </span>Teaching Online Full Today! </p>
-        <p>⇉ Join Over 100,000+ Students <span> Who Have Enrolled In My </span>50+<span> Udemy Courses This Year!</span></p>
-        <p>⇉ 3000+ Five Star Reviews Shows <span>Students Who Enroll Are Getting Real Results!</span></p>
-        <hr>
-        <h6>Here Is Everything You Will Learn In Our Complete Course: </h6>
-        <ul>
-               <li>The Course Creation Basics</li>
-               <li>How To Pick The Right Course Topics</li>
-               <li>Editing Your Videos</li>
-               <li>Essential Equipment For Your Online Courses</li>
-               <li>How To Publish Your Online Course</li>
-               <li>And So Much More! </li>
-               
-        </ul>  
-        <hr> 
-        
-<ol >
-        <li><i>What I can't do in this Course</i>..</li>
-
-<li><i>I can't guarantee your success – this course does take work on your part. But You Can Do It!</i></li>
-
-<li><i>I am also not responsible for your actions. You are responsible for 100% of the decisions and actions you make while using this course.<i> </li> 
-        </ol>   
-     <hr>   
-     <h1>This course will not remain this price forever! It's time to take action!</h1>
-
-<h2>Click the "take this course" button at the top right now!</h2>
-
-<b><i>...every hour you delay is costing you money...</i></b>
-
-<h1>See you in the course!</h1>
-
-<h2>Sincerely,</h2>
-
-<h2>Joe Parys </h2>
-
-<h2>What are the requirements?</h2>
-<ul>
-<li><h1>They will need to no very little about course creation!</h1></li>
-<h3>What am I going to get from this course?</h3>
-</ul>  
-<ul>
-    <li><h1>Create their very own online video course!</h1></li>
-</ul>
-<ul><h3>What is the target audience?</h3></ul>
-<ul>
-    <li><h1>This course is for beginners</h1></li>
-</ul>
-    </div>
+            <div class="col-md-8">
+                <div class="Description">
+                    <h6>Course Description</h6>
+                    <p>⇉ Want To Learn How Begin Teaching Online Full Time From Scratch?</p>
+                    <p>⇉ Then Enroll Today In This FREE Course!</p>
+                    <p>⇉ Watch the promo video <span>To See How You Can Begin </span>Teaching Online Full Today! </p>
+                    <p>⇉ Join Over 100,000+ Students <span> Who Have Enrolled In My </span>50+<span> Udemy Courses This Year!</span></p>
+                    <p>⇉ 3000+ Five Star Reviews Shows <span>Students Who Enroll Are Getting Real Results!</span></p>
+                    
+                    <h6>Here Is Everything You Will Learn In Our Complete Course: </h6>
+                    <ul>
+                        <li>The Course Creation Basics</li>
+                        <li>How To Pick The Right Course Topics</li>
+                        <li>Editing Your Videos</li>
+                        <li>Essential Equipment For Your Online Courses</li>
+                        <li>How To Publish Your Online Course</li>
+                        <li>And So Much More! </li>
+                        
+                    </ul>
+                    
+                    
+                    <ol >
+                        <li><i>What I can't do in this Course</i>..</li>
+                        <li><i>I can't guarantee your success – this course does take work on your part. But You Can Do It!</i></li>
+                        <li><i>I am also not responsible for your actions. You are responsible for 100% of the decisions and actions you make while using this course.<i> </li>
+                    </ol>
+                    <h1>This course will not remain this price forever! It's time to take action!</h1>
+                    <h2>Click the "take this course" button at the top right now!</h2>
+                    <b><i>...every hour you delay is costing you money...</i></b>
+                    <h1>See you in the course!</h1>
+                    <h2>Sincerely,</h2>
+                    <h2>Joe Parys </h2>
+                    <h2>What are the requirements?</h2>
+                    <ul>
+                        <li><h1>They will need to no very little about course creation!</h1></li>
+                        <h3>What am I going to get from this course?</h3>
+                    </ul>
+                    <ul>
+                        <li><h1>Create their very own online video course!</h1></li>
+                    </ul>
+                    <h1>What is the target audience?</h1>
+                    <h1>This course is for beginners</h1>
+                </div>
+                <div>
+                     <span class="details">Full details</span>
+                     <div class="clearFix"></div>
+                </div>
 
 
-    <div class="col-md-4 Students">
-        <p>Students Who Viewed This Course Also Viewed</p>
-        <div class="first">
-             <div class="col-md-4 col-xs-4 col-sm-4">
-             <img src="assets/images/sekiller/first.png">
-             </div>
+                <div  id="curriclum">
+                    <h1 style="font-size: 40px; font-weight: 300;">Curriculum</h1>
+                    
+                     <!-- birinci section h2 taginda sectionun basligidi -->
+                    <h2>Section 1: Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time!</h2>
+
+                    <!-- lectureler -->
+                    <div class="Lecture_1 col-md-12">
+                        <div class="col-md-2">
+                            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture 1 </h5>
+                        </div>
+                        <div class="col-md-7">
+                             <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
+                        </div>
+                        <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm">Preview</button></div>
+                        <div class="col-md-1"><h4>02:36</h4></div>
+                       <!--  <p>A short introduction and course befits </p> -->
+                    </div>
+                    <div class="Lecture_1 col-md-12">
+                        <div class="col-md-2">
+                            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture 2 </h5>
+                        </div>
+                        <div class="col-md-7">
+                             <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
+                        </div>
+                        <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm">Preview</button></div>
+                        <div class="col-md-1"><h4>02:36</h4></div>
+                       <!--  <p>A short introduction and course befits </p> -->
+                    </div>
+
+
+                    <!-- ikinci section h2 taginda sectionun basligidi -->
+                    <h2>Section 2: Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time!</h2>
+                    <div class="Lecture_1 col-md-12">
+                        <div class="col-md-2">
+                            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture 3 </h5>
+                        </div>
+                        <div class="col-md-7">
+                             <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
+                        </div>
+                        <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm">Preview</button></div>
+                        <div class="col-md-1"><h4>02:36</h4></div>
+                       <!--  <p>A short introduction and course befits </p> -->
+                    </div>
+                    <div class="Lecture_1 col-md-12">
+                        <div class="col-md-2">
+                            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture 4 </h5>
+                        </div>
+                        <div class="col-md-7">
+                             <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
+                        </div>
+                        <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm">Preview</button></div>
+                        <div class="col-md-1"><h4>02:36</h4></div>
+                       <!--  <p>A short introduction and course befits </p> -->
+                    </div>
+                    <div class="Lecture_1 col-md-12">
+                        <div class="col-md-2">
+                            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture 5 </h5>
+                        </div>
+                        <div class="col-md-7">
+                             <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
+                        </div>
+                        <div class="col-md-2"><button type="button" class="btn btn-primary btn-sm">Preview</button></div>
+                        <div class="col-md-1"><h4>02:36</h4></div>
+                       <!--  <p>A short introduction and course befits </p> -->
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-4 Students">
+            <p>Students Who Viewed This Course Also Viewed</p>
+            <div class="first">
+                 <div class="col-md-4 col-xs-4 col-sm-4">
+                 <img src="assets/images/sekiller/first.png">
+                 </div>
+                 <div class="col-md-8 col-xs-8 col-sm-8">
+                 <h1>How to Create and Promote a SkillBear Course in 24 Hours!</h1>
+                 <h2>Warren Leslie Chalklen, PhD, Edu...</h2>
+                 
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <span> 5.0 (2 ratings)</span>
+                 <h5>$19<strike>$20</strike></h5>
+
+                 </div>
+            </div>
+            <div class="second">
+            <div class="col-md-4 col-xs-4 col-sm-4">
+                <img src="assets/images/sekiller/second.png">
+            </div>
+
              <div class="col-md-8 col-xs-8 col-sm-8">
-             <h1>How to Create and Promote a SkillBear Course in 24 Hours!</h1>
-             <h2>Warren Leslie Chalklen, PhD, Edu...</h2>
-             
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <span> 5.0 (2 ratings)</span>
-             <h5>$19<strike>$20</strike></h5>
+                 <h1>How To Quit Your Day Job To Pursue The Work Of Your Dreams</h1>
+                 <h2>Christopher Greenwood, Teaches...</h2>
+                 
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <span>  4.9 (8 ratings)</span>
+                 <h5>$19<strike>$100</strike></h5>
 
-             </div>
-        </div>
-        <div class="second">
-        <div class="col-md-4 col-xs-4 col-sm-4">
-            <img src="assets/images/sekiller/second.png">
-        </div>
+            </div>
+            </div>
+            
+            <div class="third">
+                 <div class="col-md-4 col-xs-4 col-sm-4">
+                 <img src="assets/images/sekiller/third.png">
+                 </div>
+                 <div class="col-md-8 col-xs-8 col=sm-8">
+                 <h1>Podcasts into Kindle & Print On Demand Books Real Fast!</h1>
+                 <h2>Scott Paton, Executive Producer...</h2>
+                 
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <i class="ud_i_star" aria-hidden="true"></i>
+                 <span> 4.9 (16 ratings)</span>
+                 <h5>$19<strike>$40</strike></h5>
 
-         <div class="col-md-8 col-xs-8 col-sm-8">
-             <h1>How To Quit Your Day Job To Pursue The Work Of Your Dreams</h1>
-             <h2>Christopher Greenwood, Teaches...</h2>
-             
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <span>  4.9 (8 ratings)</span>
-             <h5>$19<strike>$100</strike></h5>
-
+                </div>
+                    <h4>SHARE</h4>
+                <div>
+                <i class="fa fa-facebook fa-3x" aria-hidden="true"></i></div>
+                <div>
+                <i class="fa fa-twitter fa-3x" aria-hidden="true"></i></div>
+                <div>
+                <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
+            </div>
         </div>
-        </div>
-        
-        <div class="third">
-             <div class="col-md-4 col-xs-4 col-sm-4">
-             <img src="assets/images/sekiller/third.png">
-             </div>
-             <div class="col-md-8 col-xs-8 col=sm-8">
-             <h1>Podcasts into Kindle & Print On Demand Books Real Fast!</h1>
-             <h2>Scott Paton, Executive Producer...</h2>
-             
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <i class="ud_i_star" aria-hidden="true"></i>
-             <span> 4.9 (16 ratings)</span>
-             <h5>$19<strike>$40</strike></h5>
-
-             </div>
-        </div>
-    </div>
-    <h4>SHARE</h4>
-    <div>
-    <i class="fa fa-facebook fa-3x" aria-hidden="true"></i></div>
-    <div>
-    <i class="fa fa-twitter fa-3x" aria-hidden="true"></i></div>
-    <div>
-    <i class="fa fa-google-plus fa-3x" aria-hidden="true"></i>
-
+        <div class="clearFix"></div>
     </div>
 </section>
+
 <section id="Curriculum">
     <div class="container">
-        <div class="row">
-            <div class="col-md-9">
-            <h1>Curriculum</h1>
-            <hr>
-
-                <h2>Section 1: Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time!</h2><hr>
-
-          <div class="Lecture_1">
-          
-       
-           <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture1 </h5>
-            <span>Course Introduction and Benefits: Welcome to Begin Teaching Online Full Time! </span>
-          <button type="button" class="btn btn-primary btn-sm">Preview</button>
-          
-        <p>A short introduction and course befits <p>
-        <h4>02:36</h4>
-          <hr>
-
-        <h2>Section 2: How To Quickly and Easily Start Teaching Online Today!</h2>
-        <hr>
-         
-
-         <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture2</h5>
-            <span>  
-Get Started Right Now! How To Begin This Very Moment Teaching Online! </span>
-          <button type="button" class="btn btn-primary btn-sm">Preview</button>
-          
-        <p>Learn how to get started teaching online right here!  <p>
-        <p>https://support.udemy.com/customer/portal/articles/1594257?b_id=3056</p>
-        <h4>06:01</h4>
-
-
-          <hr>
-          
-
-
-
-            <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture3</h5>
-            <span>  
-            
-Choosing A Topic: How To Choose A Hot Topic That Will Do Well On Udemy & Beyond! </span>
-          <button type="button" class="btn btn-primary btn-sm">Preview</button>
-          
-        <p>Learn how to choose the right topic to teach online!  <p>
-       
-        <h4>02:13</h4>
-
-
-
-<hr>
-
- <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture4</h5>
-            <span>  
-            The Basics: Which Equipment Should You Use To Create Your Online Course?</span>
-         
-          
-        <p>Learn which equipment is going to help you create awesome online videos!   <p>
-       
-        <h4>09:36</h4>
-        <hr>
-
-
-        <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture5</h5>
-            <span>  
-            Video Editing Basics: How To Edit Your Videos To Make Them Look Professional! </span>
-         
-          
-        <p>Learn how to edit your videos to make them look professional! <p>
-       
-        <h4>11:25</h4>
-        <hr>
-
- <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture6</h5>
-            <span>  
-                
-Publishing Your Course! How To Publish Your Course & Begin Earning Money Today!span>
-         
-          
-        <p>How to publish your course to get it approved and live on the marketplace here on Udemy!  <p>
-       
-        <h4>09:24</h4>
-        <hr>
-
-
-
-<h3> Section 3: Course Summary and Conclusion </h3>
-<hr>
-
-
- <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture7</h5>
-            <span>  
-                
-Course Summary and Conclusion: What Have We Learned In This Course?</span>
-         
-          
-        <p>A short course summary and conclusion of our course. Don't forget our special bonus lecture at the end!  <p>
-       
-        <h4>00:59</h4>
-        <hr>
-
-        <h5><i class="fa fa-play-circle" aria-hidden="true"></i> Lecture8</h5>
-            <span>  
-                
-Want More?! Watch Our Special Bonus Lecture & Continue Learning With Us Today! </span>
-         
-          
-        <p>Free bonus lecture if you want more online teaching tips!   <p>
-       
-        <h4>02:20</h4>
-        <hr>
-
-          </div>
-            </div>
-            <div class="col-md-3"></div>
-        </div>
+        
     </div>
     </section>
     <section id="Instructor">
