@@ -18,12 +18,12 @@ class SubmenuController extends Controller
 
 
     public function store(Request $request, $id)
-    { 
+    {   $slug = str_slug($request->name, "-");
         $newsubmenu = new Subcategory;
          $newsubmenu->name=$request->name;
          $newsubmenu->icon=$request->icon;
          $newsubmenu->category_id=$id;
-         $newsubmenu->slug=$request->name;
+         $newsubmenu->slug=$slug;
          $newsubmenu->save();
         return back();
     }

@@ -13,10 +13,10 @@ class CreateLecturesTable extends Migration
     public function up()
     {
         Schema::create('lectures', function (Blueprint $table) {
-            $table->increments('id',11);
+            $table->increments('id');
             $table->string('name', 150);
             $table->string('slug', 150)->unique();
-            $table->text('text');
+            $table->text('text')->nullable();
             $table->integer('order', false, true)->length(10);
             $table->integer('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');

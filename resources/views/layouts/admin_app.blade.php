@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('dist/css/AdminLTE.min.css')}}">
+  <!-- iconsWebSite -->
+  <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/iconsWebSite.css') }}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{url('dist/css/skins/_all-skins.min.css')}}">
@@ -29,6 +31,7 @@
   <link rel="stylesheet" href="{{url('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
+  <script src="{{url('plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
@@ -121,16 +124,6 @@
       </div>
       <!-- search form -->
       <div style="height:30px;"></div>
-      {{-- <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form> --}}
-      <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="active treeview">
@@ -142,7 +135,9 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>Bütün dərslər</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i>Dərs əlavə et</a></li>
+            <li><a href="{{ url('/admin/course/add') }}"><i class="fa fa-circle-o"></i>Kurs əlavə et</a></li>
+            <li><a href="{{ url('/admin/section/add') }}"><i class="fa fa-circle-o"></i>Kursa bölmə əlavə et</a></li>
+            <li><a href="{{ url('/admin/lecture/add') }}"><i class="fa fa-circle-o"></i>Kursa mühazirə əlavə et</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -213,7 +208,7 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 2.2.3 -->
-<script src="{{url('plugins/jQuery/jquery-2.2.3.min.js')}}"></script>
+
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -249,5 +244,8 @@
 <script src="{{url('dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{url('dist/js/demo.js')}}"></script>
+<script src="{{url('plugins/ckeditor/ckeditor.js')}}"></script>
+
+<script src="{{url('assets/js/ajax.js')}}"></script>
 </body>
 </html>

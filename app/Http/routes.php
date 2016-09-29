@@ -42,10 +42,21 @@ Route::get('/account-settings', 'RouteController@account_settings');
     Route::post('/admin/menu/{id}/submenu', 'AdminPages\SubmenuController@store');
     Route::put('/admin/submenu/{id}', 'AdminPages\SubmenuController@update');
     Route::get('/admin/submenu/{id}', 'AdminPages\SubmenuController@delete');
+// ==================Course Routes================
+    Route::get('/admin/course/add', 'AdminPages\CourseController@index');
+    Route::post('/admin/course/add', 'AdminPages\CourseController@store');
+
+    Route::get('/admin/section/add', 'AdminPages\SectionController@index');
+    Route::post('/admin/section/add', 'AdminPages\SectionController@store');
+
+    Route::get('/admin/lecture/add', 'AdminPages\LectureController@index');
+    Route::post('/admin/lecture/add', 'AdminPages\LectureController@store');
+    // Route::get('/admin/language/{id}', 'AdminPages\LanguageController@delete');
+    // Route::put('/admin/language/{id}', 'AdminPages\LanguageController@update');
 
 // ==================User Register================
     Route::post('/register','Auth\AuthController@register');
     // Route::post('/login','Auth\AuthController@login');
     // Route::get('/logout','Auth\AuthController@logout');
 
-    
+       Route::get('/ajax/category/{id}','AjaxController@category'); 
