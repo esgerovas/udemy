@@ -757,14 +757,10 @@ body {
       #edit_profile-wrap .mainDiv .buton:hover {
         background-color: #9A5F9A; }
 
-#header {
-  height: 48px;
-  background-color: white;
-  border-top: 4px solid #994399; }
-
 #categories-wrap {
   font-size: 13px;
   background-color: #F4F4F4;
+  margin-top: 1px;
   /* .category_header */ }
   #categories-wrap .category-header {
     background-color: #994399;
@@ -787,12 +783,12 @@ body {
     #categories-wrap .category-header h1.header-title {
       color: white;
       margin: 0;
-      margin-top: 22px;
+      margin-top: 40px;
       font-size: 30px;
       font-weight: 500; }
     #categories-wrap .category-header .nav-tabs {
       padding: 0;
-      margin-top: 10px;
+      margin-top: 20px;
       border-bottom: none; }
       #categories-wrap .category-header .nav-tabs li {
         float: left;

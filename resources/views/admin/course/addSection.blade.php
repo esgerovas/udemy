@@ -30,7 +30,9 @@
                   </select>  
                 </div>
                 <button type="submit" class="btn btn-primary pull-right">Təsdiqlə</button>
-                <a href="" class="btn btn-default pull-right" style="display:inline-block; margin-right:10px;">Ləğv et</a>
+                <a href="/admin" class="btn btn-default pull-right" style="display:inline-block; margin-right:10px;">Ləğv et</a>
+              </div>
+              </div>
               </div>
       </form>
     </div>

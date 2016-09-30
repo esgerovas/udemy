@@ -18,7 +18,7 @@ class LanguageController extends Controller
     public function index()
     {
         $data=Language::all();
-        return view('admin/parametr/language')->with('data',$data);;
+        return view('admin/parametr/language')->with('data',$data);
     }
 
     public function store(Request $request)

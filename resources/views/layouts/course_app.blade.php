@@ -1,3 +1,4 @@
+@inject("cat","App\Category")
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,9 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('/assets/css/font-awesome.min.css')}}">
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="{{url('/assets/css/custom/style.css')}}">
-    <script src="/assets/js/footer-wrap.js"></script><script src="/plugins/afterglow/afterglow.min.js"></script>
-    
-    
+
   </head>
   <body>
     <!-- This page for Alim -->
@@ -115,74 +114,16 @@
         <!-- browse -->
         <div class="browse @yield('fixedMenu')"><span>Browse <i class="fa fa-caret-down" aria-hidden="true"></i></span>
             <ul class="@yield('fixedMenuBar')">
-                <li><a href="#"><b class="menu__icon ud_development"></b>&nbsp; Development <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
+                @foreach($cat->all() as $cat)
+                 <li><a href="{{url('/courses/'.$cat->id.'/'.$cat->subcategories->first()->id)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp; {{$cat->name}} <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
                     <ul>
-                        <li><h4><a href="#">All Development</a></h4></li>
-                        <li><a href="{{url('/Web-Development')}}"><b class="menu__icon ud_web-development"></b>&nbsp; Web Development</a></li>
-                        <li><a href="#"><b class="menu__icon ud_mobile-apps"></b>&nbsp; Mobile Apps</a></li>
-                        <li><a href="#"><b class="menu__icon ud_programming-languages"></b>&nbsp; Programming Language</a></li>
-                        <li><a href="#"><b class="menu__icon ud_game-development"></b>&nbsp; Game Development</a></li>
-                        <li><a href="#"><b class="menu__icon ud_databases"></b>&nbsp; Databases</a></li>
-                        <li><a href="#"><b class="menu__icon ud_software-testing"></b>&nbsp; Software Testing</a></li>
-                        <li><a href="#"><b class="menu__icon ud_software-engineering"></b>&nbsp; Software Engineering</a></li>
-                        <li><a href="#"><b class="menu__icon ud_development-tools"></b>&nbsp; Development Tools</a></li>
+                    <li><h4><a href="{{url('/courses/'.$cat->id.'/'.$cat->subcategories->first()->id)}}">All {{$cat->name}}</a></h4></li>
+                    @foreach($cat->subcategories as $sub)
+                        <li><a href="{{url('/courses/'.$cat->id.'/'.$sub->id)}}"><b class="menu__icon {{$sub->icon}}"></b>&nbsp; {{$sub->name}}</a></li>
+                    @endforeach
                     </ul>
                 </li>
-                <li><a href="#"><b class="menu__icon ud_it-and-software"></b>&nbsp; IT &amp; Software <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
-                    <ul>
-                        <li><h4><a href="#">All IT &amp; Software</a></h4></li>
-                        <li><a href="#"><b class="menu__icon ud_it-certification"></b>&nbsp; IT Certification</a></li>
-                        <li><a href="#"><b class="menu__icon ud_network-and-security"></b>&nbsp; Network &amp; Security</a></li>
-                        <li><a href="#"><b class="menu__icon ud_hardware"></b>&nbsp; Hardware</a></li>
-                        <li><a href="#"><b class="menu__icon ud_operating-systems"></b>&nbsp; Operating System</a></li>
-                        <li><a href="#"><b class="menu__icon ud_it-and-software"></b>&nbsp; Other</a></li>
-                    </ul>
-
-                </li>
-                <li><a href="#"><b class="menu__icon ud_office-productivity"></b>&nbsp; Office Productivity <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
-                    <ul>
-                        <li><h4><a href="#">All Office Productivity</a></h4></li>
-                        <li><a href="#"><b class="fa fa-linux" aria-hidden="true"></b>&nbsp; Linux</a></li>
-                        <li><a href="#"><b class="menu__icon ud_microsoft"></b>&nbsp; Microsoft</a></li>
-                        <li><a href="#"><b class="menu__icon ud_apple"></b>&nbsp; Apple</a></li>
-                        <li><a href="#"><b class="menu__icon ud_google"></b>&nbsp; Google</a></li>
-                        <li><a href="#"><b class="menu__icon ud_oracle"></b>&nbsp; Oracle</a></li>
-                        <li><a href="#"><b class="menu__icon ud_office-productivity"></b>&nbsp; Other</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><b class="menu__icon ud_design"></b>&nbsp; Design <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
-                    <ul>
-                        <li><h4><a href="#">All Design</a></h4></li>
-                        <li><a href="#"><b class="menu__icon ud_web-design"></b>&nbsp; Web Design</a></li>
-                        <li><a href="#"><b class="menu__icon ud_graphic-design"></b>&nbsp; Graphic Desing</a></li>
-                        <li><a href="#"><b class="menu__icon ud_design-tools"></b>&nbsp; Design Tools</a></li>
-                        <li><a href="#"><b class="menu__icon ud_game-design"></b>&nbsp; Game Design</a></li>
-                        <li><a href="#"><b class="menu__icon ud_3d-and-animation"></b>&nbsp; 3D &amp; Animation</a></li>
-                        <li><a href="#"><b class="menu__icon ud_design"></b>&nbsp; Other</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><b class="menu__icon ud_photography"></b>&nbsp; Photography <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
-                    <ul>
-                        <li><h4><a href="#">All Photography</a></h4></li>
-                        <li><a href="#"><b class="menu__icon ud_digital-photography"></b>&nbsp; Digital Photography</a></li>
-                        <li><a href="#"><b class="menu__icon ud_photography-fundamentals"></b> &nbsp;Photograph Fundamentals</a></li>
-                        <li><a href="#"><b class="menu__icon ud_portraits"></b>&nbsp; Portraits</a></li>
-                        <li><a href="#"><b class="menu__icon ud_portraits"></b>&nbsp; Landscape</a></li>
-                        <li><a href="#"><b class="menu__icon ud_photography-tools"></b>&nbsp; Photography Tools</a></li>
-                        <li><a href="#"><b class="menu__icon ud_mobile-photography"></b>&nbsp; Mobile Photography</a></li>
-                        <li><a href="#"><b class="menu__icon ud_mobile-photography"></b>&nbsp; Video Design</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><b class="menu__icon ud_language"></b>&nbsp; Language <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
-                    <ul>
-                        <li><h4><a href="#">All Language</a></h4></li>
-                        <li><a href="#"><b class="menu__icon ud_spanish"></b>&nbsp; Azerbaijan</a></li>
-                        <li><a href="#"><b class="menu__icon ud_english"></b>&nbsp; English</a></li>
-                        <li><a href="#"><b class="menu__icon ud_hebrew"></b>&nbsp; Russian</a></li>
-                        <li><a href="#"><b class="menu__icon ud_russian"></b>&nbsp; Turkish</a></li>
-                        <li><a href="#"><b class="menu__icon ud_language"></b>&nbsp; Other</a></li>
-                    </ul>
-                </li>
+                @endforeach
             </ul>
         </div>
         <!--Navigator bar --> 
@@ -326,7 +267,9 @@
     <script src="/assets/js/content-wrap.js"></script>
        <!-- categories -->
     <script src="/assets/js/categories.js"></script>
-    <script src="/assets/js/footer-wrap.js"></script><script src="/assets/js/course-wrap.js"></script>
+    <script src="/assets/js/footer-wrap.js"></script>
+    <script src="/assets/js/course-wrap.js"></script>
+
   </body>
 </html>
          @if(Auth::user())

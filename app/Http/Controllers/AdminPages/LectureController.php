@@ -21,12 +21,12 @@ class LectureController extends Controller
     }
 
     public function store(Request $request)
-    { 
-      $newLecture = new Lecture;
+    {      
       $dir='assets/images/courseVideo';
-      $filetype=$request->file('video')->getClientOriginalExtension();
-      $filename=rand(11111,999).'.'.$filetype;
-      $request->file('video')->move($dir,$filename);
+      $filetype=$request->file('video_link')->getClientOriginalExtension();
+      $filename=rand(11111,99999).'.'.$filetype;
+      $request->file('video_link')->move($dir,$filename);
+       $newLecture = new Lecture;
       $slug = str_slug($request->name, "-");
       $data = [
             'name'=>$request->name,
@@ -34,10 +34,11 @@ class LectureController extends Controller
             'order'=>$request->order,
             'slug'=>$slug,
             'section_id'=>$request->section,
-            'video'=>$filename,
-            'link'=>$request->youtubelink
+            'video_link'=>$filename,
+            'youtube_link'=>$request->youtube_link,
+            'duration'=>$request->duration
         ];
-        $newCourse->create($data);
+        $newLecture->create($data);
         return redirect('/admin/lecture/add');
     }
 

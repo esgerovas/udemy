@@ -1,12 +1,8 @@
 $backColor:#F4F4F4;
-#header{
-	height:48px;
-	background-color:white;
-	border-top:4px solid $mainColor;
-}
 #categories-wrap{
 	font-size:$mainTextSize;
 	background-color:$backColor;
+	margin-top:1px;
 	.category-header{
 		background-color:$mainColor;
 		width:100%;
@@ -29,13 +25,13 @@ $backColor:#F4F4F4;
 		h1.header-title{
 			color:white;
 			margin:0;
-			margin-top:22px;
+			margin-top:40px;
 			font-size:30px;
 			font-weight:500;
 		}
 		.nav-tabs {
 			padding:0;
-			margin-top:10px;
+			margin-top:20px;
 			border-bottom: none;
 			li {
 				float: left;

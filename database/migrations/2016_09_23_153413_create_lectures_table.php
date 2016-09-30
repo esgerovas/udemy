@@ -14,10 +14,13 @@ class CreateLecturesTable extends Migration
     {
         Schema::create('lectures', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 150);
-            $table->string('slug', 150)->unique();
+            $table->string('name');
+            $table->string('video_link')->nullable();
+            $table->string('youtube_link')->nullable();
+            $table->time('duration');
+            $table->string('slug')->unique();
             $table->text('text')->nullable();
-            $table->integer('order', false, true)->length(10);
+            $table->integer('order');
             $table->integer('section_id')->unsigned();
             $table->foreign('section_id')->references('id')->on('sections')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

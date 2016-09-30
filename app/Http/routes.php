@@ -3,7 +3,8 @@ Route::auth();
 
 Route::get('/', 'RouteController@home');
 Route::get('/courses', 'RouteController@courses');
-Route::get('/Web-Development', 'RouteController@categories');
+ Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
+Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
 Route::get('/Web-Developer-Bootcamp', 'RouteController@course');
 Route::get('/shopping-card', 'RouteController@shopping');
 Route::get('/my-courses', 'RouteController@my_courses');
@@ -59,4 +60,5 @@ Route::get('/account-settings', 'RouteController@account_settings');
     // Route::post('/login','Auth\AuthController@login');
     // Route::get('/logout','Auth\AuthController@logout');
 
-       Route::get('/ajax/category/{id}','AjaxController@category'); 
+    Route::get('/ajax/category/{id}','AjaxController@category'); 
+    Route::get('/ajax/course/{id}','AjaxController@course'); 

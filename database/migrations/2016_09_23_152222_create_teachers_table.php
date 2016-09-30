@@ -27,6 +27,7 @@ class CreateTeachersTable extends Migration
             $table->string('password');
             $table->string('number')->nullable();
             $table->integer('age')->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }

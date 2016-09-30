@@ -24,14 +24,20 @@
         <div class="row">
             <!-- video yerlesdirilecek -->
             <div class="col-md-8">
-                <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto">
-                    <source type="video/mp4" src="/assets/videos/yapon.mp4">
-                    <!-- <source type="video/mp4" src="ParovStelar_hd.mp4" data-quality="hd">
+      {{--           <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto">
+                    <source type="video/mp4" src="{{url('/assets/videos/yapon.mp4')}}">
+                    <source type="video/mp4" src="ParovStelar_hd.mp4" data-quality="hd">
                     <source type="video/webm" src="ParovStelar.webm">
                     <source type="video/webm" src="ParovStelar_hd.webm" data-quality="hd">
                     <source type="video/ogg" src="ParovStelar.ogg">
-                    <source type="video/ogg" src="ParovStelar_hd.ogg" data-quality="hd"> -->
+                    <source type="video/ogg" src="ParovStelar_hd.ogg" data-quality="hd">
+                </video> --}}
+                <video width="320" height="240" controls>
+                  <source src="assets/videos/yapon.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
                 </video>
+
+                    <script src="{{url('plugins/afterglow/afterglow.min.js')}}"></script>
             </div>
             
             <div class="col-md-4">
