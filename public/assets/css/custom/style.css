@@ -1454,102 +1454,85 @@ body {
   top: 0;
   left: 0; }
 
-#course-wrap {
-  width: 100%; }
-  #course-wrap .container {
-    padding: 30px 0; }
-  #course-wrap h1 {
-    font-size: 35px;
-    font-weight: normal;
-    line-height: 50px; }
-  #course-wrap h5 {
-    line-height: 28px;
-    font-size: 15px; }
-  #course-wrap .ud_i_star {
-    color: #994399; }
-  #course-wrap .author {
-    margin-bottom: 10px; }
-    #course-wrap .author h2, #course-wrap .author h3 {
-      display: inline-block; }
-    #course-wrap .author a {
-      text-decoration: none; }
-  #course-wrap span {
-    font-weight: normal; }
-  #course-wrap h3 {
-    font-size: 15px;
-    font-weight: normal;
-    color: #4985B8; }
-    #course-wrap h3:hover {
-      color: #353535; }
-  #course-wrap .reiting {
-    padding: 7px 0; }
-  #course-wrap .startPreview {
-    padding: 15px 0;
-    margin-bottom: 5px;
+#course-wrap .container {
+  padding: 30px 0;
+  overflow: hidden; }
+#course-wrap h1 {
+  font-size: 35px;
+  font-weight: normal; }
+#course-wrap h5 {
+  line-height: 28px;
+  font-size: 15px; }
+#course-wrap .ud_i_star {
+  color: #994399; }
+#course-wrap .author {
+  margin-bottom: 10px; }
+  #course-wrap .author h2, #course-wrap .author h3 {
+    display: inline-block; }
+  #course-wrap .author a {
+    text-decoration: none; }
+#course-wrap span {
+  font-weight: normal; }
+#course-wrap h3 {
+  font-size: 15px;
+  font-weight: normal;
+  color: #4985B8; }
+  #course-wrap h3:hover {
+    color: #353535; }
+#course-wrap .reiting {
+  padding: 7px 0; }
+#course-wrap .startPreview {
+  padding: 15px 0;
+  margin-bottom: 5px;
+  display: block;
+  border-bottom: 1px solid lightgray; }
+  #course-wrap .startPreview span {
+    padding: 0 15px;
     display: block;
-    border-bottom: 1px solid lightgray; }
-    #course-wrap .startPreview span {
-      padding: 0 15px;
-      display: block;
-      padding-bottom: 7px; }
-      #course-wrap .startPreview span a {
-        text-decoration: none; }
-  #course-wrap .navbar {
-    margin: 30px 0;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray; }
-  #course-wrap .video {
-    height: 420px;
-    width: 100%; }
-  #course-wrap .btn-1 {
-    width: 195px;
-    height: 40px;
-    background-color: #994399;
-    color: #FFFCF0; }
-  #course-wrap .btn-2 {
-    width: 195px;
-    height: 40px;
-    background-color: #F1F1F1;
-    color: #C5C5C5;
-    margin-top: 8px; }
-  #course-wrap h6 {
-    font-size: 13px;
-    color: #4985B8;
-    line-height: 23px; }
-    #course-wrap h6:hover {
-      color: #353535; }
-  #course-wrap .dropdown h6 {
-    font-size: 13px;
-    color: #4985B8;
-    line-height: 23px; }
-  #course-wrap .dropdown button {
-    background-color: transparent;
-    color: #4985B8;
-    border: none;
-    font-size: 10px; }
-  #course-wrap .dropdown-menu li i {
-    color: #4985B8;
-    font-size: 13px; }
-  #course-wrap .dropdown-menu a {
-    color: #4985B8;
-    font-size: 13px; }
-  #course-wrap .fa-flag {
-    color: #4985B8; }
-  #course-wrap .lectures h5 {
-    line-height: 28px;
-    font-weight: 400; }
-  #course-wrap .eight h5 {
-    font-size: 13px;
-    line-height: 28px;
-    font-weight: 400;
-    margin-left: 1px; }
-  #course-wrap .navbar-light ul li a {
-    color: gray;
-    font-size: 15px;
-    font-weight: 400; }
-    #course-wrap .navbar-light ul li a:hover {
-      color: #353535;
-      background-color: white; }
+    padding-bottom: 7px; }
+    #course-wrap .startPreview span a {
+      text-decoration: none; }
+#course-wrap .navbar {
+  margin: 30px 0;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray; }
+#course-wrap .video {
+  height: 420px;
+  width: 100%; }
+#course-wrap .btn-1 {
+  width: 195px;
+  height: 40px;
+  background-color: #994399;
+  color: #FFFCF0; }
+#course-wrap .btn-2 {
+  width: 195px;
+  height: 40px;
+  background-color: #F1F1F1;
+  color: #C5C5C5;
+  margin-top: 8px; }
+#course-wrap h6 {
+  font-size: 13px;
+  color: #4985B8;
+  line-height: 23px; }
+  #course-wrap h6:hover {
+    color: #353535; }
+#course-wrap .fa-flag {
+  color: #4985B8; }
+#course-wrap .lectures h5 {
+  line-height: 28px;
+  font-weight: 400; }
+#course-wrap .eight h5 {
+  font-size: 13px;
+  line-height: 28px;
+  font-weight: 400;
+  margin-left: 1px; }
+#course-wrap .navbar-light ul li a {
+  color: gray;
+  font-size: 15px;
+  font-weight: 400; }
+  #course-wrap .navbar-light ul li a:hover {
+    color: #353535;
+    background-color: white; }
 
 #about_use {
   background-color: #F4F4F4; }
@@ -1603,7 +1586,7 @@ body {
     font-weight: 700;
     font-style: normal; }
   #about_use .Students .first {
-    width: 350px;
+    width: 100%;
     height: 120px;
     background-color: #FFFFFF; }
     #about_use .Students .first:hover {
@@ -1637,7 +1620,7 @@ body {
   #about_use .Students .col-md-8 .ud_i_star {
     color: #994399; }
   #about_use .second {
-    width: 350px;
+    width: 100%;
     height: 120px;
     background-color: #FFFFFF; }
     #about_use .second .col-md-4 {
@@ -1669,7 +1652,7 @@ body {
     #about_use .second .col-md-8 .ud_i_star {
       color: #994399; }
   #about_use .third {
-    width: 350px;
+    width: 100%;
     height: 120px;
     background-color: #FFFFFF; }
     #about_use .third .col-md-4 {
@@ -1707,14 +1690,17 @@ h4 {
   color: #353535; }
 
 .col-md-8 h2 {
-  margin-top: 15px;
-  font-style: normal;
-  padding-bottom: 8px;
+  margin-top: 20px;
   font-size: 15px;
-  font-weight: 700;
-  border-bottom: 1px solid lightgray; }
+  font-weight: 600;
+  font-style: normal; }
 .col-md-8 #curriclum {
-  margin-top: 20px; }
+  margin-top: 25px; }
+@media screen and (max-width: 480px) {
+  .col-md-8 #curriclum h2 {
+    font-size: 10px; }
+  .col-md-8 #curriclum > div h5, .col-md-8 #curriclum > div span, .col-md-8 #curriclum > div button {
+    font-size: 10px; } }
 .col-md-8 #curriclum > div {
   display: flex;
   align-items: center; }
@@ -1768,203 +1754,107 @@ h4 {
 .fa-play-circle {
   color: #999FA3; }
 
-#Instructor {
-  background-color: #F4F4F4; }
-  #Instructor h1 {
-    font-size: 38px;
-    font-weight: 300;
-    color: #353535;
-    font-style: normal;
-    line-height: 60px; }
-  #Instructor .col-md-10 span {
-    color: #4985B8;
-    font-style: normal; }
-  #Instructor .col-md-10 h5 {
-    font-style: normal;
-    line-height: 30px; }
-  #Instructor .col-md-10 .icon {
-    width: 190px;
-    min-height: 35px; }
-  #Instructor .col-md-10 .fa-twitter-square {
-    font-size: 40px;
-    color: #999FA3; }
-  #Instructor .col-md-10 .fa-facebook-square {
-    font-size: 40px;
-    color: #999FA3; }
-  #Instructor .col-md-10 .fa-linkedin-square {
-    font-size: 40px;
-    color: #999FA3; }
-  #Instructor .col-md-10 .fa-youtube-square {
-    font-size: 40px;
-    color: #999FA3; }
-  #Instructor .col-md-10 .fa-globe {
-    font-size: 23px;
-    color: white;
-    margin-top: 7px;
-    margin-left: 7px; }
-  #Instructor .square {
-    width: 35px;
-    height: 35px;
-    background-color: #999FA3;
-    border-radius: 6px;
-    display: inline-block;
-    position: relative;
-    top: -4px; }
-  #Instructor .list span {
-    font-style: normal; }
-  #Instructor ol li {
-    font-style: normal;
-    line-height: 30px;
-    font-weight: 300;
-    font-size: 15px; }
-  #Instructor h1 {
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 700;
-    color: #3b3b3b; }
-  #Instructor h2 {
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 300;
-    color: #353535; }
-  #Instructor h2 span {
-    font-style: normal;
-    font-size: 14px;
-    font-weight: 700;
-    color: #3b3b3b;
-    line-height: 40px; }
-  #Instructor h3 {
-    font-size: 14px;
-    color: #3b3b3b;
-    font-weight: 700;
-    line-height: 30px;
-    font-style: normal; }
-  #Instructor h4 {
-    font-style: normal;
-    font-size: 14.5px;
-    font-weight: 300;
-    color: #353535;
-    line-height: 38px; }
-  #Instructor h4 span {
-    font-size: 14px;
-    color: #3b3b3b;
-    font-weight: 700;
-    line-height: 40px;
-    font-style: normal; }
-  #Instructor h6 {
-    font-style: normal;
-    font-size: 35px;
-    font-weight: 300;
-    color: #353535; }
-  #Instructor .col-md-10 h5 span {
-    color: #4985B8;
-    font-style: normal; }
-  #Instructor .list1 span {
-    font-style: normal; }
-  #Instructor .list1 h1 {
-    font-size: 13px;
-    font-weight: 600;
-    color: #3b3b3b;
-    font-style: normal; }
-  #Instructor .list1 h2 {
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 300;
-    color: #353535;
-    line-height: 30px; }
-  #Instructor .list1 h2 span {
-    font-style: normal;
-    font-size: 15px;
-    font-weight: 600;
-    color: #3b3b3b; }
-  #Instructor span {
-    font-style: normal;
-    line-height: 30px; }
+.container {
+  overflow: hidden; }
 
-#Reviews {
-  background-color: #F4F4F4; }
-  #Reviews h1 {
-    font-style: normal;
+#instruct {
+  padding: 15px 0;
+  padding-bottom: 40px;
+  font-style: normal; }
+  #instruct h1 {
     font-weight: 300;
-    color: #353535;
-    line-height: 30px; }
-  #Reviews .col-md-2 h5 {
-    font-style: normal; }
-  #Reviews .col-md-2 p {
-    font-size: 100px;
-    font-weight: 600;
-    color: #994399;
-    font-style: normal; }
-  #Reviews .col-md-2 i {
-    color: #994399;
-    font-size: 24px; }
-    #Reviews .col-md-2 i:last-child {
-      color: lightgray; }
-  #Reviews .col-md-3 h6 {
-    font-size: 20px;
-    margin-top: 50px;
-    font-style: normal;
-    font-weight: 600; }
-  #Reviews .col-md-3 label {
+    font-size: 40px;
+    padding-bottom: 10px; }
+  #instruct img {
     float: left;
-    margin-right: 5px;
-    font-weight: 300;
-    color: #353535;
-    font-style: normal; }
-  #Reviews .col-md-3 .progress {
-    width: 137px;
-    display: block;
-    margin-bottom: 10px; }
-    #Reviews .col-md-3 .progress div {
-      background-color: #994399; }
-  #Reviews .col-md-9 p {
-    font-style: normal;
-    font-weight: 300;
-    color: #353535;
+    margin-right: 100px; }
+    @media screen and (max-width: 480px) {
+      #instruct img {
+        margin-right: 40px; } }
+  #instruct h6 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 0; }
+  #instruct p {
+    font-size: 14px; }
+  #instruct .about {
+    padding-top: 25px; }
+  #instruct .cv {
+    padding: 25px 0; }
+  #instruct .businness {
+    padding-bottom: 25px; }
+  #instruct h5 {
+    padding: 5px 7px;
+    margin-left: 7px;
+    font-size: 16px; }
+    #instruct h5 a {
+      text-decoration: none; }
+  #instruct .social i {
+    font-size: 40px;
+    color: lightgray;
+    float: left;
+    padding: 0 7px; }
+
+#reviews h1 {
+  padding-bottom: 20px; }
+#reviews .average {
+  padding: 15px; }
+  #reviews .average h5 {
+    font-size: 90px;
+    font-weight: 600;
+    padding: 0;
+    color: #994399; }
+  #reviews .average p {
+    padding-left: 7px;
     font-size: 15px; }
-  #Reviews .col-md-9 h5 {
-    font-style: normal;
-    color: #B1B1B7; }
+  #reviews .average i {
+    font-size: 18px;
+    color: #994399; }
+    #reviews .average i:last-child {
+      color: lightgray; }
+#reviews .details {
+  padding: 15px; }
+#reviews .details > p {
+  padding-bottom: 7px;
+  font-weight: bold;
+  font-size: 15px; }
+#reviews .details > div label {
+  float: left;
+  padding-right: 7px; }
+#reviews .details > div .progress {
+  width: calc(100% - 120px);
+  float: left; }
+#reviews .details > div .faiz {
+  float: right;
+  width: 50px;
+  padding: 0 5px; }
 
-.col-md-12 i {
-  color: #994399; }
-.col-md-12 p {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  color: #353535; }
-.col-md-12 span {
-  font-style: normal;
-  font-weight: 300;
-  color: #353535;
-  font-size: 14px; }
-
-.one {
-  width: 230px;
-  height: 265px;
-  color: gray; }
-
-.thumbnail {
-  margin-right: 0px;
-  width: 230px;
-  height: 270px;
-  margin-bottom: 30px; }
-  .thumbnail img:hover {
-    opacity: 0.4; }
-
-h1 {
-  font-size: 13px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 5px;
-  color: #353535; }
-
-h2 {
-  font-size: 13px;
-  font-weight: 300;
-  font-style: normal;
-  line-height: 15px;
-  color: #353535; }
+#comment-bar .row {
+  border-top: 1px solid lightgray; }
+#comment-bar .col-md-2 {
+  padding: 25px 0; }
+#comment-bar .allcomment > .col-md-10 {
+  padding: 25px 0; }
+  #comment-bar .allcomment > .col-md-10 i {
+    color: #994399; }
+#comment-bar .allcomment {
+  border-bottom: 1px solid lightgray; }
+  #comment-bar .allcomment img {
+    margin-right: 7px; }
+  #comment-bar .allcomment h3 {
+    font-weight: 400;
+    font-size: 15px; }
+  #comment-bar .allcomment h5 {
+    color: lightgray;
+    font-size: 14px;
+    font-weight: 400; }
+  #comment-bar .allcomment a > i {
+    font-size: 17px;
+    color: gray; }
+  #comment-bar .allcomment .str {
+    padding: 7px 0; }
+#comment-bar .comment {
+  width: 100%; }
 
 #myCourses-wrap .container-fluid {
   padding: 0px; }
