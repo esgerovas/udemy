@@ -6,7 +6,7 @@
     <div class="col-md-12"> 
       <h1 class="text-center" style="margin-bottom:50px;">Bölməyə mühazirə elavə et</h1>
        <form action="{{url('/admin/lecture/add')}}" method="post" enctype="multipart/form-data"> 
-        {{csrf_field()}}
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="col-md-8 col-md-offset-2">
             <div class="box box-primary">
               <div class="box-header with-border"></div>

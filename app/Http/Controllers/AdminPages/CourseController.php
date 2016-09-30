@@ -24,8 +24,7 @@ class CourseController extends Controller
     { 
       $newCourse = new Course;
       $dir='assets/images/courseImg';
-      $filetype=$request->file('image')->getClientOriginalExtension();
-      $filename=rand(11111,999).'.'.$filetype;
+      $filename = date('YmdHis')."-".$request->file('image')->getClientOriginalName();
       $request->file('image')->move($dir,$filename);
       $slug = str_slug($request->title, "-");
       $data = [

@@ -20,11 +20,10 @@ class LectureController extends Controller
         return view('admin/course/addLecture');
     }
 
-    public function store(Request $request)
-    {      
+    public function store(Request $request){
+
       $dir='assets/images/courseVideo';
-      $filetype=$request->file('video_link')->getClientOriginalExtension();
-      $filename=rand(11111,99999).'.'.$filetype;
+      $filename = date('YmdHis')."-".$request->file('video_link')->getClientOriginalName();
       $request->file('video_link')->move($dir,$filename);
        $newLecture = new Lecture;
       $slug = str_slug($request->name, "-");
