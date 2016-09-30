@@ -49,7 +49,7 @@ leftMenuWidth();
 
 
 //navigator hissede menunun cixmasi ucun
-function navigator(){
+function navigate(){
 	width = $(window).width();
 	$("#header-wrap .sidebar").css({
 		transform: "translateX(-"+width+"px)",
@@ -165,7 +165,7 @@ function navigator(){
 	}
 	heightSideBar();
 }
-navigator();
+navigate();
 
 function login(){
 	$("#header-wrap .loggin").click(function() {

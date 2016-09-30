@@ -268,7 +268,7 @@
        <!-- categories -->
     <script src="/assets/js/categories.js"></script>
     <script src="/assets/js/footer-wrap.js"></script>
-    <script src="/assets/js/course-wrap.js"></script>
+    <script src="/assets/js/course-wrap.js"></script><script src="/plugins/afterglow/afterglow.min.js"></script>
 
   </body>
 </html>
