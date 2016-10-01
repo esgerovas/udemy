@@ -22,20 +22,37 @@ class LectureController extends Controller
 
     public function store(Request $request){
 
-      $dir='assets/images/courseVideo';
-      $filename = date('YmdHis')."-".$request->file('video_link')->getClientOriginalName();
-      $request->file('video_link')->move($dir,$filename);
-       $newLecture = new Lecture;
-      $slug = str_slug($request->name, "-");
-      $data = [
+    $dir='assets/images/courseVideo';
+    if($request->duration){
+        $manual = "$request->duration";
+        $vidkey = "";
+        $filename = date('YmdHis')."-".$request->file('video_link')->getClientOriginalName();
+        $request->file('video_link')->move($dir,$filename);
+    }elseif($request->youtube_link){
+        $vidkey = $request->youtube_link ; 
+        $apikey = "AIzaSyCbwb7MfEG7EN_uBIvIL7xAsqT2eVWwwZA" ;
+        $dur = file_get_contents("https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=$vidkey&key=$apikey");
+        $VidDuration =json_decode($dur, true);
+        $durationVideo = $VidDuration['items'][0]['contentDetails']['duration'];
+        preg_match_all('/(\d+)/',$durationVideo,$parts);
+        $hours = intval(floor($parts[0][0]/60) * 60 * 60);
+        $minutes = intval($parts[0][0]/60 * 60);
+        $seconds = intval($parts[0][1]);
+        $manual =  $hours . ":" . $minutes . ":" . $seconds; //this is the example in seconds
+        $filename = "";
+    }
+    
+        $newLecture = new Lecture;
+        $slug = str_slug($request->name, "-");
+        $data = [
             'name'=>$request->name,
             'text'=>$request->text,
             'order'=>$request->order,
             'slug'=>$slug,
             'section_id'=>$request->section,
             'video_link'=>$filename,
-            'youtube_link'=>$request->youtube_link,
-            'duration'=>$request->duration
+            'youtube_link'=>$vidkey,
+            'duration'=>$manual
         ];
         $newLecture->create($data);
         return redirect('/admin/lecture/add');
