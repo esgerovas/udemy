@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0 30px;">
-                <h1>Begin Teaching Online Full Time: Starter Course Unofficial</h1>
-                <h5>Learn How To Create Your Very Own Online Video Course From Scratch Today!</h5>
+                <h1>{{$data->title}}</h1>
+                <h5>{{$data->headline}}</h5>
                 <div class="reiting">
                     <i class="ud_i_star" aria-hidden="true"></i>
                     <i class="ud_i_star" aria-hidden="true"></i>
@@ -17,7 +17,7 @@
                     <span>4.3 (104 ratings) • 3,076 students enrolled</span>
                 </div>
                 <div class="author">
-                    <h2 style="font-size: 15px;">Instructed by</h2>&nbsp;<h3><a href="#"> Joe Parys</a> ,<a href="#"> Joe Parys Academy </a></h3>
+                    <h3><a href="#">{{$data->teacher->name}}</a></h3>&nbsp;<h2 style="font-size: 15px;">tərəfindən hazırlanıb</h2>
                 </div>
             </div>
         </div>
@@ -25,12 +25,7 @@
             <!-- video yerlesdirilecek -->
             <div class="col-md-8 col-sm-12 col-xs-12" style="padding: 0 30px;">
                 <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto">
-                    <source type="video/mp4" src="/assets/videos/yapon.mp4">
-                    <!-- <source type="video/mp4" src="ParovStelar_hd.mp4" data-quality="hd">
-                    <source type="video/webm" src="ParovStelar.webm">
-                    <source type="video/webm" src="ParovStelar_hd.webm" data-quality="hd">
-                    <source type="video/ogg" src="ParovStelar.ogg">
-                    <source type="video/ogg" src="ParovStelar_hd.ogg" data-quality="hd"> -->
+                    <source type="video/mp4" src="{{url('/assets/images/courseVideo/'.$data->sections->first()->lectures->first()->video_link)}}">
                 </video>
             </div>
             

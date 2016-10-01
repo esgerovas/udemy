@@ -115,11 +115,11 @@
         <div class="browse @yield('fixedMenu')"><span>Browse <i class="fa fa-caret-down" aria-hidden="true"></i></span>
             <ul class="@yield('fixedMenuBar')">
                 @foreach($cat->all() as $cat)
-                 <li><a href="{{url('/courses/'.$cat->id.'/'.$cat->subcategories->first()->id)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp; {{$cat->name}} <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
+                 <li><a href="{{url('/courses/'.$cat->slug.'/'.$cat->subcategories->first()->slug)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp; {{$cat->name}} <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
                     <ul>
-                    <li><h4><a href="{{url('/courses/'.$cat->id.'/'.$cat->subcategories->first()->id)}}">All {{$cat->name}}</a></h4></li>
+                    <li><h4><a>Bütün {{$cat->name}}</a></h4></li>
                     @foreach($cat->subcategories as $sub)
-                        <li><a href="{{url('/courses/'.$cat->id.'/'.$sub->id)}}"><b class="menu__icon {{$sub->icon}}"></b>&nbsp; {{$sub->name}}</a></li>
+                        <li><a href="{{url('/courses/'.$cat->slug.'/'.$sub->slug)}}"><b class="menu__icon {{$sub->icon}}"></b>&nbsp; {{$sub->name}}</a></li>
                     @endforeach
                     </ul>
                 </li>

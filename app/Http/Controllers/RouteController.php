@@ -14,18 +14,20 @@ class RouteController extends Controller
 	   	return view('website.courses');
 	}
 	function featured($cat_id, $sub_id) {
-		$cat = Category::find($cat_id);
-		$sub = Subcategory::find($sub_id);
+		$cat = Category::where('slug',$cat_id)->get()->first();
+		$sub = Subcategory::where('slug',$sub_id)->get()->first();
 		$arr = array('cat' => $cat,'sub'=>$sub);
-		// dd($arr);
 	    return view('website.course.featured')->with('data',$arr);
 	}
-	function allCourses($slug) {
-		dd($slug);
-	    return view('website.course.allCourses');
+	function allCourses($cat_id, $sub_id) {
+		$cat = Category::where('slug',$cat_id)->get()->first();
+		$sub = Subcategory::where('slug',$sub_id)->get()->first();
+		$arr = array('cat' => $cat,'sub'=>$sub);
+	    return view('website.course.allCourses')->with('data',$arr);
 	}
-	function course() {
-	    return view('website.course.course');
+	function viewCourse($slug) {
+		$cat = Course::where('slug',$slug)->get()->first();
+	    return view('website.course.course')->with('data',$cat);
 	}
 	function shopping() {
 	    return view('website.course.shopping');

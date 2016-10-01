@@ -1,5 +1,6 @@
 @extends('layouts.course_app')
-
+@inject('lang','App\Language');
+@inject('level','App\Level');
 @section('content')
     <!-- This page for Sara -->
     <section id="categories-wrap">
@@ -8,13 +9,13 @@
             <div class="container">
                 <div class="path">
                     <a href="index.html"><i class="fa fa-home"></i></a>
-                    <a href="#">/ Development</a>
-                    <span>/ Web Development</span>
+                    <a href="#">/ {{ $data['cat']->name }}</a>
+                    <span>/ {{ $data['sub']->name }}</span>
                 </div>
-                <h1 class="header-title">Web Development</h1>
+                <h1 class="header-title">{{ $data['sub']->name }}</h1>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="{{url('/courses/featured')}}">Featured</a></li>
-                    <li role="presentation" class="active"><a href="#">All Courses</a></li>
+                    <li role="presentation"><a href="{{url('/courses/'.$data['cat']->slug.'/'.$data['sub']->slug)}}">Featured</a></li>
+                    <li role="presentation" class="active"><a href="">Bütün kurslar</a>
                 </ul> <!-- Nav tabs -->
             </div>
         </div>
@@ -26,25 +27,6 @@
                         <div class="sorting">
                             <button class="btn closed"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
                             <h3>Refine</h3>
-                            <form action="">
-                                <label>Price</label>
-                                <ul>
-                                    <li>
-                                        <div class="checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                        <span>Paid (1721)</span>
-                                    </li>
-                                    <li>
-                                        <div class="checkbox">
-                                            <input type="checkbox">
-                                            <label></label>
-                                        </div>
-                                        <span>Free (191)</span>
-                                    </li>
-                                </ul>
-                            </form>
                             <form action="">
                                 <label>Level</label>
                                 <ul>
@@ -136,16 +118,9 @@
                             <button class="btn closed"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
                             <h3>Related Topics</h3>
                             <ul>
-                                <li><a href="#"><i class="ud_mobile-apps">&nbsp;</i><span>Mobile Apps</span></a></li>
-                                <li><a href="#"><i class="ud_programming-languages">&nbsp;</i><span>Programming Languages</span></a></li>
-                                <li><a href="#"><i class="ud_design-tools">&nbsp;</i><span>Design Tools</span></a></li>
-                                <li><a href="#"><i class="ud_network-and-security">&nbsp;</i><span>Network &amp; Security</span></a></li>
-                                <li><a href="#"><i class="ud_media">&nbsp;</i><span>Media</span></a></li>
-                                <li><a href="#"><i class="ud_web-design">&nbsp;</i><span>Web Design</span></a></li>
-                                <li><a href="#"><i class="ud_microsoft">&nbsp;</i><span>Microsoft</span></a></li>
-                                <li><a href="#"><i class="ud_user-experience">&nbsp;</i><span>User Experience</span></a></li>
-                                <li><a href="#"><i class="ud_finance">&nbsp;</i><span>Finance</span></a></li>
-                                <li><a href="#"><i class="ud_social-media-marketing">&nbsp;</i><span>Social Media Marketing</span></a></li>
+                            @foreach($data['cat']->subcategories as $sub)
+                                <li><a href="{{url('/courses/'.$data['cat']->slug.'/'.$sub->slug)}}"><i class="{{ $sub->icon }}">&nbsp;</i><span>{{ $sub->name }}</span></a></li>
+                            @endforeach
                             </ul>
                         </div><!-- sidebar-nav -->
                     </div><!-- sidebar -->

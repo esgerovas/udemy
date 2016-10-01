@@ -8,13 +8,13 @@
             <div class="container">
                 <div class="path">
                     <a href="index.html"><i class="fa fa-home"></i></a>
-                    <a href="#">/ {{$data['cat']->name}}</a>
-                    <span>/ {{$data['sub']->name}}</span>
+                    <a href="#">/ {{ $data['cat']->name }}</a>
+                    <span>/ {{ $data['sub']->name }}</span>
                 </div>
-                <h1 class="header-title">{{$data['sub']->name}}</h1>
+                <h1 class="header-title">{{ $data['sub']->name }}</h1>
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" class="active"><a href="#">Featured</a></li>
-                    <li role="presentation"><a href="{{url('/courses/'.$data['cat']->id.'/'.$data['sub']->id.'/allCourses')}}">All Courses</a></li>
+                    <li role="presentation"><a href="{{url('/courses/'.$data['cat']->slug.'/'.$data['sub']->slug.'/all-courses')}}">Bütün kurslar</a></li>
                 </ul> <!-- Nav tabs -->
             </div>
         </div>
@@ -29,7 +29,7 @@
                             <h3>Related Topics</h3>
                             <ul>
                             @foreach($data['cat']->subcategories as $sub)
-                                <li><a href="{{url('/courses/'.$data['cat']->id.'/'.$sub->id)}}"><i class="{{$sub->icon}}">&nbsp;</i><span>{{$sub->name}}</span></a></li>
+                                <li><a href="{{url('/courses/'.$data['cat']->slug.'/'.$sub->slug)}}"><i class="{{ $sub->icon }}">&nbsp;</i><span>{{ $sub->name }}</span></a></li>
                             @endforeach
                             </ul>
                         </div><!-- sidebar-nav -->
@@ -42,7 +42,7 @@
                             <h2>Featured Course with Coding Exercises</h2>
                             <a class = "main-panel-box" href="#">
                                 <div class="box-img">
-                                    <img src="assets/images/categories/1.jpg">
+                                    <img src="{{url('assets/images/categories/1.jpg')}}">
                                 </div>
                                 <div class="box-info">
                                     <h6>ES6 Javascript: The Complete Developer's Guide </h6>
@@ -70,18 +70,19 @@
                         <div class="sub-row">
                             <h2>&nbsp;</h2>
                             <div class="sub-panel">
-                                <a class= "panel-box" href="#">
+                            @foreach($data['sub']->courses as $course)
+                                <a class= "panel-box" href="{{url('/'.$course->slug)}}">
                                     <div class="box-img">
-                                        <img src="{{url('assets/images/categories/2.jpg')}}">
+                                        <img src="{{url('assets/images/courseImg/'.$course->image)}}">
                                         <div class="img-info">
-                                            {{-- <img src="{{url('assets/images/categories/2.1.jpg')}}"> --}}
+                                            <img src="{{url('assets/images/teacherImg/'.$course->teacher->image)}}">
                                             <span>309 lectures</span>
                                             <span>42.5 hours video</span>
                                         </div>
                                     </div>
                                     <div class="box-info">
-                                        <h6>The Web Developer Bootcamp </h6>
-                                        <div class="auther">Colt steele, Developer and Bootcamp Instructor</div>
+                                        <h6>{{$course->title}}</h6>
+                                        <div class="auther">{{$course->teacher->name}}, {{$course->teacher->job}}</div>
                                         <div class="rank">
                                             <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
                                             <span class="review_degree">4.7</span>
@@ -93,6 +94,7 @@
                                         </div>
                                     </div>
                                 </a><!-- panel-box-->
+                            @endforeach
                             </div>
                         </div><!--sub row-->
                         <div class="sub-row">
