@@ -49,18 +49,18 @@ Route::auth();
     // Route::post('/login','Auth\AuthController@login');
     // Route::get('/logout','Auth\AuthController@logout');
 
-Route::get('/ajax/category/{id}','AjaxController@category'); 
-Route::get('/ajax/course/{id}','AjaxController@course'); 
+    Route::get('/ajax/category/{id}','AjaxController@category'); 
+    Route::get('/ajax/course/{id}','AjaxController@course'); 
 
 
-Route::get('/', 'RouteController@home');
-Route::get('/courses', 'RouteController@courses');
-Route::get('/course/videos/{slug}', 'RouteController@viewVideo');
-Route::get('/course/videos/{slug}/?watch={id}', 'RouteController@viewVideo');
-Route::get('/course/{slug}', 'RouteController@viewCourse');
-Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
-Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
-Route::get('/shopping-card', 'RouteController@shopping');
-Route::get('/my-courses', 'RouteController@my_courses');
-Route::get('/edit-profile', 'RouteController@edit_profile');
-Route::get('/account-settings', 'RouteController@account_settings');
+    Route::get('/', 'RouteController@home');
+    Route::get('/courses', 'RouteController@courses');
+    Route::get('/course/videos/{slug}/watch={id}', 'RouteController@viewVideo');
+    Route::get('/course/videos/{slug}', 'RouteController@viewVideo');
+    Route::get('/course/{slug}', 'RouteController@viewCourse');
+    Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
+    Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
+    Route::get('/shopping-card', 'RouteController@shopping');
+    Route::get('/my-courses', 'RouteController@my_courses');
+    Route::get('/edit-profile', 'RouteController@edit_profile');
+    Route::get('/account-settings', 'RouteController@account_settings');

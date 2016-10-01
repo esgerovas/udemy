@@ -1,3 +1,4 @@
+@inject('cat','App\Category')
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -112,10 +113,10 @@
         <div class="menu">
             <!-- logo -->
             <div class="logo">
-                <h1>Grapes</h1>
+                <h1>Growing</h1>
             </div>
             <div class="logo2">
-                <h1>Grapes</h1>
+                <h1>Growing</h1>
             </div>
              <!-- navigator --> 
             <div class="navigator">
@@ -124,21 +125,21 @@
                 @if(Auth::user())
                     <div class="text-center imgProfile">
                         <div>
-                            <img src="assets/images/{{ Auth::user()->image }}">
+                            <img src="{{url('assets/images/'. Auth::user()->image )}}">
                             <span>{{ Auth::user()->name }}</span>
                         </div>
                     </div>
                 @endif
                     <ul>
-                        <li class="buttonBrowse"><a>Courses <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Partners</a></li>
+                        <li class="buttonBrowse"><a>Kurslar <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Haqqımızda</a></li>
+                        <li><a href="#">Əlaqə</a></li>
+                        <li><a href="#">Əməkdaşlar</a></li>
                     @if(Auth::user())
-                     <li><a href="{{ url('/logout') }}" style="color:#993399;">Logout</a></li>
+                     <li><a href="{{ url('/logout') }}" style="color:#993399;">Çıxış</a></li>
                     @else
-                       <li><button class="loggin">Login</button></li>
-                       <li><button class="sin">Sign Up</button></li>  
+                       <li><button class="loggin">Daxil ol</button></li>
+                       <li><button class="sin">Qeydiyyat</button></li>  
                     @endif
                         
                     </ul>
@@ -146,17 +147,14 @@
 
                 <div class="browseMenu">
                     <div>
-                        <span><i class="pull-left fa fa-angle-left" aria-hidden="true"></i> Menu</span>
-                        <h6>Courses</h6>
+                        <span><i class="pull-left fa fa-angle-left" aria-hidden="true"></i> Geri</span>
+                        <h6>Menu</h6>
                     </div>
                     <ul>
-                        <li><a href="#"><b class="menu__icon ud_development"></b>&nbsp; Development</a></li>
-                        <li><a href="#"><b class="menu__icon ud_it-and-software"></b>&nbsp; IT &amp; Software</a></li>
-                        <li><a href="#"><b class="menu__icon ud_office-productivity"></b>&nbsp; Office Productivity</a></li>
-                        <li><a href="#"><b class="menu__icon ud_design"></b>&nbsp; Design</a></li>
-                        <li><a href="#"><b class="menu__icon ud_photography"></b>&nbsp; Photography</a></li>
-                        <li><a href="#"><b class="menu__icon ud_language"></b>&nbsp; Language</a></li>
-                        <li><a href="{{url('/courses')}}">Bütün kurslar</a></li>
+                        @foreach($cat->get() as $cat)
+                         <li><a href="{{url('/courses/'.$cat->slug.'/'.$cat->subcategories->first()->slug)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp;{{$cat->name}}</a></li>
+                        @endforeach
+                        <li><a href="{{url('/courses')}}"><b class="menu__icon ud_academics"></b>Bütün kurslar</a></li>
                     </ul>
                 </div>
             </div>
@@ -169,10 +167,10 @@
                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
                 <ul>
-                    <li><a href="{{url('/courses')}}">Courses</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Partners</a></li>
+                    <li><a href="{{url('/courses')}}">Kurslar</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Əlaqə</a></li>
+                    <li><a href="#">Əməkdaşlar</a></li>
 
                      @if(Auth::user())
                         <li class="dropdown">
@@ -183,8 +181,8 @@
                         </li>
 
                     @else
-                       <li><button class="loggin">Login</button></li>
-                       <li><button class="sin">Sign Up</button></li>  
+                       <li><button class="loggin">Daxil ol</button></li>
+                       <li><button class="sin">Qeydiyyat</button></li>  
                     @endif
                 </ul>
             </div>
@@ -198,40 +196,37 @@
         <div class="container-fluid">
             <div class="container">
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Mobile Apps</a></li>
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Vloq</a></li>
+                    <li><a href="#">Mobile Proqramlama</a></li>
+                    <li><a href="#">Dəstək</a></li>
+                    <li><a href="#">Kariyera</a></li>
                 </ul>
                  <ul>
-                    <ul class="language_box">
-                        <li><a href="#">Azerbaijan <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">English <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Turkish <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Russian <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                    <ul class="language_box hidden">
+                        <li><a href="#">Azərbaycanca <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">İngiliscə <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Türkcə <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Rusca <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
                     </ul>
-                    <li class="language"><a><b class="icon-globe fa fa-globe mr5"></b> English <b class="icon-caret-up fa fa-caret-up user-caret ml5"></b></a></li>
+                    <li class="language"><a><b class="icon-globe fa fa-globe mr5"></b> Azərbaycanca <b class="icon-caret-up fa fa-caret-up user-caret ml5"></b></a></li>
                     <li><span>Copyright &copy; 2016</span></li>
-                    <li><a href="#">Term</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Intellectual Property</a></li>
+                    <li><a href="#">Qaydalarımız</a></li>
+                    <li><a href="#">Gizlilik Şərtləri</a></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- jQuery  -->
-    <script src="/assets/js/jquery-3.1.0.min.js"></script>
+    <script src="{{url('/assets/js/jquery-3.1.0.min.js')}}"></script>
     <!-- bootstrap -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="{{url('/assets/js/bootstrap.min.js')}}"></script>
     <!-- custom -->
-    <script src="/assets/js/main-Page.js"></script>
-    <script src="/assets/js/footer-wrap.js"></script>
+    <script src="{{url('/assets/js/main-Page.js')}}"></script>
+    <script src="{{url('/assets/js/footer-wrap.js')}}"></script>
   </body>
 </html>
-
 
         <?php 
             if($errors->has('email') || $errors->has('password')) {

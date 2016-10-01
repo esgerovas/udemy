@@ -1,6 +1,6 @@
 @extends('layouts.course_app')
-@inject('lang','App\Language');
-@inject('level','App\Level');
+@inject('lang','App\Language')
+@inject('level','App\Level')
 @section('content')
     <!-- This page for Sara -->
     <section id="categories-wrap">
@@ -14,7 +14,7 @@
                 </div>
                 <h1 class="header-title">{{ $data['sub']->name }}</h1>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation"><a href="{{url('/courses/'.$data['cat']->slug.'/'.$data['sub']->slug)}}">Featured</a></li>
+                    <li role="presentation"><a href="{{url('/courses/'.$data['cat']->slug.'/'.$data['sub']->slug)}}">Xüsusi kurslar</a></li>
                     <li role="presentation" class="active"><a href="">Bütün kurslar</a>
                 </ul> <!-- Nav tabs -->
             </div>
@@ -26,9 +26,9 @@
                     <div class="sidebar">
                         <div class="sorting">
                             <button class="btn closed"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
-                            <h3>Refine</h3>
+                            <h3>Müəyyənləşdir</h3>
                             <form action="">
-                                <label>Level</label>
+                                <label>Səviyyə</label>
                                 <ul>
                                     <li>
                                         <div class="checkbox">
@@ -87,7 +87,7 @@
                                 </ul>
                              </form>
                             <form action="">
-                                <label>Languages</label>
+                                <label>Dillər</label>
                                 <ul>
                                     <li>
                                         <div class="checkbox">
@@ -116,7 +116,7 @@
                         </div><!-- price -->
                         <div class="sidebar-nav">
                             <button class="btn closed"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
-                            <h3>Related Topics</h3>
+                            <h3>Əlaqəli Mövzular</h3>
                             <ul>
                             @foreach($data['cat']->subcategories as $sub)
                                 <li><a href="{{url('/courses/'.$data['cat']->slug.'/'.$sub->slug)}}"><i class="{{ $sub->icon }}">&nbsp;</i><span>{{ $sub->name }}</span></a></li>
@@ -126,11 +126,11 @@
                     </div><!-- sidebar -->
                     <div class="content">
                         <div class="sidebar-btn-forcourse">
-                            <button class="btn refine">Refine</button>
-                            <button class="btn relate">Related Topics</button>
+                            <button class="btn refine">Müəyyənləşdir</button>
+                            <button class="btn relate">Əlaqəli Mövzular</button>
                         </div>
                         <div class="main-row">
-                            <label>Sort By:&nbsp;&nbsp; </label>
+                            <label>Sirala:&nbsp;&nbsp; </label>
                             <div class="dropdown">
                                 <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default">Popularity <span class="caret"></span>
                                 </button>
@@ -144,281 +144,33 @@
                             </div>
                         </div>
                         <div class="sub-row">
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/1.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/2.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>Ultimate Web Designer &amp; Developer Course: Build 23 Projects!</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/3.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/4.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/5.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/4.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box--> 
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/1.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/2.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>Ultimate Web Designer &amp; Developer Course: Build 23 Projects!</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/3.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/4.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->
-                            <a class= "panel-box" href="#">
-                                <div class="box-img">
-                                    <img src="assets/images/categories/5.jpg">
-                                </div>
-                                <div class="box-info">
-                                    <h6>The Web Developer Bootcamp</h6>
-                                    <span>Colt steele, Developer and Bootcamp Instructor</span>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>$19</strong>
-                                            <s>$200</s>
-                                        </li>
-                                        <li>
-                                            <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
-                                            <span>(6663)</span>
-                                        </li>
-                                        <li>
-                                            <span>309 lectures, 42.5 hours video</span>
-                                        </li>
-                                         <li>
-                                            <span>All Levels</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a><!-- panel-box-->                           
+                        @foreach($data['sub']->courses as $course)
+                                <a class= "panel-box" href="{{url('/course/'.$course->slug)}}">
+                                    <div class="box-img">
+                                        <img src="{{url('assets/images/courseImg/'.$course->image)}}">
+                                    </div>
+                                    <div class="box-info">
+                                        <h6>{{$course->title}}</h6>
+                                        <span>{{$course->teacher->name}}, {{$course->teacher->job}}</span>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <strong>$19</strong>
+                                                <s>$200</s>
+                                            </li>
+                                            <li>
+                                                <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
+                                                <span>(6663)</span>
+                                            </li>
+                                            <li>
+                                                <span>{{ $course->vcount($course->id) }} video,  {{$course->vduration($course->id)}} saat</span>
+                                            </li>
+                                             <li>
+                                                <span>{{$course->level->name}}</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a><!-- panel-box-->
+                            @endforeach                     
                         </div><!-- sub -row-->
                         <div class="pagination-block">
                             <ul class="list-inline">

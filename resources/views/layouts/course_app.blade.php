@@ -109,10 +109,10 @@
         </div> 
         <!-- logo -->
         <div class="logo">
-            <h1>grapes</h1>
+            <h1>Growing</h1>
         </div>
         <!-- browse -->
-        <div class="browse @yield('fixedMenu')"><span>Browse <i class="fa fa-caret-down" aria-hidden="true"></i></span>
+        <div class="browse @yield('fixedMenu')"><span>Menu <i class="fa fa-caret-down" aria-hidden="true"></i></span>
             <ul class="@yield('fixedMenuBar')">
                 @foreach($cat->all() as $cat)
                  <li><a href="{{url('/courses/'.$cat->slug.'/'.$cat->subcategories->first()->slug)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp; {{$cat->name}} <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a>
@@ -131,47 +131,53 @@
             <i class="navigat fa fa-bars" aria-hidden="true"></i>
             
             <div class="sidebar">
+            @if(Auth::user())
                 <div class="text-center imgProfile">
                     <div>
-                        <img src="assets/images/smileWhite.png">
-                        <span>Alim</span>
+                        <img src="{{url('/assets/images/'.Auth::user()->image)}}">
+                        <span>{{Auth::user()->name}}</span>
                     </div>
                 </div>
                 <ul>
-                    <li class="buttonBrowse"><a >Browse <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
-                    <li><a href="#">My Courses</a></li>
-                    <li><a href="#">My Notification</a></li>
-                    <li><a href="#">My Messages</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Help</a></li>
-                    <li><a href="#">Logout</a></li>   
+                    <li class="buttonBrowse"><a>Menu<i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Kurslar</a></li>
+                    <li><a href="#">İsmarıclar</a></li>
+                    <li><a href="#">Mesajlar</a></li>
+                    <li><a href="{{url('/edit-profile')}}">Tənzimləmələr</a></li>
+                    <li><a href="#">Kömək</a></li>
+                    <li><a href="{{ url('/logout') }}">Çıxış</a></li>
                 </ul>
+                @else
+                 <li class="buttonBrowse"><a>Menu<i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    <li><a href="#">Kömək</a></li>
+                    <li class="loggin"><a style="cursor:pointer;">Daxil ol</a></li>
+                    <li class="sin"><a style="cursor:pointer;">Qeydiyyat</a></li>
+
+                @endif
             </div>
 
             <div class="browseMenu">
                 <div>
-                    <span><i class="pull-left fa fa-angle-left" aria-hidden="true"></i> Menu</span>
-                    <h6>Browse</h6>
+                    <span><i class="pull-left fa fa-angle-left" aria-hidden="true"></i> Geri</span>
+                    <h6>Menu</h6>
                 </div>
                 <ul>
-                    <li><a href="#"><b class="menu__icon ud_development"></b>&nbsp; Development</a></li>
-                    <li><a href="#"><b class="menu__icon ud_it-and-software"></b>&nbsp; IT &amp; Software</a></li>
-                    <li><a href="#"><b class="menu__icon ud_office-productivity"></b>&nbsp; Office Productivity</a></li>
-                    <li><a href="#"><b class="menu__icon ud_design"></b>&nbsp; Design</a></li>
-                    <li><a href="#"><b class="menu__icon ud_photography"></b>&nbsp; Photography</a></li>
-                    <li><a href="#"><b class="menu__icon ud_language"></b>&nbsp; Language</a></li>
+                @foreach($cat->get() as $cat)
+                    <li><a href="{{url('/courses/'.$cat->slug.'/'.$cat->subcategories->first()->slug)}}"><b class="menu__icon {{$cat->icon}}"></b>&nbsp;{{$cat->name}}</a></li>
+                @endforeach
+                <li><a href="{{url('/courses')}}"><b class="menu__icon ud_academics"></b>Bütün kurslar</a></li>
                 </ul>
             </div>
         </div>
         <!-- Search and button -->
         <div class="search">
            <form>
-                <input type="text" name="" placeholder="Search for Courses">
+                <input type="text" name="" placeholder="Kurs Axtar">
                 <!-- asagidaki button islemiyecek -->
                 <button type="button">&#xf002;</button>
                 <input type="submit" class="fa-input" value="&#xf002;">
                 <!--asagidaki input islemiyecek -->
-                <input class="submit" type="button" value="Cancel">
+                <input class="submit" type="button" value="Ləğv et">
            </form>
         </div>
         <!-- for screen max 760px device -->
@@ -196,7 +202,7 @@
                         <p>By Mimar Aslan, Turkey</p>
                         <ul class="clearFix"></ul>
                     </a>
-                    <div class="text-right"><a href="#">See All <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></div>
+                    <div class="text-right"><a href="#">Hamısına bax <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></div>
                 </div>
             </div>
             <div class="myCourses myCourses2" style="width:150px; border-left:0;"><a>{{ Auth::user()->name}}</a>
@@ -207,22 +213,21 @@
                 <a href="{{url('/account-settings')}}"><img src="{{url('assets/images/'.Auth::user()->image)}}"></a>
                 <div class="profil_menu">
                     <ul>
-                        <li><a href="#">My Profile</a></li>
-                        <li><a href="#">My Message</a></li>
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#">Mesajlar</a></li>
                         <li>
                             <ul>
-                                <li><a href="#">Help</a></li>
+                                <li><a href="#">Kömək</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{url('/edit-profile')}}">Account Setting</a></li>
-                        <li><a href="#">Grapes Credits</a></li>
-                        <li><a href="{{ url('/logout') }}">Logout</a></li>
+                        <li><a href="{{url('/edit-profile')}}">Tənzimləmələr</a></li>
+                        <li><a href="{{ url('/logout') }}">Çıxış</a></li>
                     </ul>
                 </div>
             </div>
             @else
-                <div class="qeydiyyat"><button class="loggin">Login</button></div>
-                <div class="qeydiyyat" ><button class="sin">Sign Up</button></div>
+                <div class="qeydiyyat"><button class="loggin">Daxil ol</button></div>
+                <div class="qeydiyyat" ><button class="sin">Qeydiyyat</button></div>
             @endif
         </div>
         <div class="clearFix"></div>
@@ -234,25 +239,23 @@
         <div class="container-fluid">
             <div class="container">
                 <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Mobile Apps</a></li>
-                    <li><a href="#">Topics</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Careers</a></li>
+                   <li><a href="#">Haqqımızda</a></li>
+                    <li><a href="#">Vloq</a></li>
+                    <li><a href="#">Mobile Proqramlama</a></li>
+                    <li><a href="#">Dəstək</a></li>
+                    <li><a href="#">Kariyera</a></li>
                 </ul>
                  <ul>
                     <ul class="language_box">
-                        <li><a href="#">Azerbaijan <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">English <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Turkish <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Russian <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                       <li><a href="#">Azərbaycanca <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">İngiliscə <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Türkcə <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
+                        <li><a href="#">Rusca <i class="pull-right fa fa-check" aria-hidden="true"></i></a></li>
                     </ul>
-                    <li class="language"><a><b class="icon-globe fa fa-globe mr5"></b> English <b class="icon-caret-up fa fa-caret-up user-caret ml5"></b></a></li>
+                     <li class="language"><a><b class="icon-globe fa fa-globe mr5"></b> Azərbaycanca <b class="icon-caret-up fa fa-caret-up user-caret ml5"></b></a></li>
                     <li><span>Copyright &copy; 2016</span></li>
-                    <li><a href="#">Term</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Intellectual Property</a></li>
+                    <li><a href="#">Qaydalarımız</a></li>
+                    <li><a href="#">Gizlilik Şərtləri</a></li>
                 </ul>
             </div>
         </div>

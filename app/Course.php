@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-
+use DB;
 class Course extends Model
 {
 
@@ -26,5 +26,20 @@ class Course extends Model
     }
     public function sections(){
         return $this->hasMany('App\Section');
-    }
+    }    
+    public function vcount($id){
+        return DB::select("call lec_count($id)")[0]->lec_count;
+    } 
+    public function vduration($id){
+    $duration = DB::select("call lec_duration($id)");  
+    $dur = ($duration[0]->lec_duration)/60;
+    $h=0;
+        if($dur<60){
+            $m=round($dur);
+        }else{
+            $h = round($dur/60);
+            $m = $dur%60;
+        }
+    return $h.'.'.$m;
+    } 
 }

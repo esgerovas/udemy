@@ -54,7 +54,7 @@ class RouteController extends Controller
 		$section = Course::where('slug',$slug)->first()->sections()->orderBy('order','asc')->get();
 		$a = $section->first()->lectures()->orderBy('order','asc')->get()->first();
 
-		if($id !=null){
+		if($id!=0){
 			$a = Lecture::find($id);
 		}
 	        if($a->youtube_link == ""){
@@ -66,7 +66,6 @@ class RouteController extends Controller
 	        }
 	    return view('website.course.viewCourseVideo',compact('b','k','section','course'));
 	}
-
 	function shopping() {
 	    return view('website.course.shopping');
 	}

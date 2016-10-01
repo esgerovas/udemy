@@ -13,7 +13,7 @@
                 </div>
                 <h1 class="header-title">{{ $data['sub']->name }}</h1>
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#">Featured</a></li>
+                    <li role="presentation" class="active"><a href="#">Xüsusi kurslar</a></li>
                     <li role="presentation"><a href="{{url('/courses/'.$data['cat']->slug.'/'.$data['sub']->slug.'/all-courses')}}">Bütün kurslar</a></li>
                 </ul> <!-- Nav tabs -->
             </div>
@@ -26,7 +26,7 @@
                     <div class="sidebar">
                          <div class="sidebar-nav">
                             <button class="btn closed"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
-                            <h3>Related Topics</h3>
+                            <h3>Əlaqəli Mövzular</h3>
                             <ul>
                             @foreach($data['cat']->subcategories as $sub)
                                 <li><a href="{{url('/courses/'.$data['cat']->slug.'/'.$sub->slug)}}"><i class="{{ $sub->icon }}">&nbsp;</i><span>{{ $sub->name }}</span></a></li>
@@ -36,20 +36,21 @@
                     </div><!-- sidebar -->
                     <div class="content">
                         <div class="sidebar-btn">
-                            <button class="btn relate">Related Topics</button>
+                            <button class="btn relate">Əlaqəli Mövzular</button>
                         </div>
                         <div class="main-row">
-                            <h2>Featured Course with Coding Exercises</h2>
-                            <a class = "main-panel-box" href="#">
+                            <h2>&nbsp;</h2>
+                            @foreach($data['sub']->courses->splice(0,1) as $course)
+                            <a class = "main-panel-box" href="{{url('/course/'.$course->slug)}}">
                                 <div class="box-img">
-                                    <img src="{{url('assets/images/categories/1.jpg')}}">
+                                    <img src="{{url('assets/images/courseImg/'.$course->image)}}">
                                 </div>
                                 <div class="box-info">
-                                    <h6>ES6 Javascript: The Complete Developer's Guide </h6>
-                                    <span class="auther">Colt steele, Developer and Bootcamp Instructor</span>
-                                    <span>309 lectures, video</span>
+                                    <h6>{{$course->title}} </h6>
+                                    <span class="auther">{{$course->teacher->name}}, {{$course->teacher->job}}</span>
+                                    <span>{{ $course->vcount($course->id) }} video</span>
                                     <span>2689 students</span>
-                                    <span>Beginner Level</span>
+                                    <span>{{$course->level->name}}</span>
                                     <div class="rank">
                                         <span class="star">
                                             <i class="ud_i_star"></i>
@@ -58,7 +59,7 @@
                                             <i class="ud_i_star"></i>
                                             <i class="ud_i_star"></i>
                                         </span> 
-                                        <span class="review_count">436 review</span>
+                                        <span class="review_count">436 dəfə baxılıb</span>
                                     </div>
                                     <div class="course-price">
                                         <strong>$19</strong>
@@ -66,9 +67,9 @@
                                     </div>
                                 </div>
                             </a>
+                            @endforeach
                        </div><!-- main-row-->
                        <?php $k=0;?>
-                        
                             @foreach($data['sub']->courses as $course)
                             @if($k%4==0)
                             <div class="sub-row">
@@ -103,28 +104,16 @@
                                     </div>
                                 </div><!--sub row-->
                                 @endif
-                                
                             @endforeach
-                            
                         <div class="sub-row">
-                            <h2>Related Topics</h2>
+                            <h2>Əlaqəli Mövzular</h2>
                             <div class="sub-icon">
                                 <ul>
+                                @foreach($data['cat']->subcategories->take(5) as $lec)
                                     <li>
-                                        <a href="#"><i class="ud_mobile-apps"></i><span>Mobile Apps</span></a>
+                                        <a href="#"><i class="{{$lec->icon}}"></i><span>{{$lec->name}}</span></a>
                                     </li>
-                                    <li>
-                                        <a href="#"><i class="ud_programming-languages"></i><span>Programming Languages</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ud_design-tools"></i><span>Design Tools</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ud_network-and-security"></i><span>Network &amp; Security</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="ud_media"></i><span>Media</span></a>
-                                    </li>
+                                @endforeach
                                 </ul>
                             </div>
                         </div><!--sub row-->

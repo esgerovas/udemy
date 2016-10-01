@@ -2032,6 +2032,7 @@ h4 {
             background-color: #e8e8e8;
             color: #353535; }
       #content-wrap .container-fluid .container1 .courses_list .sub-panel {
+        font-size: 13px;
         margin: 0 0 40px 0;
         height: 300px;
         overflow: hidden;
@@ -2739,7 +2740,8 @@ h4 {
     #courses-catalog .container-manual .column .contents {
       padding: 8px; }
       #courses-catalog .container-manual .column .contents h6 {
-        font-size: 17px; }
+        font-size: 17px;
+        line-height: 22px; }
       #courses-catalog .container-manual .column .contents p {
         padding: 8px 0;
         color: #828282; }

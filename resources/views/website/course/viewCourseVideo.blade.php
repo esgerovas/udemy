@@ -11,7 +11,7 @@
 					<ul>
 						<h6>Bölmə {{$section->order}}: {{$section->name}}</h6>
 						@foreach($section->lectures as $lect)
-						<li><span>-</span><a class="lect" href="{{url('/course/videos/'.$course->slug.'/?watch='.$lect->id)}}">{{$lect->name}}</a></li>
+						<li><span>-</span><a class="lect" href="{{url('/course/videos/'.$course->slug.'/watch='.$lect->id)}}">{{$lect->name}}</a></li>
 						@endforeach
 					</ul>
 					@endforeach
