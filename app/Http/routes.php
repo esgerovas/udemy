@@ -1,16 +1,5 @@
 <?php
 Route::auth();
-
-Route::get('/', 'RouteController@home');
-Route::get('/courses', 'RouteController@courses');
- Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
-Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
-Route::get('/{slug}', 'RouteController@viewCourse');
-Route::get('/shopping-card', 'RouteController@shopping');
-Route::get('/my-courses', 'RouteController@my_courses');
-Route::get('/edit-profile', 'RouteController@edit_profile');
-Route::get('/account-settings', 'RouteController@account_settings');
-
 //Login Routes...
     Route::get('/admin/login','AdminAuth\AuthController@showLoginForm');
     Route::post('/admin/login','AdminAuth\AuthController@login');
@@ -62,3 +51,13 @@ Route::get('/account-settings', 'RouteController@account_settings');
 
     Route::get('/ajax/category/{id}','AjaxController@category'); 
     Route::get('/ajax/course/{id}','AjaxController@course'); 
+
+Route::get('/', 'RouteController@home');
+Route::get('/courses', 'RouteController@courses');
+Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
+Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
+Route::get('/{slug}', 'RouteController@viewCourse');
+Route::get('/shopping-card', 'RouteController@shopping');
+Route::get('/my-courses', 'RouteController@my_courses');
+Route::get('/edit-profile', 'RouteController@edit_profile');
+Route::get('/account-settings', 'RouteController@account_settings');

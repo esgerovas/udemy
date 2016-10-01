@@ -8,7 +8,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 
 use App\Subcategory;
-
+use DB;
 class SubmenuController extends Controller
 {  
  public function __construct(){
@@ -36,9 +36,9 @@ class SubmenuController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
-        $data = Subcategory::find($id);
-        $data->update($request->all());
+    {     DB::table('subcategories')
+            ->where('id', $id)
+            ->update(['name' => $request->name,'icon' => $request->icon,'slug'=>str_slug($request->name, "-")]);
         return back();
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
-
+use DB;
 use App\Category;
 class MenuController extends Controller
 {  
@@ -38,9 +38,9 @@ class MenuController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
-        $data = Category::find($id);
-        $data->update($request->all());
+    {      DB::table('categories')
+            ->where('id', $id)
+            ->update(['name' => $request->name,'icon' => $request->icon,'slug'=>str_slug($request->name, "-")]);
         return back();
     }
 }

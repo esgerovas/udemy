@@ -130,7 +130,7 @@
                     </div>
                 @endif
                     <ul>
-                        <li class="buttonBrowse"><a href="{{url('/courses')}}">Courses <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li class="buttonBrowse"><a>Courses <i class="pull-right fa fa-angle-right" aria-hidden="true"></i></a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Partners</a></li>
@@ -156,6 +156,7 @@
                         <li><a href="#"><b class="menu__icon ud_design"></b>&nbsp; Design</a></li>
                         <li><a href="#"><b class="menu__icon ud_photography"></b>&nbsp; Photography</a></li>
                         <li><a href="#"><b class="menu__icon ud_language"></b>&nbsp; Language</a></li>
+                        <li><a href="{{url('/courses')}}">Bütün kurslar</a></li>
                     </ul>
                 </div>
             </div>

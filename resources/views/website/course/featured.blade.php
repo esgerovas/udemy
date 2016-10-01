@@ -67,10 +67,14 @@
                                 </div>
                             </a>
                        </div><!-- main-row-->
-                        <div class="sub-row">
+                       <?php $k=0;?>
+                        
+                            @foreach($data['sub']->courses as $course)
+                            @if($k%4==0)
+                            <div class="sub-row">
                             <h2>&nbsp;</h2>
                             <div class="sub-panel">
-                            @foreach($data['sub']->courses as $course)
+                            @endif
                                 <a class= "panel-box" href="{{url('/'.$course->slug)}}">
                                     <div class="box-img">
                                         <img src="{{url('assets/images/courseImg/'.$course->image)}}">
@@ -94,9 +98,14 @@
                                         </div>
                                     </div>
                                 </a><!-- panel-box-->
+                                <?php $k++;?>
+                                @if($k%4==0)
+                                    </div>
+                                </div><!--sub row-->
+                                @endif
+                                
                             @endforeach
-                            </div>
-                        </div><!--sub row-->
+                            
                         <div class="sub-row">
                             <h2>Related Topics</h2>
                             <div class="sub-icon">

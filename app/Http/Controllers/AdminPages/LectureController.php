@@ -22,7 +22,7 @@ class LectureController extends Controller
 
     public function store(Request $request){
 
-    $dir='assets/images/courseVideo';
+    $dir='/storage/courseVideo';
     if($request->duration){
         $manual = "$request->duration";
         $vidkey = "";

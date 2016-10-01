@@ -1549,15 +1549,16 @@ body {
     cursor: pointer;
     color: #5074A1; }
   #about_use .Description {
-    padding: 10px 15px; }
-    #about_use .Description h6 {
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 35px; }
+    padding: 10px 15px 10px 0; }
+    #about_use .Description h1, #about_use .Description h2, #about_use .Description h3, #about_use .Description h4, #about_use .Description h5, #about_use .Description h6 {
+      line-height: 40px;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 600; }
     #about_use .Description p {
       font-size: 14px;
-      font-weight: 700;
-      line-height: 30px; }
+      line-height: 24px;
+      margin-bottom: 20px; }
     #about_use .Description span {
       font-weight: 300; }
     #about_use .Description ul li {
@@ -1703,11 +1704,19 @@ h4 {
   font-style: normal; }
 .col-md-8 #curriclum {
   margin-top: 25px; }
+  .col-md-8 #curriclum .lect_desc {
+    background-color: white; }
+    .col-md-8 #curriclum .lect_desc p {
+      line-height: 23px;
+      padding: 10px;
+      text-indent: 15px; }
 @media screen and (max-width: 480px) {
   .col-md-8 #curriclum h2 {
-    font-size: 10px; }
-  .col-md-8 #curriclum > div h5, .col-md-8 #curriclum > div span, .col-md-8 #curriclum > div button {
-    font-size: 10px; } }
+    font-size: 12px; }
+  .col-md-8 #curriclum .lect_desc {
+    font-size: 13px; }
+  .col-md-8 #curriclum > div h4, .col-md-8 #curriclum > div h5, .col-md-8 #curriclum > div span, .col-md-8 #curriclum > div button {
+    font-size: 12px; } }
 .col-md-8 #curriclum > div {
   display: flex;
   align-items: center; }
@@ -1764,17 +1773,26 @@ h4 {
 .container {
   overflow: hidden; }
 
+#desc {
+  padding: 2px 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: grey; }
+
 #instruct {
   padding: 15px 0;
   padding-bottom: 40px;
-  font-style: normal; }
+  font-style: normal;
+  margin-top: 30px; }
   #instruct h1 {
     font-weight: 300;
     font-size: 40px;
     padding-bottom: 10px; }
   #instruct img {
     float: left;
-    margin-right: 100px; }
+    margin-right: 70px;
+    width: 150px;
+    height: 150px; }
     @media screen and (max-width: 480px) {
       #instruct img {
         margin-right: 40px; } }
@@ -1786,6 +1804,9 @@ h4 {
     font-size: 14px; }
   #instruct .about {
     padding-top: 25px; }
+    #instruct .about p {
+      text-indent: 16px;
+      line-height: 26px; }
   #instruct .cv {
     padding: 25px 0; }
   #instruct .businness {
@@ -1793,14 +1814,16 @@ h4 {
   #instruct h5 {
     padding: 5px 7px;
     margin-left: 7px;
-    font-size: 16px; }
+    font-size: 16px;
+    margin-top: 30px; }
     #instruct h5 a {
       text-decoration: none; }
   #instruct .social i {
     font-size: 40px;
     color: lightgray;
     float: left;
-    padding: 0 7px; }
+    padding: 0 7px;
+    margin-top: 20px; }
 
 #reviews h1 {
   padding-bottom: 20px; }

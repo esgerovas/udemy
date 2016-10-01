@@ -213,3 +213,9 @@ function signUP(){
 	});
 }
 signUP();
+
+
+$(".desc").click(function() {
+	var id = $(this).data('id');
+	$('#open_'+id).toggle();
+});

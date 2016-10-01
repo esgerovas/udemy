@@ -259,16 +259,16 @@
     </section>
 
     <!-- jQuery  -->
-    <script src="/assets/js/jquery-3.1.0.min.js"></script>
+    <script src="{{url('/assets/js/jquery-3.1.0.min.js')}}"></script>
     <!-- bootstrap -->
-    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="{{url('/assets/js/bootstrap.min.js')}}"></script>
     <!-- custom -->
-    <script src="/assets/js/header-wrap.js"></script>
-    <script src="/assets/js/content-wrap.js"></script>
+    <script src="{{url('/assets/js/header-wrap.js')}}"></script>
+    <script src="{{url('/assets/js/content-wrap.js')}}"></script>
        <!-- categories -->
-    <script src="/assets/js/categories.js"></script>
-    <script src="/assets/js/footer-wrap.js"></script>
-    <script src="/assets/js/course-wrap.js"></script><script src="/plugins/afterglow/afterglow.min.js"></script>
+    <script src="{{url('/assets/js/categories.js')}}"></script>
+    <script src="{{url('/assets/js/footer-wrap.js')}}"></script>
+    <script src="{{url('/plugins/afterglow/afterglow.min.js')}}"></script>
 
   </body>
 </html>

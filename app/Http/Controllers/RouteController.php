@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Category;
 use App\Subcategory;
 use App\Course;
+use DB;
 class RouteController extends Controller
 {
 	function home(){
@@ -26,8 +27,19 @@ class RouteController extends Controller
 	    return view('website.course.allCourses')->with('data',$arr);
 	}
 	function viewCourse($slug) {
-		$cat = Course::where('slug',$slug)->get()->first();
-	    return view('website.course.course')->with('data',$cat);
+		$crs = Course::where('slug',$slug)->first();
+		$t = $crs->teacher;
+		$lec_count = DB::select("call lec_count($crs->id)");
+		$duration = DB::select("call lec_duration($crs->id)");	
+		$dur = ($duration[0]->lec_duration)/60;
+		if($dur<60){
+			$dur=$dur.' dəqiqə';
+		}else{
+			$h = round($dur/60);
+			$m = $dur%60;
+			$dur = $h. ' saat '.$m.' dəqiqə'; 
+		}
+	    return view('website.course.course',compact('crs','lec_count','dur','t'));
 	}
 	function shopping() {
 	    return view('website.course.shopping');
