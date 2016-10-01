@@ -52,6 +52,11 @@
 			display: block;
 			padding-bottom: 7px;
 			a{
+				background-color: $mainColor;
+				padding: 7px 18px;
+				border: none;
+				@include border-radius(2px);
+				color: white;
 				text-decoration: none;
 			}
 		}

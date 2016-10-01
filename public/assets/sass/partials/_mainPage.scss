@@ -3,7 +3,7 @@
 	//up line
 	.upLine{
 		border: 2px solid $mainColor;
-		@include shadow(0 4px 40px 11px black);
+		@include shadow(0 4px 28px 7px black);
 	}
 	.menu{
 		//logo
@@ -284,168 +284,6 @@
 			}
 		}
 	}
-	//main slider
-	.slider{
-		width: 100%;
-		padding: 30px 3%;
-		//course image
-		.sliderImage{
-			width: 50%;
-			padding: 0 15px;
-			float: left;
-			img{
-				width: 100%;
-				@include transition(all 0.3s ease);
-				&:hover{
-					filter: brightness(80%);
-				}
-			}
-		}
-		//course about content
-		.content{
-			float: right;
-			width: 50%;
-			padding: 0 15px;
-			color: $textColor;
-			h6{
-				line-height: 23px;
-			}
-			.time{
-				h6{
-					font-size: 14px;
-				}
-			}
-			.header{
-				padding: 19px 0;
-				h6{
-					font-size: 29px;
-					font-weight: 300;
-					line-height: 30px;
-					a{
-						text-decoration: none;
-						color: $textColor;
-					}
-				}
-			}
-			.ratings{
-				.star 
-					i{
-					letter-spacing: 2px;
-					color:$mainColor;
-					font-size:14px;
-				}
-				.review_degree{
-					font-weight:600;
-				}
-				.review_count{
-					font-weight:600;
-					color:lighten($textColor, 35%);
-				}
-			}
-			.about{
-				padding: 15px 0;
-				h5{
-					font-size: 14px;
-					font-weight: 600;
-				}
-				h6{
-					font-size: 13px;
-				}
-			}
-			.duration{
-				h5{
-					font-size: 14px;
-					font-weight: 600;
-				}
-				h6{
-					font-size: 13px;
-				}
-			}
-			.takeCours{
-				padding: 15px 0;
-				position: relative;
-				.count{
-					position: relative;
-					h5{
-						font-size: 14px;
-						font-weight: 600;
-					}
-					h6{
-						font-size: 13px;
-					}
-					.take{
-						margin-right: 7%;
-						position: absolute;
-						bottom:0;
-						right: 0;
-						a{
-							display: block;
-							padding: 7px 25px;
-							font-size: 13px;
-							border: 1px solid none;
-							background-color: $mainColor;
-							text-decoration: none;
-							color: white;
-							@include border-radius(2px);
-						}
-					}
-				}
-			}
-		}
-	}
-	@media screen and (min-width: 960px){
-		.slider{
-			display: flex;
-			align-items: center;
-		}
-	}
-	@media screen and (min-width: 960px) and (max-width: 1200px){
-		.slider{
-			padding: 30px 3% 15px 3%;
-			.sliderImage{
-
-			}
-			.content{
-				.time{
-					h6{
-						font-size: 13px;
-						margin: 0 0 -9px 0;
-					}
-				}
-				.header{
-					padding: 10px 0;
-					h6{
-						font-size: 24px;
-					}
-				}
-				.about{
-					padding: 8px 0;
-				}
-				.takeCours{
-					display: none;
-				}
-			}
-		}
-	}
-	@media screen and (max-width: 960px){
-		.slider{
-			.sliderImage{
-				width: 100%;
-			}
-			.content{
-				width: 100%;
-				.time{
-					margin: 13px 0 -10px 0;
-				}
-				.header{
-					padding: 13px 0;
-					h6{
-						font-size: 24px;
-					}
-				}
-			}
-		}
-	}
 	@media screen and (min-width: 720px){
 		.logo2{
 			display: none;
@@ -618,10 +456,141 @@
 
 
 #courses-catalog{
-	padding: 50px 0;
 	background-color: #F4F4F4;
+	//main slider
+	.slider{
+		width: 100%;
+		padding: 30px 3%;
+		background-color: #E1E3E4;
+		//course image
+		.sliderImage{
+			width: 50%;
+			padding: 0 15px;
+			float: left;
+			img{
+				width: 100%;
+				@include transition(all 0.3s ease);
+				&:hover{
+					filter: brightness(80%);
+				}
+			}
+		}
+		//course about content
+		.content{
+			float: right;
+			width: 50%;
+			padding: 0 15px;
+			color: $textColor;
+			h6{
+				line-height: 23px;
+			}
+			.time{
+				h6{
+					font-size: 14px;
+				}
+			}
+			.header{
+				padding: 19px 0;
+				h6{
+					font-size: 29px;
+					font-weight: 300;
+					line-height: 30px;
+					a{
+						text-decoration: none;
+						color: $textColor;
+					}
+				}
+			}
+			.ratings{
+				.star 
+					i{
+					letter-spacing: 2px;
+					color:$mainColor;
+					font-size:14px;
+				}
+				.review_degree{
+					font-weight:600;
+				}
+				.review_count{
+					font-weight:600;
+					color:lighten($textColor, 35%);
+				}
+			}
+			.about{
+				padding: 15px 0;
+				h5{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				h6{
+					font-size: 13px;
+				}
+			}
+			.duration{
+				h5{
+					font-size: 14px;
+					font-weight: 600;
+				}
+				h6{
+					font-size: 13px;
+				}
+			}
+			.takeCours{
+				padding: 15px 0;
+				position: relative;
+				.count{
+					position: relative;
+					h5{
+						font-size: 14px;
+						font-weight: 600;
+					}
+					h6{
+						font-size: 13px;
+					}
+					.take{
+						margin-right: 7%;
+						position: absolute;
+						bottom:0;
+						right: 0;
+						a{
+							display: block;
+							padding: 7px 25px;
+							font-size: 13px;
+							border: 1px solid none;
+							background-color: $mainColor;
+							text-decoration: none;
+							color: white;
+							@include border-radius(2px);
+						}
+					}
+				}
+			}
+		}
+		.sliderButton{
+			width: 100%;
+			padding-top: 28px;
+			.buttons{
+				width: calc(23px * 5);
+				margin: 0 auto;
+				div{
+					cursor: pointer;
+					width: 13px;
+					height: 13px;
+					margin: 0 5px;
+					float:left;
+					border: 1px solid lightgray;
+					background-color: white;
+					@include border-radius(50%);
+				}
+				.buttonColor{
+					background-color: $mainColor;
+				}
+			}
+		}
+	}
 	.container-manual{
 		margin: 0 auto;
+		padding: 50px 0;
 		.column{ 
 			margin: 10px;
 			display: block;
@@ -705,6 +674,32 @@
 		}
 	}
 	@media screen and (min-width: 960px) and (max-width: 1200px){
+		.slider{
+			padding: 30px 3% 15px 3%;
+			.sliderImage{
+
+			}
+			.content{
+				.time{
+					h6{
+						font-size: 13px;
+						margin: 0 0 -9px 0;
+					}
+				}
+				.header{
+					padding: 10px 0;
+					h6{
+						font-size: 24px;
+					}
+				}
+				.about{
+					padding: 8px 0;
+				}
+				.takeCours{
+					display: none;
+				}
+			}
+		}
 		.container-manual{
 			width: 872px;
 			.column{
@@ -725,6 +720,33 @@
 			width: 287px;
 			.column{
 				width: calc(100% - 20px);
+			}
+		}
+	}
+	@media screen and (min-width: 960px){
+		.slider{
+			.mainSlider{
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+	@media screen and (max-width: 960px){
+		.slider{
+			.sliderImage{
+				width: 100%;
+			}
+			.content{
+				width: 100%;
+				.time{
+					margin: 13px 0 -10px 0;
+				}
+				.header{
+					padding: 13px 0;
+					h6{
+						font-size: 24px;
+					}
+				}
 			}
 		}
 	}

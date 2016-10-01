@@ -1,5 +1,5 @@
 //navigator hissede menunun cixmasi ucun
-function navigator(){
+function navigate(){
 	width = $(window).width();
 	$("#main-Page .sidebar").css({
 		transform: "translateX(-"+width+"px)",
@@ -166,7 +166,7 @@ function navigator(){
 	}
 	heightSideBar();
 }
-navigator();
+navigate();
 
 //signUP Page open and close
 function login(){
@@ -215,3 +215,44 @@ function signUP(){
 	});
 }
 signUP();
+
+
+function sliderMainPage(){
+
+	var num = 0;
+	$slider = function($a){
+		$('#courses-catalog .sliderButton .buttons div').removeClass('buttonColor');
+		$('#courses-catalog .mainSlider').hide();
+		if(num < $a-1){
+			num++;
+			$('#courses-catalog .sliderButton .buttons div:eq('+num+')').addClass('buttonColor');
+			$('#courses-catalog .mainSlider:eq('+num+')').fadeIn();
+		}else{
+			$('#courses-catalog .sliderButton .buttons div:first').addClass('buttonColor');
+			$('#courses-catalog .mainSlider:first').fadeIn();
+			num = 0;
+		}
+	}
+
+	var toplam = $('#courses-catalog .mainSlider').length;
+	var interval = setInterval('$slider('+toplam+')', 6000);
+	// $('#courses-catalog .slider').hover(function(){
+	// 	clearInterval(interval);
+	// }, function(){
+	// 	setInterval('$slider('+toplam+')', 6000);
+	// });
+
+	$('#courses-catalog .sliderButton .buttons div:first').addClass('buttonColor');
+	$('#courses-catalog .mainSlider').hide();
+	$('#courses-catalog .mainSlider:first').fadeIn();
+	$('#courses-catalog .sliderButton .buttons div').click(function(){
+		var index = $(this).index();
+		$('#courses-catalog .sliderButton .buttons div').removeClass('buttonColor');
+		$(this).addClass('buttonColor');
+		$('#courses-catalog .mainSlider').hide();
+		$('#courses-catalog .mainSlider:eq('+index+')').fadeIn();
+		num = index;
+		return false;
+	});
+}
+sliderMainPage();
