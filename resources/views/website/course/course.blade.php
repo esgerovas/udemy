@@ -24,8 +24,8 @@
         <div class="row">
             <!-- video yerlesdirilecek -->
             <div class="col-md-8 col-sm-12 col-xs-12" style="padding: 0 30px;">
-                <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto">
-                    <source type="video/mp4" src="{{url('/assets/images/courseVideo/'.$data->sections->first()->lectures->first()->video_link)}}">
+                <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto" data-skin="dark">
+                    <source type="video/mp4" src="{{url('/storage/courseVideo/'.$data->sections->first()->lectures->first()->video_link)}}">
                 </video>
             </div>
             
