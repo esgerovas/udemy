@@ -2882,4 +2882,119 @@ h4 {
     font-size: 25px;
     margin: 15px 0; }
 
+#viewCourseVideo .container-fluid {
+  padding: 0; }
+  #viewCourseVideo .container-fluid .all {
+    padding: 1px 0;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    #viewCourseVideo .container-fluid .all .videoList {
+      float: left;
+      width: 400px;
+      height: 700px;
+      overflow-y: scroll;
+      background-color: white;
+      padding: 15px;
+      -moz-box-shadow: 1px 1px 5px 1px lightgray;
+      -webkit-box-shadow: 1px 1px 5px 1px lightgray;
+      box-shadow: 1px 1px 5px 1px lightgray; }
+      #viewCourseVideo .container-fluid .all .videoList h2 {
+        font-size: 20px;
+        text-align: center;
+        padding: 10px 0;
+        font-weight: 600; }
+      #viewCourseVideo .container-fluid .all .videoList h6 {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 3px 0; }
+      #viewCourseVideo .container-fluid .all .videoList ul {
+        padding: 7px 0; }
+        #viewCourseVideo .container-fluid .all .videoList ul li {
+          word-wrap: break-word; }
+          #viewCourseVideo .container-fluid .all .videoList ul li span {
+            padding: 0 5px;
+            font-weight: 600;
+            font-size: 18px; }
+          #viewCourseVideo .container-fluid .all .videoList ul li a {
+            text-decoration: none;
+            color: #419DFF;
+            cursor: pointer; }
+    #viewCourseVideo .container-fluid .all .videoPlace {
+      padding: 0 60px;
+      float: right;
+      width: calc(100% - 400px);
+      height: 630px; }
+      #viewCourseVideo .container-fluid .all .videoPlace .border {
+        width: 100%;
+        height: 100%;
+        border: 1px solid gray;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        padding: 3px; }
+        #viewCourseVideo .container-fluid .all .videoPlace .border .video {
+          width: 100%;
+          height: 100%; }
+    @media screen and (max-width: 480px) {
+      #viewCourseVideo .container-fluid .all .videoList {
+        display: inline-block;
+        position: absolute;
+        z-index: 111;
+        top: 0;
+        left: 0;
+        width: 300px;
+        -webkit-transform: translateX(-300px);
+        -moz-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+        -o-transform: translateX(-300px);
+        transform: translateX(-300px); }
+      #viewCourseVideo .container-fluid .all .videoPlace {
+        padding: 0;
+        height: 300px;
+        width: 100%; } }
+    @media screen and (min-width: 480px) and (max-width: 960px) {
+      #viewCourseVideo .container-fluid .all .videoList {
+        display: inline-block;
+        position: absolute;
+        z-index: 111;
+        top: 0;
+        left: 0;
+        width: 300px;
+        -webkit-transform: translateX(-300px);
+        -moz-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+        -o-transform: translateX(-300px);
+        transform: translateX(-300px); }
+      #viewCourseVideo .container-fluid .all .videoPlace {
+        width: 100%;
+        height: 550px; } }
+    @media screen and (min-width: 960px) and (max-width: 1200px) {
+      #viewCourseVideo .container-fluid .all .videoList {
+        width: 300px; }
+        #viewCourseVideo .container-fluid .all .videoList .close {
+          display: none; }
+      #viewCourseVideo .container-fluid .all .videoPlace {
+        height: 550px;
+        width: calc(100% - 300px); } }
+    @media screen and (min-width: 1200px) {
+      #viewCourseVideo .container-fluid .all .videoList .close {
+        display: none; } }
+#viewCourseVideo .viewList {
+  margin-left: 15px;
+  margin-top: 15px;
+  display: inline-block; }
+  #viewCourseVideo .viewList span {
+    background-color: transparent;
+    border: 1px solid #994399;
+    color: #994399;
+    padding: 5px 12px;
+    cursor: pointer;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px; }
+@media screen and (min-width: 960px) {
+  #viewCourseVideo .viewList {
+    display: none; } }
+
 /*# sourceMappingURL=style.css.map */

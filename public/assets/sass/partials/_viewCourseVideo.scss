@@ -1,0 +1,137 @@
+#viewCourseVideo{
+	.container-fluid{
+		padding: 0;
+		.all{
+			padding: 1px 0;
+			position: relative;
+			display: flex;
+			align-items: center;
+			.videoList{
+				float: left;
+				width: 400px;
+				height: 700px;
+				overflow-y: scroll;
+				background-color: white;
+				padding: 15px;
+				@include shadow(1px 1px 5px 1px lightgray);
+				h2{
+					font-size: 20px;
+					text-align: center;
+					padding: 10px 0;
+					font-weight: 600;
+				}
+				h6{
+					font-weight: 400;
+					font-size: 16px;
+					padding: 3px 0;
+				}
+				ul{
+					padding: 7px 0;
+					li{
+						word-wrap: break-word;
+						span{
+							padding: 0 5px;
+							font-weight: 600;
+							font-size: 18px;
+						}
+						a{
+							text-decoration: none;
+							color: #419DFF;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+			.videoPlace{
+				padding: 0 60px;
+				float: right;
+				width: calc(100% - 400px);
+				height: 630px;
+				.border{
+					width: 100%;
+					height: 100%;
+					border: 1px solid gray;
+					@include border-radius(2px);
+					padding: 3px;
+					.video{
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+			@media screen and (max-width:480px){
+				.videoList{
+					display: inline-block;
+					position: absolute;
+					z-index: 111;
+					top: 0;
+					left: 0;
+					width: 300px;
+					@include transform(translateX(-300px));
+				}
+				.videoPlace{
+					padding: 0;
+					height: 300px;
+					width: 100%;
+				}
+			}
+			@media screen and (min-width:480px) and (max-width: 960px){
+				.videoList{
+					display: inline-block;
+					position: absolute;
+					z-index: 111;
+					top: 0;
+					left: 0;
+					width: 300px;
+					@include transform(translateX(-300px));
+				}
+				.videoPlace{
+					width: 100%;
+					height: 550px;
+				}
+			}
+			@media screen and (min-width:960px) and (max-width: 1200px){
+				.videoList{
+					width: 300px;
+					.close{
+						display: none;
+					}
+				}
+				.videoPlace{
+					height: 550px;
+					width: calc(100% - 300px);
+				}
+			}
+			@media screen and (min-width:1200px){
+				.videoList{
+					.close{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.viewList{
+		margin-left: 15px;
+		margin-top: 15px;
+		display: inline-block;
+		span{
+			background-color: transparent;
+			border: 1px solid $mainColor;
+			color: $mainColor;
+			padding: 5px 12px;
+			cursor: pointer;
+			@include border-radius(2px);
+		}
+	}
+	@media screen and (min-width:960px) {
+		.viewList{
+			display: none;
+		}
+	}
+	@media screen and (max-width:960px) {
+		.viewList{
+			
+		}
+	}
+}

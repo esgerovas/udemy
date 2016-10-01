@@ -268,7 +268,9 @@
        <!-- categories -->
     <script src="{{url('/assets/js/categories.js')}}"></script>
     <script src="{{url('/assets/js/footer-wrap.js')}}"></script>
+    <script src="{{url('/assets/js/viewCourseVideo.js')}}"></script>
     <script src="{{url('/plugins/afterglow/afterglow.min.js')}}"></script>
+    
 
   </body>
 </html>

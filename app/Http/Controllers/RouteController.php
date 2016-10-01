@@ -53,4 +53,7 @@ class RouteController extends Controller
 	function account_settings() {
 	    return view('website.course.account_settings');
 	}
+	function viewVideo() {
+	    return view('website.course.viewCourseVideo');
+	}
 }

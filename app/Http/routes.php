@@ -49,10 +49,11 @@ Route::auth();
     // Route::post('/login','Auth\AuthController@login');
     // Route::get('/logout','Auth\AuthController@logout');
 
-    Route::get('/ajax/category/{id}','AjaxController@category'); 
-    Route::get('/ajax/course/{id}','AjaxController@course'); 
+Route::get('/ajax/category/{id}','AjaxController@category'); 
+Route::get('/ajax/course/{id}','AjaxController@course'); 
 
 Route::get('/', 'RouteController@home');
+Route::get('/courses/video', 'RouteController@viewVideo');
 Route::get('/courses', 'RouteController@courses');
 Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
 Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
