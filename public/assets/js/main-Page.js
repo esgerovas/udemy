@@ -216,7 +216,9 @@ function signUP(){
 }
 signUP();
 
-
+$('#courses-catalog .slider').css({
+	height: $(window).height()
+});
 function sliderMainPage(){
 
 	var num = 0;
@@ -243,13 +245,13 @@ function sliderMainPage(){
 	// });
 
 	$('#courses-catalog .sliderButton .buttons div:first').addClass('buttonColor');
-	$('#courses-catalog .mainSlider').hide();
+	$('#courses-catalog .mainSlider').fadeout();
 	$('#courses-catalog .mainSlider:first').fadeIn();
 	$('#courses-catalog .sliderButton .buttons div').click(function(){
 		var index = $(this).index();
 		$('#courses-catalog .sliderButton .buttons div').removeClass('buttonColor');
 		$(this).addClass('buttonColor');
-		$('#courses-catalog .mainSlider').hide();
+		$('#courses-catalog .mainSlider').fadeout();
 		$('#courses-catalog .mainSlider:eq('+index+')').fadeIn();
 		num = index;
 		return false;

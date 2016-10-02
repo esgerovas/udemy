@@ -168,7 +168,7 @@ function navigate(){
 navigate();
 
 function login(){
-	$("#header-wrap .loggin").click(function() {
+	$(".loggin").click(function() {
 		$("#header-wrap .login-First").css({"display":"block"});
 		width = $(window).width();
 		$("#header-wrap .sidebar").css({

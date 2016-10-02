@@ -75,7 +75,7 @@
                             <h2>&nbsp;</h2>
                             <div class="sub-panel">
                             @endif
-                                <a class= "panel-box" href="{{url('/'.$course->slug)}}">
+                                <a class= "panel-box" href="{{url('/course/'.$course->slug)}}">
                                     <div class="box-img">
                                         <img src="{{url('assets/images/courseImg/'.$course->image)}}">
                                         <div class="img-info">

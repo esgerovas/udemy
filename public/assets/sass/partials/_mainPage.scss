@@ -1,5 +1,10 @@
 #main-Page{
-	background-color: #E1E3E4;
+    background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0,0,0,0.8), transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0.8), transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0.8), transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0.8), transparent); /* Standard syntax */
+    z-index:9999;
 	//up line
 	.upLine{
 		border: 2px solid $mainColor;
@@ -7,6 +12,7 @@
 	}
 	.menu{
 		//logo
+		background-color:transparent;
 		.logo{
 			width: 120px;
 			height: 40px;
@@ -452,143 +458,81 @@
 	}
 }
 
-
-
-
 #courses-catalog{
-	background-color: #F4F4F4;
 	//main slider
 	.slider{
+		position:relative;
+		top:-48px;
 		width: 100%;
-		padding: 30px 3%;
-		background-color: #E1E3E4;
+		overflow:hidden;
 		//course image
-		.sliderImage{
-			width: 50%;
-			padding: 0 15px;
-			float: left;
-			img{
-				width: 100%;
-				@include transition(all 0.3s ease);
-				&:hover{
-					filter: brightness(80%);
-				}
-			}
-		}
-		//course about content
-		.content{
-			float: right;
-			width: 50%;
-			padding: 0 15px;
-			color: $textColor;
-			h6{
-				line-height: 23px;
-			}
-			.time{
-				h6{
-					font-size: 14px;
-				}
-			}
-			.header{
-				padding: 19px 0;
-				h6{
-					font-size: 29px;
-					font-weight: 300;
-					line-height: 30px;
-					a{
-						text-decoration: none;
-						color: $textColor;
-					}
-				}
-			}
-			.ratings{
-				.star 
-					i{
-					letter-spacing: 2px;
-					color:$mainColor;
-					font-size:14px;
-				}
-				.review_degree{
-					font-weight:600;
-				}
-				.review_count{
-					font-weight:600;
-					color:lighten($textColor, 35%);
-				}
-			}
-			.about{
-				padding: 15px 0;
-				h5{
-					font-size: 14px;
-					font-weight: 600;
-				}
-				h6{
-					font-size: 13px;
-				}
-			}
-			.duration{
-				h5{
-					font-size: 14px;
-					font-weight: 600;
-				}
-				h6{
-					font-size: 13px;
-				}
-			}
-			.takeCours{
-				padding: 15px 0;
-				position: relative;
-				.count{
-					position: relative;
-					h5{
-						font-size: 14px;
-						font-weight: 600;
-					}
-					h6{
-						font-size: 13px;
-					}
-					.take{
-						margin-right: 7%;
-						position: absolute;
-						bottom:0;
-						right: 0;
-						a{
-							display: block;
-							padding: 7px 25px;
-							font-size: 13px;
-							border: 1px solid none;
-							background-color: $mainColor;
-							text-decoration: none;
-							color: white;
-							@include border-radius(2px);
-						}
-					}
-				}
-			}
-		}
-		.sliderButton{
+		img{
 			width: 100%;
-			padding-top: 28px;
-			.buttons{
-				width: calc(23px * 5);
-				margin: 0 auto;
-				div{
+			height:100%;
+			z-index:-1;
+			@include transition(all 0.3s ease);
+			&:hover{
+				filter: brightness(80%);
+			}
+		}
+		.go{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			z-index: 9999;
+			top:40%;
+
+			h1{
+				display: block;
+				width: 100%;	
+				text-align: center;
+				margin: 30px 0;
+				font-weight: 600;
+				font-size: 60px;
+				color: white;
+			}
+			div{
+				width: 100%;
+				display: block;
+				a{
+					text-transform: uppercase;
+					text-align: center;
+					font-size: 17px;
+					margin: 0 auto;
+					color: white;
+					display: block;
+					width: 180px;
+					border: 1px solid white;
+					padding: 5px 50px;
+					letter-spacing:2px;
+					background-color:transparent;
 					cursor: pointer;
-					width: 13px;
-					height: 13px;
-					margin: 0 5px;
-					float:left;
-					border: 1px solid lightgray;
-					background-color: white;
-					@include border-radius(50%);
+					@include transition(all 0.3s ease);
 				}
-				.buttonColor{
-					background-color: $mainColor;
+				a:hover {
+					background-color: white;
+					color: black;
+					text-decoration:none;
+				}
+			}
+		}
+		@media screen and (max-width:960px) {
+			.go {
+				top:10%;
+			}
+		}
+		@media screen and (max-width:760px) {
+			.go {
+				top:5%;
+				h1{
+					font-size:40px;
 				}
 			}
 		}
 	}
 	.container-manual{
+
+	background-color: #F4F4F4;
 		margin: 0 auto;
 		padding: 50px 0;
 		.column{ 

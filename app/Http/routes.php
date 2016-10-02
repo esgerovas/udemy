@@ -52,12 +52,14 @@ Route::auth();
 Route::get('/ajax/category/{id}','AjaxController@category'); 
 Route::get('/ajax/course/{id}','AjaxController@course'); 
 
+
 Route::get('/', 'RouteController@home');
-Route::get('/courses/video', 'RouteController@viewVideo');
 Route::get('/courses', 'RouteController@courses');
+Route::get('/course/videos/{slug}', 'RouteController@viewVideo');
+Route::get('/course/videos/{slug}/?watch={id}', 'RouteController@viewVideo');
+Route::get('/course/{slug}', 'RouteController@viewCourse');
 Route::get('/courses/{cat_id}/{sub_id}', 'RouteController@featured');
 Route::get('/courses/{cat_id}/{sub_id}/all-courses', 'RouteController@allCourses');
-Route::get('/{slug}', 'RouteController@viewCourse');
 Route::get('/shopping-card', 'RouteController@shopping');
 Route::get('/my-courses', 'RouteController@my_courses');
 Route::get('/edit-profile', 'RouteController@edit_profile');

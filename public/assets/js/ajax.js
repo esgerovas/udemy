@@ -6,8 +6,6 @@
 				'X-CRSF-TOKEN':'<?=csrf_token()?>'
 			}
 		})
-		
-		
 		$.ajax({
 			url: '/ajax/category/'+id,
 			type: 'GET',
@@ -23,6 +21,8 @@
             }
 		});
 	});
+
+
 	$('#course').change(function(event) {
 		var id= $(this).val()
 		$.ajaxSetup({
@@ -45,4 +45,6 @@
             }
 		});
 	});
+
+		
 	

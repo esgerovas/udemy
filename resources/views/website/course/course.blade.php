@@ -1,5 +1,4 @@
 @extends('layouts.course_app')
-
 @section('content')
         <!-- This page for Hemide -->
 <section id="course-wrap">
@@ -10,12 +9,6 @@
                 <h5>{{$crs->headline}}</h5>
                 <div class="reiting">
                 &nbsp;
-{{--                     <i class="ud_i_star" aria-hidden="true"></i>
-                    <i class="ud_i_star" aria-hidden="true"></i>
-                    <i class="ud_i_star" aria-hidden="true"></i>
-                    <i class="ud_i_star" aria-hidden="true"></i>
-                    <i class="ud_i_star" aria-hidden="true"></i>
-                    <span>4.3 (104 ratings) • 3,076 students enrolled</span> --}}
                 </div>
                 <div class="author">
                     <h3><a href="#">{{$crs->teacher->name}}</a></h3>&nbsp;<h2 style="font-size: 15px;">tərəfindən hazırlanıb</h2>
@@ -25,15 +18,24 @@
         <div class="row">
             <!-- video yerlesdirilecek -->
             <div class="col-md-8 col-sm-12 col-xs-12" style="padding: 0 30px;">
+            @if($section->first()->lectures()->orderBy('order','asc')->first()->video_link)
                 <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto" data-skin="dark">
-                    <source type="video/mp4" src="{{url('/storage/courseVideo/'.$crs->sections->first()->lectures->first()->video_link)}}">
+                    <source type="video/mp4" src="{{url('/storage/courseVideo/'.$section->first()->lectures()->orderBy('order','asc')->first()->video_link)}}">
                 </video>
+            @else
+                <video class="afterglow video" id="myvideo"  width="100%" height="100%" data-volume=".7" preload="auto" data-skin="dark" data-youtube-id="{{$section->first()->lectures()->orderBy('order','asc')->first()->youtube_link}}">
+                </video>
+            @endif
             </div>
             
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <span class="startPreview">
                     <span>&nbsp;</span>
-                    <span><a href="#"> Kursa Başla</a></span>
+                    @if(Auth::user())
+                     <span><a href="{{url('/course/videos/'.$crs->slug)}}"> Kursa Başla</a></span>
+                    @else
+                    <span><a class="loggin"> Kursa Başla</a></span>
+                    @endif
                     <span>&nbsp;</span>
                 </span>
                 <div class="col-md-6 col-xs-6 col-sm-6">

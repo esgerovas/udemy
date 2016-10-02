@@ -1,9 +1,9 @@
 function viewCourse(){
 	$a = $(window).width();
     if($a < 960){
-    	$('#viewCourseVideo .all').css({
-    		height: "700px"
-    	});
+    	// $('#viewCourseVideo .all').css({
+    	// 	height: "800px"
+    	// });
 		$('#viewCourseVideo .viewList').click(function(){
 			$('#viewCourseVideo .videoList').css({
 				transform: "translateX(0)"

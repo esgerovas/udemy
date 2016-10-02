@@ -21,4 +21,5 @@ class AjaxController extends Controller
     	$b=$a->sections;
     	return $b->toJson();
     }
+
 }

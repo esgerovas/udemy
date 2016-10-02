@@ -204,7 +204,7 @@
             </div>
             <!-- smile -->
             <div class="smile">
-                <a href="{{url('/account-settings')}}"><img src="assets/images/{{ Auth::user()->image }}"></a>
+                <a href="{{url('/account-settings')}}"><img src="{{url('assets/images/'.Auth::user()->image)}}"></a>
                 <div class="profil_menu">
                     <ul>
                         <li><a href="#">My Profile</a></li>
@@ -269,6 +269,8 @@
     <script src="{{url('/assets/js/categories.js')}}"></script>
     <script src="{{url('/assets/js/footer-wrap.js')}}"></script>
     <script src="{{url('/assets/js/viewCourseVideo.js')}}"></script>
+
+
     <script src="{{url('/plugins/afterglow/afterglow.min.js')}}"></script>
     
 
