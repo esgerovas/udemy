@@ -5,10 +5,10 @@
         <div class="slider">
         <!-- backend hissesi ucun tekrarlanan class burda mainSlider classidi -->
             <div class="mainSlider">
-            <img src="{{url('assets/images/MainPage/b2.jpg')}}">
-            </div>
-              <div class="mainSlider">
             <img src="{{url('assets/images/MainPage/1.jpeg')}}">
+            </div>
+            <div class="mainSlider">
+            <img src="{{url('assets/images/MainPage/b2.jpg')}}">
             </div>
               <div class="mainSlider">
             <img src="{{url('assets/images/MainPage/11.jpg')}}">

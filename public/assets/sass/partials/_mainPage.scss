@@ -32,6 +32,8 @@
 		}
 		//menu
 		.menuList{
+			position: relative;
+			z-index: 999;
 
 			float: right;
 			&>ul{
