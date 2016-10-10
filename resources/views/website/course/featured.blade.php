@@ -59,11 +59,12 @@
                                             <i class="ud_i_star"></i>
                                             <i class="ud_i_star"></i>
                                         </span> 
-                                        <span class="review_count">436 dəfə baxılıb</span>
+                                        
                                     </div>
                                     <div class="course-price">
-                                        <strong>$19</strong>
-                                        <s>$200</s>
+                                       {{--  <strong>$19</strong>
+                                        <s>$200</s> --}}
+                                        <span class="review_count">436 dəfə baxılıb</span>
                                     </div>
                                 </div>
                             </a>
@@ -81,8 +82,8 @@
                                         <img src="{{url('assets/images/courseImg/'.$course->image)}}">
                                         <div class="img-info">
                                             <img src="{{url('assets/images/teacherImg/'.$course->teacher->image)}}">
-                                            <span>309 lectures</span>
-                                            <span>42.5 hours video</span>
+                                            <span>{{ $course->vcount($course->id) }} video</span>
+                                            <span>{{$course->vduration($course->id)}} hours video</span>
                                         </div>
                                     </div>
                                     <div class="box-info">
@@ -94,8 +95,8 @@
                                             <span class="review_count">(6663)</span>
                                         </div>
                                         <div class="course-price">
-                                            <strong>$19</strong>
-                                            <s>$200</s>
+                                           {{--  <strong>$19</strong>
+                                            <s>$200</s> --}}
                                         </div>
                                     </div>
                                 </a><!-- panel-box-->

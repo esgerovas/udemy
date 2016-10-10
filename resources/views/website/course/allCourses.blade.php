@@ -153,10 +153,10 @@
                                         <h6>{{$course->title}}</h6>
                                         <span>{{$course->teacher->name}}, {{$course->teacher->job}}</span>
                                         <ul class="list-inline">
-                                            <li>
+                                           {{--  <li>
                                                 <strong>$19</strong>
                                                 <s>$200</s>
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <span class="star"><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i><i class="ud_i_star"></i></span> 
                                                 <span>(6663)</span>

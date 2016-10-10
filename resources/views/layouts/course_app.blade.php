@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grapes</title>
+    <title>Udemy_az</title>
 
     <!-- iconsWebSite -->
     <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/iconsWebSite.css') }}">
@@ -109,7 +109,7 @@
         </div> 
         <!-- logo -->
         <div class="logo">
-            <h1>Growing</h1>
+            <h1>Udemy_az</h1>
         </div>
         <!-- browse -->
         <div class="browse @yield('fixedMenu')"><span>Menu <i class="fa fa-caret-down" aria-hidden="true"></i></span>
@@ -182,7 +182,7 @@
         </div>
         <!-- for screen max 760px device -->
         <div class="logo2">
-            <h1>grapes</h1>
+            <h1>Udemy_az</h1>
         </div>
         <!-- My Courses -->
         <div class="right-panel">

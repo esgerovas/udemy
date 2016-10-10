@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Grapes</title>
+    <title>Udemy_az</title>
 
     <!-- iconsWebSite -->
     <link rel="stylesheet" type="text/css" href="{{ url('/assets/css/iconsWebSite.css') }}">
@@ -113,10 +113,10 @@
         <div class="menu">
             <!-- logo -->
             <div class="logo">
-                <h1>Growing</h1>
+                <h1>Udemy_az</h1>
             </div>
             <div class="logo2">
-                <h1>Growing</h1>
+                <h1>Udemy_az</h1>
             </div>
              <!-- navigator --> 
             <div class="navigator">
